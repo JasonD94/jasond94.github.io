@@ -1,0 +1,6 @@
+#!/bin/bash
+#*****************************************************************************
+#*  Checks all files in the given directory against cpplint                  *
+#*****************************************************************************
+
+cpplint.py --filter=-runtime/references,-build/header_guard --extensions=cpp,hpp *.cpp *.hpp
