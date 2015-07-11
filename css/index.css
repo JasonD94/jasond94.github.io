@@ -3,8 +3,8 @@
 http://cssdeck.com/labs/cool-and-professional-google-web-fonts-for-use
 
 */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro);
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Advent+Pro);
 
 html {
     min-height: 100%;
