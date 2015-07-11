@@ -83,68 +83,77 @@
 
     <!-- 3rd row - Github cards -->
     <div class = "row">
-        <div class = "center_text_nohighlight">
+      <div class = "center_text_nohighlight">
         <p style="text-decoration: underline; font-weight: bold;">
         Repositories that Jason has contributed to: </p>
-        </div>
-
-        <!-- These are all separate columns and width set to 350px for the best looking arrangement
-        for desktop views. Should check mobile at some point in the future. -->
-        <div class="col-md-4">
-          <!-- Center tags are here for better mobile display. -->
-          <center>
-            <div class="github-card" data-user="iSENSEDev" data-repo="Teaching"></div>
-            <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-          </center>
-        </div>
-
-        <div class="col-md-4">
-          <!-- Center tags are here for better mobile display. -->
-          <center>
-            <div class="github-card" data-user="iSENSEDev" data-repo="iSENSE-API"></div>
-            <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-          </center>
-        </div>
-
-        <div class="col-md-4">
-          <!-- Center tags are here for better mobile display. -->
-          <center>
-            <div class="github-card" data-user="iSENSEDev" data-repo="HTML-Apps"></div>
-            <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-          </center>
-        </div>
-
-
-        <!-- This is a new row (4th row total) of GitHub cards. -->
-
-        <div class="col-md-4"><center>
-        <iframe src="http://lab.lepture.com/github-cards/card.html?user=JasonD94&repo=HighSchool"
-        frameborder="0" scrolling="0" width="350px" height="200px" allowtransparency></iframe>
-        </center></div>
-
-        <div class="col-md-4"><center>
-        <iframe src="http://lab.lepture.com/github-cards/card.html?user=JasonD94&repo=College-Public"
-        frameborder="0" scrolling="0" width="350px" height="200px" allowtransparency></iframe>
-        </center></div>
-
-        <div class="col-md-4"><center>
-        <iframe src="http://lab.lepture.com/github-cards/card.html?user=JohnShep&repo=repair"
-        frameborder="0" scrolling="0" width="350px" height="200px" allowtransparency></iframe>
-        </center></div>
-
-        <!-- Span is inline and forces just the text to be highlighted!! See:
-        http://stackoverflow.com/questions/14310154/how-do-i-set-background-color-of-text-only-in-css -->
-        <div class="center_text"><span class="highlight">
-        <a href="https://github.com/JasonD94">
-        Other work Jason has done can be found on his Github page here.</a>
-        </span></div>
-
       </div>
+
+      <!-- These are all separate columns and width set to 350px for the best looking arrangement
+           for desktop views. Should check mobile at some point in the future. -->
+      <div class="col-md-4">
+        <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="iSENSEDev" data-repo="Teaching"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+
+      <div class="col-md-4">
+        <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="iSENSEDev" data-repo="iSENSE-API"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+
+      <div class="col-md-4">
+        <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="iSENSEDev" data-repo="HTML-Apps"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+    </div>
+
+    <!-- 4th Row - more GitHub cards. -->
+    <div class = "row">
+        <div class="col-md-4">
+        <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="JasonD94" data-repo="HighSchool"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+
+      <div class="col-md-4">
+      <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="JasonD94" data-repo="College-Public"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+
+      <div class="col-md-4">
+      <!-- Center tags are here for better mobile display. -->
+        <center>
+          <div class="github-card" data-user="JasonD94" data-repo="repair"></div>
+          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        </center>
+      </div>
+
+      <!-- Span is inline and forces just the text to be highlighted! See:
+      http://stackoverflow.com/questions/14310154/how-do-i-set-background-color-of-text-only-in-css -->
+      <div class="center_text"><span class="highlight">
+      <a href="https://github.com/JasonD94">
+      Other work Jason has done can be found on his Github page here.</a>
+      </span></div>
+
     </div>
 
     <!-- 4th row - Contact info -->
     <div class = "row">
       <div class="col-md-2"></div>
+
       <div class="col-md-8">
         <div class="center_text"><span class="highlight">
 
@@ -158,22 +167,19 @@
 
         </span></div>
       </div>
+
       <div class="col-md-2"></div>
     </div>
 
     <!-- 5th row - PDF of resume -->
     <div class = "row">
 
-      <!-- PDF doesn't hide text this way! -->
-      <div class = "col-md-3"></div>
-      <div class = "col-md-6">
-      <embed src="img/resume.pdf" width="100%" height="1100px">
-        <noembed>Sorry, your browser does not support embedded PDF files.
-        <a href="resume.pdf">You can find an unofficial copy of Jason's resume here instead.
-        </a> <br/></noembed>
-      </embed>
+      <div class="content">
+        <div class="embed-container">
+            <iframe src="img/resume.pdf" border="0" scrolling="no" allowTransparency="true"></iframe>
+        </div>
       </div>
-      <div class = "col-md-3"></div>
+
     </div>
 
     <!-- 6th row - Latin words -->
