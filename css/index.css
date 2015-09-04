@@ -1,0 +1,131 @@
+/* Google Fonts to use. See the following page for more fonts:
+
+http://cssdeck.com/labs/cool-and-professional-google-web-fonts-for-use
+
+*/
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Advent+Pro);
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+  /*padding-bottom: 60px;*/
+  /* This is the same as the sky in background 4, to make the mobile display look better. */
+  background-color: #376BD0;
+  background-image: url('../img/background4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: "Advent Pro", Times, sans-serif;
+}
+
+body > .container {
+  padding: 65px 10px 0;
+}
+
+body > .row {
+  margin: 10px;
+}
+
+.easy_text {
+  color: white;
+  text-align: center;
+  background-color:black;
+  z-index:0;
+  opacity:0.5;
+}
+
+/* About / Header name */
+.about {
+  color: white;
+  text-align: center;
+}
+
+a:link {
+}
+
+
+
+h1.name {
+  color: white;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 750%;
+}
+
+.black {
+  background-color: black;
+}
+
+object {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Center text with no background. */
+.center_text_nohighlight {
+  color: black;
+  text-align: center;
+  font-size: 200%;
+}
+
+/* Center text */
+.center_text {
+  color: white;
+  text-align: center;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+}
+
+.center_text_small {
+  color: white;
+  text-align: center;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 120%;
+}
+
+/* Highlight just the text. */
+.highlight {
+  background-color: black;
+}
+
+/* Left align text */
+.left_align {
+  color: black;
+  text-align: left;
+  font-family: "Advent Pro";
+  font-size: 150%;
+}
+
+.content {
+  width: 70%;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+.embed-container {
+  height: 0;
+  width: 100%;
+  padding-bottom: 130%; /* play with this until right */
+  overflow: hidden;
+  position: relative;
+}
+
+.embed-container iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
