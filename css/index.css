@@ -100,10 +100,10 @@ object {
 
 /* Left align text */
 .left_align {
-  color: black;
+  color: white;
   text-align: left;
   font-family: "Advent Pro";
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .content {
