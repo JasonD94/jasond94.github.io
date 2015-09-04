@@ -1,3 +1,17 @@
+<!--
+    File: /~jason/index.html
+    91.461 Assignment: Creating Your First Web Page
+    Copyright 2015 Jason Downing
+    MIT Licensed - see http://opensource.org/licenses/MIT for details.
+    Anyone may freely use this code. Just don't sue me if it breaks.
+    Created: September 3rd, 2015.
+    Last Updated: September 4th, 2015 at 12:05PM.
+
+    Note: much of this design comes from a previce personal website that I built over the summer.
+    I've redesigned this one, using much of the same <head> but redoing nearly all of the body.
+    Some of the CSS is similar or reused, but much of it was changed.
+    I also added multiple pages and the menu bar at the top.
+-->
 <!DOCTYPE html>
 <html lang = "en-US">
 <head>
@@ -79,26 +93,40 @@
     </div>
 </div>
 
+<!-- Adding line breaks to make the display nicer. -->
+<br><br>
+
 <!-- Second row - JasonD94 Github card -->
 <div class = "row">
-    <div class="col-md-12">
-        <div class = "center_text_nohighlight">
-            <p style="text-decoration: underline; font-weight: bold;">Jason's Github Account: </p>
-        </div>
-
+ <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <span class = "center_text">
+            <p class = "highlight_text_underline">Jason's Github Account: </p>
+        </span>
+    <div class="col-md-4"></div>
         <!-- Display Github account -->
         <center>
             <div class="github-card" data-user="JasonD94"></div>
             <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </center>
     </div>
+    <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
+    <div class="col-md-4"></div>
 </div>
+
+<!-- Adding line breaks to make the display nicer. -->
+<br><br>
 
 <!-- 3rd row - more Github cards (Teaching / iSENSE-API / HTML-Apps repos) -->
 <div class = "row">
-    <div class = "center_text_nohighlight">
-        <p style="text-decoration: underline; font-weight: bold;">Repositories that Jason has contributed to: </p>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <span class = "center_text">
+            <p class = "highlight_text_underline">Repositories that Jason has contributed to: </p>
+        </span>
     </div>
+    <div class="col-md-3"></div>
 
     <!-- These are all separate columns and width set to 350px for the best looking arrangement for desktop views. -->
     <!-- Also, the "col-xs-12 col-md-6 col-lg-4" is to optimize display for different devices.
@@ -128,6 +156,9 @@
     </div>
 </div>
 
+<!-- Adding line breaks to make the display nicer. -->
+<br><br>
+
 <!-- 4th Row - more GitHub cards. (HighSchool / College-Public / repair fork) -->
 <div class = "row">
     <div class="col-xs-12 col-md-6 col-lg-4">
@@ -155,6 +186,9 @@
     </div>
 
 </div>
+
+<!-- Adding line breaks to make the display nicer. -->
+<br><br>
 
 <!-- FUTURE TO DO:
 
@@ -191,15 +225,15 @@ UML-Alerts
     </div>
 </div>
 
-</div>          <!-- This should be the end div of the main container. -->
+<!-- Adding line breaks to make the display nicer. -->
+<br><br>
 
 <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
-<div class = "container">
-    <div class = "center_text_small">
-        <p class = "text-muted"><span class = "highlight">
-            Jason Downing &copy; 2015. All rights reserved. Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
-        </span></p>
-    </div>
+<div class = "center_text_small">
+    <p class = "text-muted"><span class = "highlight">
+        Jason Downing &copy; 2015. All rights reserved. Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
+    </span></p>
 </div>
+</div>          <!-- This should be the end div of the main container. -->
 </body>
 </html>

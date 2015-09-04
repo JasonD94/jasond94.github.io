@@ -1,3 +1,14 @@
+/*
+    File: /~jason/css/index.css
+    91.461 Assignment: Creating Your First Web Page
+    Copyright 2015 Jason Downing
+    MIT Licensed - see http://opensource.org/licenses/MIT for details.
+    Anyone may freely use this code. Just don't sue me if it breaks.
+    Created: September 3rd, 2015.
+    Last Updated: September 4th, 2015 at 12:05PM.
+*/
+
+
 /* Google Fonts to use. See the following page for more fonts:
 
 http://cssdeck.com/labs/cool-and-professional-google-web-fonts-for-use
@@ -12,12 +23,21 @@ html {
 }
 
 body {
-  /*padding-bottom: 60px;*/
-  /* This is the same as the sky in background 4, to make the mobile display look better. */
-  background-color: #376BD0;
-  background-image: url('../img/background4.jpg');
+  /*
+    Background image was found at the following URL (I did not create nor own this image):
+    http://wallpaperput.com/wp-content/uploads/2014/10/space-cool-HD-wallpaper.jpg
+
+    The color was found with a Google search for "black color code", and this site was helpful for confirming:
+    http://www.rapidtables.com/web/color/RGB_Color.htm
+  */
+  background-color: #000000;
+  background-image: url('../img/space-wallpaper.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  /* This line came off of Stackoverflow. It works very well. See the first answer from Vashishtha Jogi.
+      https://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
+   */
+  background-size: cover;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -49,8 +69,6 @@ body > .row {
 
 a:link {
 }
-
-
 
 h1.name {
   color: white;
@@ -98,6 +116,23 @@ object {
   background-color: black;
 }
 
+/* Highlights and underlines / bolds the text */
+.highlight_text_underline {
+  background: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Used to center / highlight text */
+.highlight_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+}
+
 /* Left align text */
 .left_align {
   color: white;
@@ -117,7 +152,7 @@ object {
 .embed-container {
   height: 0;
   width: 100%;
-  padding-bottom: 130%; /* play with this until right */
+  padding-bottom: 130%;  /* play with this until right */
   overflow: hidden;
   position: relative;
 }
