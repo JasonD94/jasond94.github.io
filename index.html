@@ -50,9 +50,9 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
             <div id = "navbar" class = "navbar-collapse collapse">
                 <ul class = "nav navbar-nav navbar-right">
                     <li class = "active"><a href = "index.html">Home</a></li>
-                    <li><a href = "about.html">About</a></li>
-                    <li><a href = "contact.html">GitHub</a></li>
-                    <li><a href = "services.html">Future Projects</a></li>
+                    <li><a href = "#About">About</a></li>
+                    <li><a href = "#GitHub">GitHub</a></li>
+                    <li><a href = "#Projects">Future Projects</a></li>
                 </ul>
             </div>
             </div>
@@ -87,8 +87,17 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
 <!-- The main container -->
 <div class="container">
 
-<!-- First row - Large title, plus photo / About paragraph -->
+<!-- First row - Large title, plus photo / About paragraph
+Note: the id "About" is just for linking on the page using the Nav Bar.
+I found out how to do this correctly at this Stackoverflow page:
+https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
 <div class = "row">
+
+<!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
+page. It offsets by 50px which is enough.
+See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+-->
+<a class="anchor"  id="About"></a>
 
     <!-- Background image is in the body -->
     <h1 class="name">
@@ -113,7 +122,7 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
 
             <!-- Reminder: put <p> tags outside of the <span> tags for the highlighting to work. -->
             <p ><span class="highlight">
-            Jason Downing is an undergraduate Computer Science student at the University of Massachusetts, Lowell.
+            Jason Downing is Junior at the University of Massachusetts, Lowell and he studies Computer Science.
             Jason's hobbies include mountain biking, skiing, hiking, and coding.
             </span></p>
 
@@ -141,7 +150,7 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <span class = "center_text">
-            <p class = "highlight_text_underline">Jason's Github Account: </p>
+            <p class = "highlight_text_underline" id = "GitHub">Jason's Github Account: </p>
         </span>
     <div class="col-md-4"></div>
         <!-- Display Github account -->

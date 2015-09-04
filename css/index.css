@@ -53,6 +53,17 @@ body > .row {
   margin: 10px;
 }
 
+/* I found this one this stackoverflow page;  it is used to make the "#About" link in the Nav Bar go all the way to the top.
+I changed it to offset to 70px since that seems to be just enough for this fix to work.
+https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+a.anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+
 .easy_text {
   color: white;
   text-align: center;
