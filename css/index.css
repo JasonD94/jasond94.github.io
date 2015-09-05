@@ -7,21 +7,27 @@
     Created: September 3rd, 2015.
     Last Updated: September 4th, 2015 at 10PM.
 
-    Note: this is a CSS file for index.html and a few other HTML p
+    Note: this is a CSS file for index.html and a few other HTML files also use it.
 */
 
 
-/* Google Fonts to use. See the following page for more fonts:
-
+/*
+Google Fonts to use. See the following page for more fonts:
 http://cssdeck.com/labs/cool-and-professional-google-web-fonts-for-use
 
 */
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 @import url(//fonts.googleapis.com/css?family=Advent+Pro);
 
-html {
-    min-height: 100%;
+/* I found this one this stackoverflow page;  it is used to make the "#About" link in the Nav Bar go all the way to the top.
+I changed it to offset to 70px since that seems to be just enough for this fix to work.
+https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+a.anchor {
+    display: block;
     position: relative;
+    top: -70px;
+    visibility: hidden;
 }
 
 body {
@@ -36,6 +42,7 @@ body {
   background-image: url('../img/space-wallpaper.jpg');
   background-position: center;
   background-repeat: no-repeat;
+
   /* This line came off of Stackoverflow. It works very well. See the first answer from Vashishtha Jogi.
       https://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
    */
@@ -55,23 +62,22 @@ body > .row {
   margin: 10px;
 }
 
-/* I found this one this stackoverflow page;  it is used to make the "#About" link in the Nav Bar go all the way to the top.
-I changed it to offset to 70px since that seems to be just enough for this fix to work.
-https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
-*/
-a.anchor {
-    display: block;
-    position: relative;
-    top: -70px;
-    visibility: hidden;
-}
-
-.easy_text {
+h1.name {
   color: white;
   text-align: center;
-  background-color:black;
-  z-index:0;
-  opacity:0.5;
+  font-family: "Ubuntu";
+  font-size: 750%;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+object {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* About / Header name */
@@ -80,24 +86,13 @@ a.anchor {
   text-align: center;
 }
 
-a:link {
-}
-
-h1.name {
+/* Center text - with a nice font, Advent Pro, from Google. */
+.center_text {
   color: white;
   text-align: center;
-  font-family: "Ubuntu";
-  font-size: 750%;
-}
-
-.black {
-  background-color: black;
-}
-
-object {
-    width: 100%;
-    height: 100%;
-    border: 0;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
 }
 
 /* This is to replace <center> tags so the site will validate. I was using <center> tags to make images and
@@ -116,62 +111,13 @@ https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
   font-size: 200%;
 }
 
-/* Center text */
-.center_text {
-  color: white;
-  text-align: center;
-  font-family: "Advent Pro";
-  font-weight:900;
-  font-size: 200%;
-}
-
+/* This does a smaller version of center_text, same font and settings other than font-size. */
 .center_text_small {
   color: white;
   text-align: center;
   font-family: "Advent Pro";
   font-weight:900;
   font-size: 120%;
-}
-
-/* Highlight just the text. */
-.highlight {
-  background-color: black;
-}
-
-.highlight_text_underline_centered {
-  background-color: black;
-  color: white;
-  font-family: "Advent Pro";
-  font-weight:900;
-  font-size: 200%;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Highlights and underlines / bolds the text */
-.highlight_text_underline {
-  background: black;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Used to center / highlight text */
-.highlight_centered {
-  background-color: black;
-  color: white;
-  font-family: "Advent Pro";
-  font-weight:900;
-  font-size: 200%;
-  text-align: center;
-}
-
-/* Left align text */
-.left_align {
-  color: white;
-  text-align: left;
-  font-family: "Advent Pro";
-  font-size: 200%;
 }
 
 .content {
@@ -198,19 +144,57 @@ https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
   left: 0;
 }
 
+/* Highlight just the text. */
+.highlight {
+  background-color: black;
+}
+
+/* Used to center / highlight text */
+.highlight_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+}
+
+/* Highlights and underlines / bolds the text */
+.highlight_text_underline {
+  background: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.highlight_text_underline_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Left align text */
+.left_align {
+  color: white;
+  text-align: left;
+  font-family: "Advent Pro";
+  font-size: 200%;
+}
+
+/*********************************************************************************************************/
+
 /*
     This was a pretty cool piece of CSS, as it lets you make the dropdown menu open on hover.
     You can also still click on the dropdown title to make it stay open.
     I found it on Stackoverflow here:
     https://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
- */
 
-/* This line disables the dropdown menu on mobile, mostly smart phones. Need to test this out to make sure it works. */
-@media (min-width: 979px) {
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
-}
+    Note: everything below here is from that post.
+ */
 
 .sidebar-nav {
     padding: 9px 0;
