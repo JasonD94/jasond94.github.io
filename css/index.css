@@ -138,6 +138,17 @@ https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
   background-color: black;
 }
 
+.highlight_text_underline_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* Highlights and underlines / bolds the text */
 .highlight_text_underline {
   background: black;

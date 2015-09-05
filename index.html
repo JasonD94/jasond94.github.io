@@ -84,7 +84,8 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
                     <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
                     linking to other assignment HTML files rather than # links.
                     See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="assignment1.html">Assignment #1</a></li>
                             <li><a href="assignment2.html">Assignment #2</a></li>
@@ -120,13 +121,14 @@ https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstra
 
     <!-- These columns have been optimized for mobile, tablet and desktop views.
 
-    one note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text. This bug made it hard to read the
-    text on mobile and looked bad.
+    one note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
+    This bug made it hard to read the text on mobile and looked bad.
 
     Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
     appear on its own line on mobile.                -->
     <div class="col-xs-12 col-md-3 col-lg-2">
         <div class = "center_text_images">
+
             <!-- I thought it would be funny to link to a YouTube video whenever someone clicks on my image.
                     I embedded it in another HTML file with autoplay enabled.
                     This site showed me how  to do so:
@@ -134,6 +136,7 @@ https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstra
             <a href="youtube.html">
             <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px" alt="Image unavailable"/>
             </a>
+
         </div>
     </div>
 
@@ -142,7 +145,7 @@ https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstra
         <div class = "left_align">
 
             <!-- Reminder: put <p> tags outside of the <span> tags for the highlighting to work. -->
-            <p ><span class="highlight">
+            <p><span class="highlight">
             Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
             Jason's hobbies include
             <!-- I decided to link to pages / images in this part for fun. -->
@@ -196,9 +199,12 @@ https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstra
  <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
     <div class="col-md-4"></div>
     <div class="col-md-4">
-        <span class = "center_text">
-            <p class = "highlight_text_underline" id = "GitHub">Jason's Github Account: </p>
-        </span>
+
+        <!-- Similar to the #About link, this is for the #GitHub link. -->
+        <a class="anchor"  id="GitHub"></a>
+
+        <p class = "highlight_text_underline_centered">Jason's Github Account: </p>
+
     <div class="col-md-4"></div>
         <div class = "center_text_images">
             <!-- Display JasonD94 Github account -->
@@ -217,9 +223,10 @@ https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstra
 <div class = "row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <span class = "center_text">
-            <p class = "highlight_text_underline">Repositories that Jason has contributed to: </p>
-        </span>
+
+        <!-- Make sure this appears centered. -->
+        <p class = "highlight_text_underline_centered">Repositories that Jason has contributed to: </p>
+
     </div>
     <div class="col-md-3"></div>
 
