@@ -16,7 +16,10 @@
 <html lang = "en-US">
 <head>
 
-<!-- Bootstrap settings -->
+<!-- Configuration.
+The  "X-UA-Compatible" / "IE-edge" tag is for Internet Explorer, and it should make it display as compilable as it can.
+The viewport / width / scale line helps make the web page more responsive to mobile devices. Bootstrap is
+also being used for its grid system and for the Nav bar, which shows up after these  meta tags.-->
 <meta charset = "utf-8">
 <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
 <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
@@ -24,7 +27,8 @@
 <!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
 (Test this though!)
 
-Note: I originally wrote part of this for another webpage, and I reworked it for this webpage.
+Note: I originally wrote part of this for another web page, and I reworked it for this web page (notedly adding
+the dropdown menu for linking to additional assignments).
 You can find the original source code in this repository:
 
 https://github.com/JasonD94/repair
@@ -52,8 +56,11 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
                     <li class = "active"><a href = "index.html">Home</a></li>
                     <li><a href = "#About">About</a></li>
                     <li><a href = "#GitHub">GitHub</a></li>
-                    <!--  -->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Future Projects<span class="caret"></span></a>
+
+                    <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
+                    linking to other assignment HTML files rather than # links.
+                    See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="assignment1.html">Assignment 1</a></li>
                             <li><a href="assignment2.html">Assignment 2</a></li>
@@ -100,11 +107,11 @@ I found out how to do this correctly at this Stackoverflow page:
 https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
 <div class = "row">
 
-<!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
-page. It offsets by 50px which is enough.
-See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
--->
-<a class="anchor"  id="About"></a>
+    <!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
+    page. It offsets by 50px which is enough.
+    See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+    -->
+    <a class="anchor"  id="About"></a>
 
     <!-- Background image is in the body -->
     <h1 class="name">
@@ -129,15 +136,18 @@ See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-
 
             <!-- Reminder: put <p> tags outside of the <span> tags for the highlighting to work. -->
             <p ><span class="highlight">
-            Jason Downing is Junior at the University of Massachusetts, Lowell and he studies Computer Science.
+
+            <!-- Idea - make random things link to other HTML pages -->
+            Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
             Jason's hobbies include mountain biking, skiing, hiking, and coding.
             </span></p>
 
             <p><span class="highlight">
             In the past, Jason has worked at several retail stores, including Sears, Kohl's and Market Basket.
-            He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an internship at Fidelity Investments as
-            a technical intern during Summer 2015. Jason will also be working at Fidelity Investments again next summer as an intern working on
-            Android development.
+            He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an
+            internship at Fidelity Investments as a technical intern during Summer 2015. Jason spent Summer 2015 writing
+            COBOL, JCL and DB2 / SQL queries for Fidelity's Brokerage system, which runs on IBM Mainframes.
+            Jason will also be interning again at Fidelity Investments next summer on the Android Dev team.
             </span></p>
 
             <p><span class="highlight">
@@ -160,8 +170,8 @@ See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-
             <p class = "highlight_text_underline" id = "GitHub">Jason's Github Account: </p>
         </span>
     <div class="col-md-4"></div>
-        <!-- Display Github account -->
         <center>
+            <!-- Display JasonD94 Github account -->
             <div class="github-card" data-user="JasonD94"></div>
             <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </center>
@@ -185,7 +195,8 @@ See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-
 
     <!-- These are all separate columns and width set to 350px for the best looking arrangement for desktop views. -->
     <!-- Also, the "col-xs-12 col-md-6 col-lg-4" is to optimize display for different devices.
-            This should hopefully prevent the Github cards from overlapping. -->
+            This should hopefully prevent the Github cards from overlapping. It should force them to go onto
+            separate lines on mobile smart phones, onto two per line on tablets and onto 3 per line on desktops. -->
     <div class="col-xs-12 col-md-6 col-lg-4">
         <!-- Center tags are here for better mobile display. -->
         <center>
