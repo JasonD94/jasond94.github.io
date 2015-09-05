@@ -7,10 +7,8 @@
     Created: September 3rd, 2015.
     Last Updated: September 4th, 2015 at 10PM.
 
-    Note: much of this design comes from a previous personal website that I built over the summer.
-    I've redesigned this one, using much of the same <head> but redoing nearly all of the body.
-    Some of the CSS is similar or reused, but much of it was changed.
-    I also added multiple pages and the menu bar at the top.
+    Note: this is just a simple document to put as a place holder for Assignment 2.
+    Really index.html is the file for assignment 2.
 -->
 <!DOCTYPE html>
 <html lang = "en-US">
@@ -20,52 +18,6 @@
 <meta charset = "utf-8">
 <meta http-equiv = "X-UA-Compatible" content = "IE-edge">
 <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
-
-<!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
-(Test this though!)
-
-Note: I originally wrote part of this for another webpage, and I reworked it for this webpage.
-You can find the original source code in this repository:
-
-https://github.com/JasonD94/repair
-https://github.com/JasonD94/repair/blob/gh-pages/index.html
- -->
-<div class = "navbar-wrapper">
-    <div class = "container">
-        <nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation">
-            <div class = "container-fluid">
-
-            <!-- Brand and toggle get grouped together for better mobile display. -->
-            <div class = "navbar-header">
-                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
-                    <span class = "sr-only">Toggle navigation. </span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                </button>
-                <a class = "navbar-brand" href = "index.html">Assignment #1</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling. -->
-            <div id = "navbar" class = "navbar-collapse collapse">
-                <ul class = "nav navbar-nav navbar-right">
-                    <li class = "active"><a href = "index.html">Home</a></li>
-                    <li><a href = "#About"></a></li>
-                    <li><a href = "#GitHub"></a></li>
-                    <!--  -->
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Future Projects<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="assignment1.html">Assignment 1</a></li>
-                            <li><a href="assignment2.html">Assignment 2</a></li>
-                            <li><a href="assignment3.html">Assignment 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-    </div>
-</div>
 
 <!-- Custom Title Bar -->
 <title>Jason Downing - Assignment #2</title>
@@ -91,25 +43,66 @@ https://github.com/JasonD94/repair/blob/gh-pages/index.html
 </head>
 <body>
 
+<!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
+(Test this though!)
+
+Note: I originally wrote part of this for another webpage, and I reworked it for this webpage.
+You can find the original source code in this repository:
+
+https://github.com/JasonD94/repair
+https://github.com/JasonD94/repair/blob/gh-pages/index.html
+ -->
+<div class = "navbar-wrapper">
+    <div class = "container">
+        <nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation">
+            <div class = "container-fluid">
+
+            <!-- Brand and toggle get grouped together for better mobile display. -->
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
+                    <span class = "sr-only">Toggle navigation. </span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                <a class = "navbar-brand" href = "index.html">Jason Downing</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling. -->
+            <div id = "navbar" class = "navbar-collapse collapse">
+                <ul class = "nav navbar-nav navbar-right">
+                    <li class = "active"><a href = "index.html">Home</a></li>
+
+                    <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
+                    linking to other assignment HTML files rather than # links.
+                    See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Future Projects<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="assignment1.html">Assignment #1</a></li>
+                            <li><a href="assignment2.html">Assignment #2</a></li>
+                            <li><a href="assignment3.html">Assignment #3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
 <!-- The main container -->
 <div class="container">
 
-<!-- First row - Large title, plus photo / About paragraph
-Note: the id "About" is just for linking on the page using the Nav Bar.
-I found out how to do this correctly at this Stackoverflow page:
-https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
+<!-- 1st row, for displaying the a basic "this is assignment 2" text. -->
 <div class = "row">
-
-<!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
-page. It offsets by 50px which is enough.
-See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
--->
-<a class="anchor"  id="About"></a>
 
     <!-- Background image is in the body -->
     <h1 class="name">
         <span class="highlight">Assignment #2</span>
     </h1>
+
+    <!-- Add some spacing -->
+    <br/><br/>
 
     <!-- These columns have been optimized for mobile, tablet and desktop views.
 
@@ -119,7 +112,9 @@ See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-
     Also, the center tag is there to improve mobile display as well. (centered image looks better IMO)   -->
     <div class="col-xs-12 col-md-12 col-lg-12">
         <center>
-            <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px"/>
+            <!-- Added a different image here. Link to this image:
+             http://pre12.deviantart.net/adc8/th/pre/i/2013/245/4/4/matrix_ubuntu_by_crniorao-d6kqm82.jpg   -->
+            <img class="img-square" src="img/matrix.png"/>
         </center>
     </div>
 
@@ -127,9 +122,16 @@ See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-
     <div class="col-xs-12 col-md-12 col-lg-12">
         <center>
 
+            <!-- Add some spacing -->
+            <br/><br/>
+
             <!-- Reminder: put <p> tags outside of the <span> tags for the highlighting to work. -->
-            <p ><span class="highlight">
+            <p><span class="highlight_centered">
                 Assignment #2 was to create a basic HTML file.
+            </span></p>
+
+            <p><span class="highlight_centered">
+            (That's what index.html, index.css and the other random HTML/fonts/images are.)
             </span></p>
 
         </center>
