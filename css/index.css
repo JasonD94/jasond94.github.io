@@ -100,6 +100,15 @@ object {
     border: 0;
 }
 
+/* This is to replace <center> tags so the site will validate. I was using <center> tags to make images and
+text appear centered on mobile devices, since the bootstrap grids I setup for mobile make things appear on separate lines.
+This post explained how to do so:
+https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
+.center_text_images {
+  margin: auto;
+  text-align: center;
+}
+
 /* Center text with no background. */
 .center_text_nohighlight {
   color: black;
