@@ -1,0 +1,248 @@
+/*
+    File: /~jason/css/youtube.css
+    91.461 Assignment: Creating Your First Web Page
+    Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
+    Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
+    MIT Licensed - see http://opensource.org/licenses/MIT for details.
+    Anyone may freely use this code. Just don't sue me if it breaks stuff.
+    Created: September 3rd, 2015.
+    Last Updated: September 9th, at 4PM.
+
+    This file is almost a copy of of index.css, other than a change to the body so that the scroll bar doesn't show up.
+
+    All CSS in this file is organized in alphabetical order - as much as possible.
+*/
+
+
+/*
+Google Fonts to use. See the following page for more fonts:
+http://cssdeck.com/labs/cool-and-professional-google-web-fonts-for-use
+
+*/
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Advent+Pro);
+
+/* I found this one this stackoverflow page;  it is used to make the "#About" link in the Nav Bar go all the way to the top.
+I changed it to offset to 70px since that seems to be just enough for this fix to work.
+https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+a.anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+
+body {
+  /*
+    Background image was found at the following URL (I did not create nor own this image):
+    http://wallpaperput.com/wp-content/uploads/2014/10/space-cool-HD-wallpaper.jpg
+
+    The color was found with a Google search for "black color code", and this site was helpful for confirming:
+    http://www.rapidtables.com/web/color/RGB_Color.htm
+  */
+  background-color: #000000;
+  background-image: url('../img/space-wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* This line came off of Stackoverflow. It works very well. See the first answer from Vashishtha Jogi.
+      https://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
+   */
+  background-size: cover;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: "Advent Pro", Times, sans-serif;
+
+  /* This is for the Youtube video page, so that the scrollbar doesn't show up in Chrome.
+      An interesting Stackoverflow post had a JS Fiddle that demonstrates this:
+      https://stackoverflow.com/questions/20182409/how-to-make-a-youtube-embedded-video-a-full-page-width-one
+  */
+  overflow: hidden;
+}
+
+body > .container {
+  padding: 65px 10px 0;
+}
+
+body > .row {
+  margin: 10px;
+}
+
+h1.name {
+  color: white;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 750%;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+object {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* About / Header name */
+.about {
+  color: white;
+  text-align: center;
+}
+
+/* Center text - with a nice font, Advent Pro, from Google. */
+.center_text {
+  color: white;
+  text-align: center;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+}
+
+/* This is to replace <center> tags so the site will validate. I was using <center> tags to make images and
+text appear centered on mobile devices, since the bootstrap grids I setup for mobile make things appear on separate lines.
+This post explained how to do so:
+https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
+.center_text_images {
+  margin: auto;
+  text-align: center;
+}
+
+/* Center text with no background. */
+.center_text_nohighlight {
+  color: black;
+  text-align: center;
+  font-size: 200%;
+}
+
+/* This does a smaller version of center_text, same font and settings other than font-size. */
+.center_text_small {
+  color: white;
+  text-align: center;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 120%;
+}
+
+.content {
+  width: 70%;
+  margin: 0px auto;
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+.embed-container {
+  height: 0;
+  width: 100%;
+  padding-bottom: 130%;  /* play with this until right */
+  overflow: hidden;
+  position: relative;
+}
+
+.embed-container iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Highlight just the text. */
+.highlight {
+  background-color: black;
+}
+
+/* Used to center / highlight text */
+.highlight_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+}
+
+/* Highlights and underlines / bolds the text */
+.highlight_text_underline {
+  background: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.highlight_text_underline_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Left align text */
+.left_align {
+  color: white;
+  text-align: left;
+  font-family: "Advent Pro";
+  font-size: 200%;
+}
+
+/*********************************************************************************************************/
+
+/*
+    This was a pretty cool piece of CSS, as it lets you make the dropdown menu open on hover.
+    You can also still click on the dropdown title to make it stay open.
+    I found it on Stackoverflow here:
+    https://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
+
+    Note: everything below here is from that post.
+ */
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
