@@ -1,342 +1,342 @@
 <!DOCTYPE html>
 <html lang = "en-US">
 <head>
+    <meta charset = "utf-8">
 
-<meta charset = "utf-8">
+    <!--
+        File: /~jason/index.html
+        91.461 Assignment: Creating Your First Web Page
+        Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
+        Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
+        MIT Licensed - see http://opensource.org/licenses/MIT for details.
+        Anyone may freely use this code. Just don't sue me if it breaks stuff.
+        Created: September 3rd, 2015.
+        Last Updated: September 5th, at 4PM.
 
-<!--
-    File: /~jason/index.html
-    91.461 Assignment: Creating Your First Web Page
-    Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
-    Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
-    MIT Licensed - see http://opensource.org/licenses/MIT for details.
-    Anyone may freely use this code. Just don't sue me if it breaks stuff.
-    Created: September 3rd, 2015.
-    Last Updated: September 5th, at 4PM.
+        Note: much of this design comes from a previous personal website that I built over the summer.
+        I've redesigned this one, using much of the same <head> but redoing nearly all of the body.
+        Some of the CSS is similar or reused, but most of it was changed.
+        I also added multiple pages and the navigation bar at the top. The navigation bar has a dropdown menu titled "Index"
+        that will contain links to future projects and assignments.
+    -->
 
-    Note: much of this design comes from a previous personal website that I built over the summer.
-    I've redesigned this one, using much of the same <head> but redoing nearly all of the body.
-    Some of the CSS is similar or reused, but most of it was changed.
-    I also added multiple pages and the navigation bar at the top. The navigation bar has a dropdown menu titled "Index"
-    that will contain links to future projects and assignments.
--->
+    <!-- Configuration.
+    The viewport / width / scale line helps make the web page more responsive to mobile devices.
+    Bootstrap is also being used for its grid system and for the Nav bar. -->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-<!-- Configuration.
-The viewport / width / scale line helps make the web page more responsive to mobile devices.
-Bootstrap is also being used for its grid system and for the Nav bar. -->
-<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+    <!-- Custom Title Bar -->
+    <title>Jason Downing - Home Page</title>
 
-<!-- Custom Title Bar -->
-<title>Jason Downing - Home Page</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-<!-- Latest compiled and minified CSS -->
-<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-<!-- Optional theme -->
-<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- CSS file to override stuff -->
+    <link rel = "stylesheet" href = "css/index.css">
 
-<!-- CSS file to override stuff -->
-<link rel = "stylesheet" href = "css/index.css">
-
-<!-- Custom favicon -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+    <!-- Custom favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
-<!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
-(Test this though!)
+    <!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
+    (Test this though!)
 
-Note: I originally wrote part of this for another web page, and I reworked it for this web page (notedly adding
-the dropdown menu for linking to additional assignments).
-You can find the original source code in this repository:
+    Note: I originally wrote part of this for another web page, and I reworked it for this web page (notedly adding
+    the dropdown menu for linking to additional assignments).
+    You can find the original source code in this repository:
 
-https://github.com/JasonD94/repair
-https://github.com/JasonD94/repair/blob/gh-pages/index.html
- -->
-<div class = "navbar-wrapper">
-    <div class = "container">
-        <nav class = "navbar navbar-inverse navbar-fixed-top">
-            <div class = "container-fluid">
+    https://github.com/JasonD94/repair
+    https://github.com/JasonD94/repair/blob/gh-pages/index.html
+     -->
+    <div class = "navbar-wrapper">
+        <div class = "container">
+            <nav class = "navbar navbar-inverse navbar-fixed-top">
+                <div class = "container-fluid">
 
-            <!-- Brand and toggle get grouped together for better mobile display. -->
-            <div class = "navbar-header">
-                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
-                    <span class = "sr-only">Toggle navigation. </span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                </button>
-                <a class = "navbar-brand" href = "/">Jason Downing</a>
+                <!-- Brand and toggle get grouped together for better mobile display. -->
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
+                        <span class = "sr-only">Toggle navigation. </span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                    <a class = "navbar-brand" href = "/">Jason Downing</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling. -->
+                <div id = "navbar" class = "navbar-collapse collapse">
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li class = "active"><a href = "/">Home</a></li>
+                        <li><a href = "#About">About</a></li>
+                        <li><a href = "#GitHub">GitHub</a></li>
+
+                        <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
+                        linking to other assignment HTML files rather than # links.
+                        See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="assignment1.html">Assignment #1</a></li>
+                                <li><a href="assignment2.html">Assignment #2</a></li>
+                                <li><a href="assignment3.html">Assignment #3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- The main container -->
+    <div class="container">
+
+        <!-- First row - Large title, plus photo / About paragraph
+        Note: the id "About" is just for linking on the page using the Nav Bar.
+        I found out how to do this correctly at this Stackoverflow page:
+        https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
+        <div class = "row">
+
+            <!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
+            page. It offsets by 50px which is enough.
+            See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+            -->
+            <a class="anchor"  id="About"></a>
+
+            <!-- Background image is in the body -->
+            <h1 class="name">
+                <span class="highlight">Jason Downing</span>
+            </h1>
+
+            <!-- These columns have been optimized for mobile, tablet and desktop views.
+
+            one note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
+            This bug made it hard to read the text on mobile and looked bad.
+
+            Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
+            appear on its own line on mobile.                -->
+            <div class="col-xs-12 col-md-3 col-lg-2">
+                <div class = "center_text_images">
+
+                    <!-- I thought it would be funny to link to a YouTube video whenever someone clicks on my image.
+                            I embedded it in another HTML file with autoplay enabled.
+                            This site showed me how  to do so:
+                            http://www.computerhope.com/issues/ch000059.htm                -->
+                    <a href="youtube.html">
+                    <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px" alt="Jason Downing"/>
+                    </a>
+
+                </div>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling. -->
-            <div id = "navbar" class = "navbar-collapse collapse">
-                <ul class = "nav navbar-nav navbar-right">
-                    <li class = "active"><a href = "/">Home</a></li>
-                    <li><a href = "#About">About</a></li>
-                    <li><a href = "#GitHub">GitHub</a></li>
+            <!-- About info -->
+            <div class="col-xs-12 col-md-9 col-lg-10">
+                <div class = "left_align">
 
-                    <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
-                    linking to other assignment HTML files rather than # links.
-                    See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="assignment1.html">Assignment #1</a></li>
-                            <li><a href="assignment2.html">Assignment #2</a></li>
-                            <li><a href="assignment3.html">Assignment #3</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                    <!-- Start of the about paragraphs. -->
+                    <div class="highlight">
+                        Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
+                        Jason's hobbies include
+                        <!-- I decided to link to pages / images in this part for fun. -->
+                        <a href="img/bike.jpg">mountain biking,</a>
+                        <a href="img/ski.jpg">skiing,</a>
+                        <!-- Found at the following URL:
+                            http://sapphirenation.net/wp-content/uploads/2015/07/steam-os-planet-steam-logo.jpg
+                         -->
+                        <a href="img/steam.jpg">PC gaming</a>
+                        and
+                        <!-- Found at the following URL:
+                            https://steve.files.wordpress.com/2006/03/Matrix%20tut%202.jpg
+                         -->
+                        <a href="img/code.jpg">coding.</a>
+                    </div>
+
+                    <div class="highlight">
+                        In the past, Jason has worked at several retail stores, including Sears, Kohl's and Market Basket.
+                        He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an
+                        internship at Fidelity Investments as a technical intern during Summer 2015. Jason spent Summer 2015 writing
+
+                        <!-- These are links to Wikipedia because people tend to not know anything about mainframes.
+                        (and I didn't either before this summer.) -->
+                        <a href="https://en.wikipedia.org/wiki/COBOL">COBOL,</a>
+                        <a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a>
+                        and
+                        <a href="https://en.wikipedia.org/wiki/IBM_DB2">DB2</a>
+                        /
+                        <a href="https://en.wikipedia.org/wiki/SQL">SQL queries</a>
+                        for Fidelity's Brokerage system, which runs on
+                        <!-- Link to a interesting article on IBM's z13 system. -->
+                        <a href="http://www.wired.com/2015/01/z13-mainframe/">IBM Mainframes.</a>
+                        Jason will also be interning again at Fidelity Investments next summer on the Android Dev team.
+                    </div>
+
+                    <div class="highlight">
+                        Jason is active on
+                        <a href="https://github.com/JasonD94">Github</a>
+                        and has various projects for school, as well as side projects with friends and on his own.
+                    </div>
+
+                </div>
             </div>
-            </div>
-        </nav>
-    </div>
-</div>
-
-<!-- The main container -->
-<div class="container">
-
-<!-- First row - Large title, plus photo / About paragraph
-Note: the id "About" is just for linking on the page using the Nav Bar.
-I found out how to do this correctly at this Stackoverflow page:
-https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
-<div class = "row">
-
-    <!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
-    page. It offsets by 50px which is enough.
-    See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
-    -->
-    <a class="anchor"  id="About"></a>
-
-    <!-- Background image is in the body -->
-    <h1 class="name">
-        <span class="highlight">Jason Downing</span>
-    </h1>
-
-    <!-- These columns have been optimized for mobile, tablet and desktop views.
-
-    one note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
-    This bug made it hard to read the text on mobile and looked bad.
-
-    Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
-    appear on its own line on mobile.                -->
-    <div class="col-xs-12 col-md-3 col-lg-2">
-        <div class = "center_text_images">
-
-            <!-- I thought it would be funny to link to a YouTube video whenever someone clicks on my image.
-                    I embedded it in another HTML file with autoplay enabled.
-                    This site showed me how  to do so:
-                    http://www.computerhope.com/issues/ch000059.htm                -->
-            <a href="youtube.html">
-            <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px" alt="Jason Downing"/>
-            </a>
-
         </div>
-    </div>
 
-    <!-- About info -->
-    <div class="col-xs-12 col-md-9 col-lg-10">
-        <div class = "left_align">
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
 
-            <!-- Start of the about paragraphs. -->
-            <div class="highlight">
-                Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
-                Jason's hobbies include
-                <!-- I decided to link to pages / images in this part for fun. -->
-                <a href="img/bike.jpg">mountain biking,</a>
-                <a href="img/ski.jpg">skiing,</a>
-                <!-- Found at the following URL:
-                    http://sapphirenation.net/wp-content/uploads/2015/07/steam-os-planet-steam-logo.jpg
-                 -->
-                <a href="img/steam.jpg">PC gaming</a>
-                and
-                <!-- Found at the following URL:
-                    https://steve.files.wordpress.com/2006/03/Matrix%20tut%202.jpg
-                 -->
-                <a href="img/code.jpg">coding.</a>
+        <!-- Second row - JasonD94 Github card -->
+        <div class = "row">
+         <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <!-- Similar to the #About link, this is for the #GitHub link. -->
+                <a class="anchor"  id="GitHub"></a>
+
+                <p class = "highlight_text_underline_centered">Jason's Github Account: </p>
+
+            <div class="col-md-4"></div>
+                <div class = "center_text_images">
+                    <!-- Display JasonD94 Github account -->
+                    <div class="github-card" data-user="JasonD94"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
             </div>
+            <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
+            <div class="col-md-4"></div>
+        </div>
 
-            <div class="highlight">
-                In the past, Jason has worked at several retail stores, including Sears, Kohl's and Market Basket.
-                He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an
-                internship at Fidelity Investments as a technical intern during Summer 2015. Jason spent Summer 2015 writing
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
 
-                <!-- These are links to Wikipedia because people tend to not know anything about mainframes.
-                (and I didn't either before this summer.) -->
-                <a href="https://en.wikipedia.org/wiki/COBOL">COBOL,</a>
-                <a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a>
-                and
-                <a href="https://en.wikipedia.org/wiki/IBM_DB2">DB2</a>
-                /
-                <a href="https://en.wikipedia.org/wiki/SQL">SQL queries</a>
-                for Fidelity's Brokerage system, which runs on
-                <!-- Link to a interesting article on IBM's z13 system. -->
-                <a href="http://www.wired.com/2015/01/z13-mainframe/">IBM Mainframes.</a>
-                Jason will also be interning again at Fidelity Investments next summer on the Android Dev team.
+        <!-- 3rd row - more Github cards (Teaching / iSENSE-API / HTML-Apps repos) -->
+        <div class = "row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+
+                <!-- Make sure this appears centered. -->
+                <p class = "highlight_text_underline_centered">Repositories that Jason has contributed to: </p>
+
+            </div>
+            <div class="col-md-3"></div>
+
+            <!-- These are all separate columns and width set to 350px for the best looking arrangement for desktop views. -->
+            <!-- Also, the "col-xs-12 col-md-6 col-lg-4" is to optimize display for different devices.
+                    This should hopefully prevent the Github cards from overlapping. It should force them to go onto
+                    separate lines on mobile smart phones, onto two per line on tablets and onto 3 per line on desktops. -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="iSENSEDev" data-repo="HTML-Apps"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
             </div>
 
-            <div class="highlight">
-                Jason is active on
-                <a href="https://github.com/JasonD94">Github</a>
-                and has various projects for school, as well as side projects with friends and on his own.
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="iSENSEDev" data-repo="iSENSE-API"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="iSENSEDev" data-repo="Teaching"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
+
+        <!-- 4th Row - more GitHub cards. (HighSchool / College-Public / UML-Alerts) -->
+        <div class = "row">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="HighSchool"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="College-Public"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="UML-Alerts"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
             </div>
 
         </div>
-    </div>
-</div>
 
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
 
-<!-- Second row - JasonD94 Github card -->
-<div class = "row">
- <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+        <!-- 5th row - a few more GitHub cards. (repair, Website, Ubuntu-Settings  -->
+        <div class = "row">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="repair"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
 
-        <!-- Similar to the #About link, this is for the #GitHub link. -->
-        <a class="anchor"  id="GitHub"></a>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="Website"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
 
-        <p class = "highlight_text_underline_centered">Jason's Github Account: </p>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class = "center_text_images">
+                    <div class="github-card" data-user="JasonD94" data-repo="Ubuntu-Settings"></div>
+                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+            </div>
 
-    <div class="col-md-4"></div>
-        <div class = "center_text_images">
-            <!-- Display JasonD94 Github account -->
-            <div class="github-card" data-user="JasonD94"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
         </div>
-    </div>
-    <!-- This is to force the text into the middle and prevent highlighting the whole column! -->
-    <div class="col-md-4"></div>
-</div>
 
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
 
-<!-- 3rd row - more Github cards (Teaching / iSENSE-API / HTML-Apps repos) -->
-<div class = "row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-
-        <!-- Make sure this appears centered. -->
-        <p class = "highlight_text_underline_centered">Repositories that Jason has contributed to: </p>
-
-    </div>
-    <div class="col-md-3"></div>
-
-    <!-- These are all separate columns and width set to 350px for the best looking arrangement for desktop views. -->
-    <!-- Also, the "col-xs-12 col-md-6 col-lg-4" is to optimize display for different devices.
-            This should hopefully prevent the Github cards from overlapping. It should force them to go onto
-            separate lines on mobile smart phones, onto two per line on tablets and onto 3 per line on desktops. -->
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="iSENSEDev" data-repo="HTML-Apps"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        <!-- 6th row - Contact info -->
+        <div class = "row">
+            <div class="col-md-12">
+                <!-- Removed extra div with class "center" - using just a span instead for easier readability. -->
+                <div class="highlight_centered ">
+                    You may contact Jason at either: <a href = "mailto:jdowning@cs.uml.edu">jdowning@cs.uml.edu</a>
+                    or <a href = "mailto:jason_downing@student.uml.edu">jason_downing@student.uml.edu</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="iSENSEDev" data-repo="iSENSE-API"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
+
+        <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
+        <div class = "center_text_small">
+            <p class = "text-muted"><span class = "highlight">
+                Jason Downing &copy; 2015. All rights reserved.
+                Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
+            </span></p>
         </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="iSENSEDev" data-repo="Teaching"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-</div>
-
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
-
-<!-- 4th Row - more GitHub cards. (HighSchool / College-Public / UML-Alerts) -->
-<div class = "row">
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="HighSchool"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="College-Public"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="UML-Alerts"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-</div>
-
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
-
-<!-- 5th row - a few more GitHub cards. (repair, Website, Ubuntu-Settings  -->
-<div class = "row">
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="repair"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="Website"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class = "center_text_images">
-            <div class="github-card" data-user="JasonD94" data-repo="Ubuntu-Settings"></div>
-            <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-        </div>
-    </div>
-
-</div>
-
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
-
-<!-- 6th row - Contact info -->
-<div class = "row">
-    <div class="col-md-12">
-        <!-- Removed extra div with class "center" - using just a span instead for easier readability. -->
-        <div class="highlight_centered ">
-            You may contact Jason at either: <a href = "mailto:jdowning@cs.uml.edu">jdowning@cs.uml.edu</a>
-            or <a href = "mailto:jason_downing@student.uml.edu">jason_downing@student.uml.edu</a>
-        </div>
-    </div>
-</div>
-
-<!-- Adding line breaks to make the display nicer. -->
-<br><br>
-
-<!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
-<div class = "center_text_small">
-    <p class = "text-muted"><span class = "highlight">
-        Jason Downing &copy; 2015. All rights reserved. Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
-    </span></p>
-</div>
-</div>          <!-- This should be the end div of the main container. -->
+    </div>          <!-- This should be the end div of the main container. -->
 </body>
 </html>

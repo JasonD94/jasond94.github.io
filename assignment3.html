@@ -1,125 +1,128 @@
-<!--
-    File: /~jason/assignment3.html
-    91.461 Assignment: Creating Your First Web Page
-    Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
-    Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
-    MIT Licensed - see http://opensource.org/licenses/MIT for details.
-    Anyone may freely use this code. Just don't sue me if it breaks stuff.
-    Created: September 3rd, 2015.
-    Last Updated: September 5th, at 4PM.
-
-    Note:  this is a place holder for assignment 3.
-    Additional assignments can be added in the future to index.html.
--->
 <!DOCTYPE html>
 <html lang = "en-US">
 <head>
+    <meta charset = "utf-8">
 
-<!-- Configuration -->
-<meta charset = "utf-8">
-<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+    <!--
+        File: /~jason/assignment3.html
+        91.461 Assignment: Creating Your First Web Page
+        Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
+        Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
+        MIT Licensed - see http://opensource.org/licenses/MIT for details.
+        Anyone may freely use this code. Just don't sue me if it breaks stuff.
+        Created: September 3rd, 2015.
+        Last Updated: September 5th, at 4PM.
 
-<!-- Custom Title Bar -->
-<title>Jason Downing - Assignment #3</title>
+        Note:  this is a place holder for assignment 3.
+        Additional assignments can be added in the future to index.html.
+    -->
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Configuration -->
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-<!-- Latest compiled and minified CSS -->
-<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Custom Title Bar -->
+    <title>Jason Downing - Assignment #3</title>
 
-<!-- Optional theme -->
-<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-<!-- CSS file to override stuff -->
-<link rel = "stylesheet" href = "css/index.css">
+    <!-- Optional theme -->
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-<!-- Custom favicon -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- CSS file to override stuff -->
+    <link rel = "stylesheet" href = "css/index.css">
+
+    <!-- Custom favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 </head>
+
 <body>
 
-<!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
-(Test this though!)
+    <!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
+    (Test this though!)
 
-Note: I originally wrote part of this for another web page, and I reworked it for this web page.
-You can find the original source code in this repository:
+    Note: I originally wrote part of this for another web page, and I reworked it for this web page.
+    You can find the original source code in this repository:
 
-https://github.com/JasonD94/repair
-https://github.com/JasonD94/repair/blob/gh-pages/index.html
- -->
-<div class = "navbar-wrapper">
-    <div class = "container">
-        <nav class = "navbar navbar-inverse navbar-fixed-top">
-            <div class = "container-fluid">
+    https://github.com/JasonD94/repair
+    https://github.com/JasonD94/repair/blob/gh-pages/index.html
+     -->
+    <div class = "navbar-wrapper">
+        <div class = "container">
+            <nav class = "navbar navbar-inverse navbar-fixed-top">
+                <div class = "container-fluid">
 
-            <!-- Brand and toggle get grouped together for better mobile display. -->
-            <div class = "navbar-header">
-                <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
-                    <span class = "sr-only">Toggle navigation. </span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                </button>
-                <a class = "navbar-brand" href = "/">Jason Downing</a>
-            </div>
+                <!-- Brand and toggle get grouped together for better mobile display. -->
+                <div class = "navbar-header">
+                    <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
+                        <span class = "sr-only">Toggle navigation. </span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                        <span class = "icon-bar"></span>
+                    </button>
+                    <a class = "navbar-brand" href = "/">Jason Downing</a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling. -->
-            <div id = "navbar" class = "navbar-collapse collapse">
-                <ul class = "nav navbar-nav navbar-right">
-                    <li class = "active"><a href = "/">Home</a></li>
-                    <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
-                    linking to other assignment HTML files rather than # links.
-                    See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="assignment1.html">Assignment #1</a></li>
-                            <li><a href="assignment2.html">Assignment #2</a></li>
-                            <li><a href="assignment3.html">Assignment #3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-    </div>
-</div>
-
-<!-- The main container -->
-<div class="container">
-
-    <!-- First row -->
-    <div class = "row">
-
-        <h1 class="name">
-            <span class="highlight">Assignment #3</span>
-        </h1>
-
-        <!-- spaces for better look -->
-        <br/>
-
-        <!-- Place holder for assignment 3. -->
-        <div class="col-xs-12 col-md-12 col-lg-12">
-            <div class="highlight_centered">
-                This page is a place holder for assignment #3.
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling. -->
+                <div id = "navbar" class = "navbar-collapse collapse">
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li class = "active"><a href = "/">Home</a></li>
+                        <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
+                        linking to other assignment HTML files rather than # links.
+                        See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="assignment1.html">Assignment #1</a></li>
+                                <li><a href="assignment2.html">Assignment #2</a></li>
+                                <li><a href="assignment3.html">Assignment #3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
         </div>
     </div>
 
-    <!-- Adding line breaks to make the display nicer. -->
-    <br><br>
+    <!-- The main container -->
+    <div class="container">
 
-    <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this web page. -->
-    <div class = "center_text_small">
-        <p class = "text-muted"><span class = "highlight">
-            Jason Downing &copy; 2015. All rights reserved. Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
-        </span></p>
-    </div>
-</div>          <!-- This should be the end div of the main container. -->
+        <!-- First row -->
+        <div class = "row">
+
+            <h1 class="name">
+                <span class="highlight">Assignment #3</span>
+            </h1>
+
+            <!-- spaces for better look -->
+            <br/>
+
+            <!-- Place holder for assignment 3. -->
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <div class="highlight_centered">
+                    This page is a place holder for assignment #3.
+                </div>
+            </div>
+        </div>
+
+        <!-- Adding line breaks to make the display nicer. -->
+        <br><br>
+
+        <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this web page. -->
+        <div class = "center_text_small">
+            <p class = "text-muted"><span class = "highlight">
+                Jason Downing &copy; 2015. All rights reserved.
+                Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
+            </span></p>
+        </div>
+    </div>          <!-- This should be the end div of the main container. -->
 </body>
 </html>
