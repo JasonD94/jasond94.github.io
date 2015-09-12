@@ -28,17 +28,11 @@
     <!-- Custom Title Bar -->
     <title>Jason Downing - Home Page</title>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
     <!-- Latest compiled and minified CSS -->
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
     <!-- CSS file to override stuff -->
     <link rel = "stylesheet" href = "css/index.css">
@@ -338,5 +332,20 @@
             </span></p>
         </div>
     </div>          <!-- This should be the end div of the main container. -->
+
+    <!--
+            These are moved to the bottom of the <body> tag to increase website load time.
+            This stackoverflow post is helpful for this issue:
+            https://stackoverflow.com/questions/6625773/where-should-i-put-the-css-and-javascript-code-in-an-html-webpage
+
+            See Yahoo's best practice rules as well:
+            https://developer.yahoo.com/performance/rules.html#css_top=
+     -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 </body>
 </html>
