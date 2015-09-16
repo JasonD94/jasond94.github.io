@@ -12,19 +12,12 @@
 
     <!--
         File: /~jason/index.html
-        91.461 Assignment: Creating Your First Web Page
-        Jason Downing - student at UMass Lowell in 91.461 GUI Programming I
+        Jason Downing - student at UMass Lowell
         Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
         MIT Licensed - see http://opensource.org/licenses/MIT for details.
         Anyone may freely use this code. Just don't sue me if it breaks stuff.
         Created: September 3rd, 2015.
-        Last Updated: September 9th, at 4PM.
-
-        Note: much of this design comes from a previous personal website that I built over the summer.
-        I've redesigned this one, using much of the same <head> but redoing nearly all of the body.
-        Some of the CSS is similar or reused, but most of it was changed.
-        I also added multiple pages and the navigation bar at the top. The navigation bar has a dropdown menu titled "Index"
-        that will contain links to future projects and assignments.
+        Last Updated: September 15th, at 9PM.
     -->
 
     <!-- Configuration.
@@ -84,21 +77,24 @@
                         <li><a href = "#GitHub">GitHub</a></li>
                     </ul>
                 </div>
+
                 </div>
             </nav>
         </div>
     </div>
 
-    <!-- The main container -->
+    <!-- The main container - required for Bootstrap. (see: http://getbootstrap.com/css/ for more info)-->
     <div class="container">
 
-        <!-- First row - Large title, plus photo / About paragraph
+        <!--
+        First row - Large title, plus photo / About paragraph
         Note: the id "About" is just for linking on the page using the Nav Bar.
         I found out how to do this correctly at this Stackoverflow page:
         https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
         <div class = "row">
 
-            <!-- I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
+            <!--
+            I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
             page. It offsets by 50px which is enough.
             See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
             -->
@@ -111,8 +107,8 @@
 
             <!-- These columns have been optimized for mobile, tablet and desktop views.
 
-            one note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
-            This bug made it hard to read the text on mobile and looked bad.
+            Note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
+            This bug made it hard to read the text on mobile and it looked bad.
 
             Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
             appear on its own line on mobile.                -->
