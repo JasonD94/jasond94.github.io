@@ -128,6 +128,15 @@ h1.name {
   text-align: center;
 }
 
+.highlight_right_aligned {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-weight:900;
+  font-size: 200%;
+  text-align: right;
+}
+
 .highlight_text_underline {
   background: black;
   font-weight: bold;

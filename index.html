@@ -75,6 +75,8 @@
                         <li class = "active"><a href = "index.html">Home</a></li>
                         <li><a href = "#About">About</a></li>
                         <li><a href = "#GitHub">GitHub</a></li>
+                        <li><a href = "img/resume.pdf">Jason's Resume</a></li>
+                        <li><a href = "#Contact">Contact Jason</a></li>
                     </ul>
                 </div>
 
@@ -292,6 +294,97 @@
 
         <br><br>                <!-- Adding line breaks to make the display nicer. -->
 
+        <!--      Contact Form.
+                    Powered by Mandrill, a JavaScript API
+                    I used the following site as a reference:
+                    http://codepen.io/riyadhalnur/pen/gbApi/?editors=101
+
+                    I also wrote a similar form here:
+                    https://github.com/JohnShep/repair/blob/master/contact.html
+
+                    I simplified this one by just using inputs though, and Bootstrap's grid system.      -->
+        <div class = "row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                <div class="highlight_centered">
+                Or contact him using the form below:
+                </div>
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+
+        <!-- Name section -->
+        <div class = "row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-2">
+                <div class="highlight_right_aligned">
+                Name:
+                </div>
+            </div>
+            <div class="col-md-4">
+                <input id="name" name="name" type="text" placeholder="Enter your name here"
+                class="form-control input-md" required="">
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+        <!-- Email section -->
+        <div class = "row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-2">
+                <div class="highlight_right_aligned">
+                Email:
+                </div>
+            </div>
+            <div class="col-md-4">
+                <input id="email" name="name" type="text" placeholder="Enter your email here"
+                class="form-control input-md" required="">
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+        <!-- Message section -->
+        <div class = "row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-2">
+                <div class="highlight_right_aligned">
+                Message:
+                </div>
+            </div>
+            <div class="col-md-4">
+                <textarea class="form-control" id="msg" name="msg" cols="6" rows="6"></textarea>
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+        <br>                <!-- Adding line breaks to make the display nicer. -->
+
+        <!-- Submit Button -->
+        <div class = "row">
+            <div class="col-md-5"></div>
+
+            <div class="col-md-2">
+                <!--
+                        this button calls the JavaScript function "sendEmail". See email.js in the JS folder for more info.
+                        Also - this Stackoverflow post was pretty helpful:
+                        https://stackoverflow.com/questions/1947263/using-an-html-button-to-call-a-javascript-function
+                -->
+                <button id="submit" name="submit" class="btn btn-primary" onclick="sendEmail();">Send Message</button>
+            </div>
+
+            <div class="col-md-5"></div>
+        </div>
+
+        <br><br>                <!-- Adding line breaks to make the display nicer. -->
+
         <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
         <div class = "center_text_small">
             <p class = "text-muted"><span class = "highlight">
@@ -315,6 +408,9 @@
 
     <!-- Latest compiled and minified Bootstrap JavaScript -->
     <script src = "js/bootstrap.min.js"></script>
+
+    <!-- Email function - powered by Mandrill -->
+    <script src="js/email.js"></script>
 
 </body>
 </html>
