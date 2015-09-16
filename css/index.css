@@ -179,6 +179,13 @@ https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
   font-size: 200%;
 }
 
+.right_align {
+  color: white;
+  text-align: left;
+  font-family: "Advent Pro";
+  font-size: 200%;
+}
+
 /*********************************************************************************************************/
 
 /*

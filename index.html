@@ -82,18 +82,6 @@
                         <li class = "active"><a href = "index.html">Home</a></li>
                         <li><a href = "#About">About</a></li>
                         <li><a href = "#GitHub">GitHub</a></li>
-
-                        <!-- w3schools had a good example of how to achieve this, so I used their layout with some changes like
-                        linking to other assignment HTML files rather than # links.
-                        See this page for where I got it from: http://www.w3schools.com/bootstrap/bootstrap_case_navigation.asp -->
-                        <!-- <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Index<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="assignment1.html">Assignment #1</a></li>
-                                <li><a href="assignment2.html">Assignment #2</a></li>
-                                <li><a href="assignment3.html">Assignment #3</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </div>
                 </div>
@@ -193,10 +181,15 @@
             </div>
         </div>
 
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
+        <br><br>                <!-- Adding line breaks to make the display nicer. -->
 
-        <!-- Second row - Jason's GitHub Account' -->
+        <!--
+                    I redid this section so that it just shows href links to my GitHub Repositories
+                    Before I was using an awesome tool from this GitHub Repository:
+                    https://github.com/lepture/github-cards
+
+                    I now only use one GitHub card, in an effort to speedup the loading of my page.
+        -->
         <div class = "row">
 
             <!-- These divs are to force the text into the middle and prevent highlighting the whole column! -->
@@ -206,130 +199,42 @@
                 <!-- Similar to the #About link, this is for the #GitHub link. -->
                 <a class="anchor"  id="GitHub"></a>
 
-                <p class = "highlight_text_underline_centered">Jason's Github Account: </p>
+                <p class = "highlight_text_underline_centered">Jason's GitHub Repositories </p>
 
             </div>
             <div class="col-md-4"></div>
         </div>
 
-        <!-- Third row - a link to my GitHub (JasonD94)  -->
+        <br><br>                <!-- Adding line breaks to make the display nicer. -->
+
         <div class = "row">
+            <div class="col-md-2"></div>
 
-            <div class = "col-md-2"></div>
+            <div class="col-md-8">
 
-            <!-- Display JasonD94 Github account -->
+                <!--
+                        This comes from the following GitHub Repository:
+                        https://github.com/lepture/github-cards
+
+                        It shows some random stats about my GitHub account.
+                 -->
+                 <div class="center_text_images">
+                    <div class="github-card" data-user="JasonD94"></div>
+                    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                </div>
+
+                <!-- Unordered list of GitHub Repositories I own, or have contributed to (eg forks). -->
 
 
-            <div class = "GitHub-Card">
-                <div class = "GH-Card-Title">JasonD94</div>
-                <div class = "GH-Card-Image"><img src="img/EDE.jpg" style="height: 100px" alt="EDE.jpg"/></div>
-                <div class = "GH-Card-Descript">Jason's personal GitHub account, with numerous project repositories.</div>
             </div>
 
 
             <div class="col-md-2"></div>
         </div>
 
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
+        <br><br>                <!-- Adding line breaks to make the display nicer. -->
 
-        <!-- 3rd row - more Github cards (Teaching / iSENSE-API / HTML-Apps repos) -->
-        <div class = "row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-
-                <!-- Make sure this appears centered. -->
-                <p class = "highlight_text_underline_centered">Repositories that Jason has contributed to: </p>
-
-            </div>
-            <div class="col-md-3"></div>
-
-            <!-- These are all separate columns and width set to 350px for the best looking arrangement for desktop views. -->
-            <!-- Also, the "col-xs-12 col-md-6 col-lg-4" is to optimize display for different devices.
-                    This should hopefully prevent the Github cards from overlapping. It should force them to go onto
-                    separate lines on mobile smart phones, onto two per line on tablets and onto 3 per line on desktops. -->
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="iSENSEDev" data-repo="HTML-Apps"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="iSENSEDev" data-repo="iSENSE-API"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="iSENSEDev" data-repo="Teaching"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
-
-        <!-- 4th Row - more GitHub cards. (HighSchool / College-Public / UML-Alerts) -->
-        <div class = "row">
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="HighSchool"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="College-Public"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="UML-Alerts"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
-
-        <!-- 5th row - a few more GitHub cards. (repair, Website, Ubuntu-Settings  -->
-        <div class = "row">
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="repair"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="Website"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class = "center_text_images">
-                    <div class="github-card" data-user="JasonD94" data-repo="Ubuntu-Settings"></div>
-                    <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
-
-        <!-- 6th row - Contact info -->
+        <!-- Contact info -->
         <div class = "row">
             <div class="col-md-12">
                 <!-- Removed extra div with class "center" - using just a span instead for easier readability. -->
@@ -340,8 +245,7 @@
             </div>
         </div>
 
-        <!-- Adding line breaks to make the display nicer. -->
-        <br><br>
+        <br><br>                <!-- Adding line breaks to make the display nicer. -->
 
         <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
         <div class = "center_text_small">
