@@ -186,6 +186,14 @@ https://stackoverflow.com/questions/7226056/equivalent-to-center-tag-in-css */
   font-size: 200%;
 }
 
+/* Plain white text for the unordered list */
+.white_text {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-size: 200%;
+}
+
 /*********************************************************************************************************/
 
 /*
