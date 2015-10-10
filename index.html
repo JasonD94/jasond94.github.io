@@ -1,419 +1,425 @@
 <!DOCTYPE html>
 <html lang = "en-US">
 <head>
-    <meta charset = "utf-8">
+  <meta charset = "utf-8">
+  <!--
+    File: /~jason/index.html
+    Jason Downing - student at UMass Lowell
+    Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
+    MIT Licensed - see http://opensource.org/licenses/MIT for details.
+    Anyone may freely use this code. Just don't sue me if it breaks stuff.
+    Created: September 3rd, 2015.
+    Last Updated: September 15th, at 9PM.
+  -->
+  
+  <!--
+    Google fonts. Included here at the very top for performance gains and to avoid the use of @import
+    like Google recommends here:
+    http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
+   -->
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu|Advent+Pro">
 
-    <!--
-            Google fonts. Included here at the very top for performance gains and to avoid the use of @import
-            like Google recommends here:
-            http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
-     -->
-     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu|Advent+Pro">
+  <!--  Configuration.
+        The viewport / width / scale line helps make the web page more responsive to mobile devices.
+        Bootstrap is also being used for its grid system and for the Nav bar. -->
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-    <!--
-        File: /~jason/index.html
-        Jason Downing - student at UMass Lowell
-        Contact: jdowning@cs.uml.edu or jason_downing@student.uml.edu
-        MIT Licensed - see http://opensource.org/licenses/MIT for details.
-        Anyone may freely use this code. Just don't sue me if it breaks stuff.
-        Created: September 3rd, 2015.
-        Last Updated: September 15th, at 9PM.
-    -->
+  <!-- Custom Title Bar -->
+  <title>Jason Downing - Home Page</title>
 
-    <!-- Configuration.
-    The viewport / width / scale line helps make the web page more responsive to mobile devices.
-    Bootstrap is also being used for its grid system and for the Nav bar. -->
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+  <!-- Latest compiled and minified CSS -->
+  <link rel = "stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Custom Title Bar -->
-    <title>Jason Downing - Home Page</title>
+  <!-- Optional theme -->
+  <link rel = "stylesheet" href="css/bootstrap-theme.min.css">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel = "stylesheet" href="css/bootstrap.min.css">
+  <!-- CSS file to override stuff -->
+  <link rel = "stylesheet" href = "css/index.css">
 
-    <!-- Optional theme -->
-    <link rel = "stylesheet" href="css/bootstrap-theme.min.css">
-
-    <!-- CSS file to override stuff -->
-    <link rel = "stylesheet" href = "css/index.css">
-
-    <!-- Custom favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- Google Analytics Tracking Tag -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68657454-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body>
 
-    <!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
-    (Test this though!)
+  <!-- This is the Nav Bar, for switching between pages. It should automatically become smaller on Mobile.
+  (Test this though!)
 
-    Note: I originally wrote part of this for another web page, and I reworked it for this web page (notedly adding
-    the dropdown menu for linking to additional assignments).
-    You can find the original source code in this repository:
+  Note: I originally wrote part of this for another web page, and I reworked it for this web page (notedly adding
+  the dropdown menu for linking to additional assignments).
+  You can find the original source code in this repository:
 
-    https://github.com/JasonD94/repair
-    https://github.com/JasonD94/repair/blob/gh-pages/index.html
-     -->
-    <div class = "navbar-wrapper">
-        <div class = "container">
-            <nav class = "navbar navbar-inverse navbar-fixed-top">
-                <div class = "container-fluid">
+  https://github.com/JasonD94/repair
+  https://github.com/JasonD94/repair/blob/gh-pages/index.html
+   -->
+  <div class = "navbar-wrapper">
+    <div class = "container">
+      <nav class = "navbar navbar-inverse navbar-fixed-top">
+        <div class = "container-fluid">
+  
+        <!-- Brand and toggle get grouped together for better mobile display. -->
+        <div class = "navbar-header">
+          <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
+            <span class = "sr-only">Toggle navigation. </span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a class = "navbar-brand" href = "index.html">Jason Downing</a>
+        </div>
+  
+        <!-- Collect the nav links, forms, and other content for toggling. -->
+        <div id = "navbar" class = "navbar-collapse collapse">
+          <ul class = "nav navbar-nav navbar-right">
+            <li class = "active"><a href = "index.html">Home</a></li>
+            <li><a href = "#About">About</a></li>
+            <li><a href = "#GitHub">GitHub</a></li>
+            <li><a href = "#Contact">Contact Jason</a></li>
+            <li><a href = "img/resume.pdf">Jason's Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
 
-                <!-- Brand and toggle get grouped together for better mobile display. -->
-                <div class = "navbar-header">
-                    <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar">
-                        <span class = "sr-only">Toggle navigation. </span>
-                        <span class = "icon-bar"></span>
-                        <span class = "icon-bar"></span>
-                        <span class = "icon-bar"></span>
-                    </button>
-                    <a class = "navbar-brand" href = "index.html">Jason Downing</a>
+  <!-- The main container - required for Bootstrap. (see: http://getbootstrap.com/css/ for more info)-->
+  <div class="container">
+    <!--
+    First row - Large title, plus photo / About paragraph
+    Note: the id "About" is just for linking on the page using the Nav Bar.
+    I found out how to do this correctly at this Stackoverflow page:
+    https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
+    <div class = "row">
+
+        <!--
+        I found this on Stackoverflow. I'm using this trick to make the "About" link 
+        actually go all the way to the top of the page. It offsets by 50px which is enough.
+        See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+        -->
+        <a class="anchor"  id="About"></a>
+
+        <!-- Background image is in the body -->
+        <h1 class="name">
+            <span class="highlight">Jason Downing</span>
+        </h1>
+
+        <!-- These columns have been optimized for mobile, tablet and desktop views.
+
+        Note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
+        This bug made it hard to read the text on mobile and it looked bad.
+
+        Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
+        appear on its own line on mobile.                -->
+        <div class="col-xs-12 col-md-3 col-lg-2">
+            <div class = "center_text_images">
+
+                <!-- I thought it would be funny to link to a YouTube video whenever someone clicks on my image.
+                        I embedded it in another HTML file with autoplay enabled.
+                        This site showed me how  to do so:
+                        http://www.computerhope.com/issues/ch000059.htm                -->
+                <a href="youtube.html">
+                    <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px" alt="Jason Downing"/>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- About info -->
+        <div class="col-xs-12 col-md-9 col-lg-10">
+            <div class = "left_align">
+
+                <!-- Start of the about paragraphs. -->
+                <div class="highlight">
+                    Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
+                    Jason's hobbies include
+                    <!-- I decided to link to pages / images in this part for fun. -->
+                    <a href="img/bike.jpg">mountain biking,</a>
+                    <a href="img/ski.jpg">skiing,</a>
+                    <!-- Found at the following URL:
+                        http://sapphirenation.net/wp-content/uploads/2015/07/steam-os-planet-steam-logo.jpg
+                     -->
+                    <a href="img/steam.jpg">PC gaming</a>
+                    and
+                    <!-- Found at the following URL:
+                        https://steve.files.wordpress.com/2006/03/Matrix%20tut%202.jpg
+                     -->
+                    <a href="img/code.jpg">coding.</a>
                 </div>
+                <br>
 
-                <!-- Collect the nav links, forms, and other content for toggling. -->
-                <div id = "navbar" class = "navbar-collapse collapse">
-                    <ul class = "nav navbar-nav navbar-right">
-                        <li class = "active"><a href = "index.html">Home</a></li>
-                        <li><a href = "#About">About</a></li>
-                        <li><a href = "#GitHub">GitHub</a></li>
-                        <li><a href = "#Contact">Contact Jason</a></li>
-                        <li><a href = "img/resume.pdf">Jason's Resume</a></li>
-                    </ul>
-                </div>
+                <div class="highlight">
+                    In the past, Jason has worked at several retail stores, including Sears, Kohl's and Market Basket.
+                    He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an
+                    internship at Fidelity Investments as a technical intern during Summer 2015. Jason spent Summer 2015 writing
 
+                    <!-- These are links to Wikipedia because people tend to not know anything about mainframes.
+                    (and I didn't either before this summer.) -->
+                    <a href="https://en.wikipedia.org/wiki/COBOL">COBOL,</a>
+                    <a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a>
+                    and
+                    <a href="https://en.wikipedia.org/wiki/IBM_DB2">DB2</a>
+                    /
+                    <a href="https://en.wikipedia.org/wiki/SQL">SQL queries</a>
+                    for Fidelity's Brokerage system, which runs on
+                    <!-- Link to a interesting article on IBM's z13 system. -->
+                    <a href="http://www.wired.com/2015/01/z13-mainframe/">IBM Mainframes.</a>
+                    Jason will also be interning again at Fidelity Investments next summer on the Android Dev team.
                 </div>
-            </nav>
+                <br>
+
+                <div class="highlight">
+                    Jason is active on
+                    <a href="https://github.com/JasonD94">Github</a>
+                    and has various projects for school, as well as side projects with friends and on his own.
+                </div>
+                <br>
+            </div>
         </div>
     </div>
 
-    <!-- The main container - required for Bootstrap. (see: http://getbootstrap.com/css/ for more info)-->
-    <div class="container">
-
-        <!--
-        First row - Large title, plus photo / About paragraph
-        Note: the id "About" is just for linking on the page using the Nav Bar.
-        I found out how to do this correctly at this Stackoverflow page:
-        https://stackoverflow.com/questions/20605009/linking-within-a-page-with-bootstrap -->
-        <div class = "row">
-
-            <!--
-            I found this on Stackoverflow. I'm using this trick to make the "About" link actually go all the way to the top of the
-            page. It offsets by 50px which is enough.
-            See this page:  https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
-            -->
-            <a class="anchor"  id="About"></a>
-
-            <!-- Background image is in the body -->
-            <h1 class="name">
-                <span class="highlight">Jason Downing</span>
-            </h1>
-
-            <!-- These columns have been optimized for mobile, tablet and desktop views.
-
-            Note: the XS columns are set to 12 in order to prevent the contact image from overlapping the text.
-            This bug made it hard to read the text on mobile and it looked bad.
-
-            Also, the center div is there to improve mobile display as well, since I have the grids setup to make the image
-            appear on its own line on mobile.                -->
-            <div class="col-xs-12 col-md-3 col-lg-2">
-                <div class = "center_text_images">
-
-                    <!-- I thought it would be funny to link to a YouTube video whenever someone clicks on my image.
-                            I embedded it in another HTML file with autoplay enabled.
-                            This site showed me how  to do so:
-                            http://www.computerhope.com/issues/ch000059.htm                -->
-                    <a href="youtube.html">
-                        <img class="img-square" src="img/jason_contact_photo.png" style="height: 200px" alt="Jason Downing"/>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- About info -->
-            <div class="col-xs-12 col-md-9 col-lg-10">
-                <div class = "left_align">
-
-                    <!-- Start of the about paragraphs. -->
-                    <div class="highlight">
-                        Jason Downing is Junior at the University of Massachusetts, Lowell, where he studies Computer Science.
-                        Jason's hobbies include
-                        <!-- I decided to link to pages / images in this part for fun. -->
-                        <a href="img/bike.jpg">mountain biking,</a>
-                        <a href="img/ski.jpg">skiing,</a>
-                        <!-- Found at the following URL:
-                            http://sapphirenation.net/wp-content/uploads/2015/07/steam-os-planet-steam-logo.jpg
-                         -->
-                        <a href="img/steam.jpg">PC gaming</a>
-                        and
-                        <!-- Found at the following URL:
-                            https://steve.files.wordpress.com/2006/03/Matrix%20tut%202.jpg
-                         -->
-                        <a href="img/code.jpg">coding.</a>
-                    </div>
-                    <br>
-
-                    <div class="highlight">
-                        In the past, Jason has worked at several retail stores, including Sears, Kohl's and Market Basket.
-                        He currently works for the Engaging Computer Group at UMass Lowell, and recently finished an
-                        internship at Fidelity Investments as a technical intern during Summer 2015. Jason spent Summer 2015 writing
-
-                        <!-- These are links to Wikipedia because people tend to not know anything about mainframes.
-                        (and I didn't either before this summer.) -->
-                        <a href="https://en.wikipedia.org/wiki/COBOL">COBOL,</a>
-                        <a href="https://en.wikipedia.org/wiki/Job_Control_Language">JCL</a>
-                        and
-                        <a href="https://en.wikipedia.org/wiki/IBM_DB2">DB2</a>
-                        /
-                        <a href="https://en.wikipedia.org/wiki/SQL">SQL queries</a>
-                        for Fidelity's Brokerage system, which runs on
-                        <!-- Link to a interesting article on IBM's z13 system. -->
-                        <a href="http://www.wired.com/2015/01/z13-mainframe/">IBM Mainframes.</a>
-                        Jason will also be interning again at Fidelity Investments next summer on the Android Dev team.
-                    </div>
-                    <br>
-
-                    <div class="highlight">
-                        Jason is active on
-                        <a href="https://github.com/JasonD94">Github</a>
-                        and has various projects for school, as well as side projects with friends and on his own.
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </div>
-
-        <br><br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <!--
-                    I redid this section so that it just shows href links to my GitHub Repositories
-                    Before I was using an awesome tool from this GitHub Repository:
-                    https://github.com/lepture/github-cards
-
-                    I now only use one GitHub card, in an effort to speedup the loading of my page.
-        -->
-        <div class = "row">
-
-            <!-- These divs are to force the text into the middle and prevent highlighting the whole column! -->
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-
-                <!-- Similar to the #About link, this is for the #GitHub link. -->
-                <a class="anchor"  id="GitHub"></a>
-
-                <p class = "highlight_text_underline_centered">Jason's GitHub Repositories </p>
-
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-
-        <br>               <!-- Adding line breaks to make the display nicer. -->
-
-        <!-- GitHub Card row -->
-        <div class = "row">
-            <div class="col-md-2"></div>
-
-            <div class="col-md-8">
-
-                <!--
-                        This comes from the following GitHub Repository:
-                        https://github.com/lepture/github-cards
-
-                        It shows some random stats about my GitHub account.
-                 -->
-                 <div class="center_text_images">
-                    <div class="github-card" data-user="JasonD94"></div>
-                    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                </div>
-            </div>
-
-            <div class="col-md-2"></div>
-        </div>
-
-        <br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <!-- GitHub Repositories row -->
-        <div class = "row">
-            <div class="col-md-2"></div>
-
-            <div class="col-md-8">
-                <!--
-                        Unordered list of GitHub Repositories I own, or have contributed to (eg forks).
-                        w3schools had a good overview for this, since I couldn't quite remember how they work.
-                        http://www.w3schools.com/html/html_lists.asp
-                 -->
-                 <ul>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/College-Public">College-Public</a>: previous semesters work, that
-                        I have put into a GitHub repository as a sort of "portfolio" of my prior classwork.
-                        I keep all my current work in a private repository. You should check out the
-                        <a href="https://education.github.com/pack">GitHub Student Developer Pack</a>
-                        if you want 5 free private GitHub repositories while you're a student.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/UML-Alerts">UML-Alerts</a>: an Android application that I co-developed
-                        for the Android Development class at UMass Lowell. It uses SMS to send messages to a list of contact(s) with
-                        a Google Maps URL embeded at the end of the message with the user's current location.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/Ubuntu-Settings">Ubuntu-Settings</a>:  settings that I customized for
-                        running Ubuntu 14.04 LTS. Includes a few bash scripts that install several of my most used programs.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/iSENSE-API">iSENSE-API</a>: I wrote a C++ API wrapper for a project
-                        called
-                        <a href="http://isenseproject.org">iSENSE.</a>
-                        I also contributed to earlier versions of the JavaScript / Python API wrappers.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/Teaching">isenseDev/Teaching</a>: I wrote some example code for
-                        the C++ API wrapper I mentioned above. I also contributed some early example code in JavaScript / Python.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/HTML-Apps">HTML-Apps</a>: I wrote a variety of HTML5 WebApps for
-                        a project called iSENSE.
-                    </li>
-                    <li class="white_text">
-                        <a href="https://github.com/JasonD94/HighSchool">HighSchool</a>: contains some random C++ programs
-                        that I wrote for two high school classes.
-                    </li>
-                 </ul>
-            </div>
-
-            <div class="col-md-2"></div>
-        </div>
-
-        <br><br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <!-- Contact info -->
-        <div class = "row">
-            <div class="col-md-12">
-                <!-- Removed extra div with class "center" - using just a span instead for easier readability. -->
-                <div class="highlight_centered ">
-                    You may contact Jason at either: <a href = "mailto:jdowning@cs.uml.edu">jdowning@cs.uml.edu</a>
-                    or <a href = "mailto:jason_downing@student.uml.edu">jason_downing@student.uml.edu</a>
-                </div>
-            </div>
-        </div>
-
-        <br><br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <a class="anchor"  id="Contact"></a>
-        <!--      Contact Form.
-                    Powered by Mandrill, a JavaScript API
-                    I used the following site as a reference:
-                    http://codepen.io/riyadhalnur/pen/gbApi/?editors=101
-
-                    I also wrote a similar form here:
-                    https://github.com/JohnShep/repair/blob/master/contact.html
-
-                    I simplified this one by just using inputs though, and Bootstrap's grid system.      -->
-        <div class = "row">
-            <div class="col-md-3"></div>
-
-            <div class="col-md-6">
-                <div class="highlight_centered">
-                Or contact him using the form below:
-                </div>
-            </div>
-
-            <div class="col-md-3"></div>
-        </div>
-
-        <!-- Name section -->
-        <div class = "row">
-            <div class="col-md-3"></div>
-
-            <div class="col-md-2">
-                <div class="highlight_right_aligned">
-                Name:
-                </div>
-            </div>
-            <div class="col-md-4">
-                <input id="name" name="name" type="text" placeholder="Enter your name here"
-                class="form-control input-md" required="">
-            </div>
-
-            <div class="col-md-1"></div>
-        </div>
-
-        <!-- Email section -->
-        <div class = "row">
-            <div class="col-md-3"></div>
-
-            <div class="col-md-2">
-                <div class="highlight_right_aligned">
-                Email:
-                </div>
-            </div>
-            <div class="col-md-4">
-                <input id="email" name="name" type="text" placeholder="Enter your email here"
-                class="form-control input-md" required="">
-            </div>
-
-            <div class="col-md-1"></div>
-        </div>
-
-        <!-- Message section -->
-        <div class = "row">
-            <div class="col-md-3"></div>
-
-            <div class="col-md-2">
-                <div class="highlight_right_aligned">
-                Message:
-                </div>
-            </div>
-            <div class="col-md-4">
-                <textarea class="form-control" id="msg" name="msg" cols="6" rows="6"></textarea>
-            </div>
-
-            <div class="col-md-1"></div>
-        </div>
-
-        <br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <!-- Submit Button -->
-        <div class = "row">
-            <div class="col-md-5"></div>
-
-            <div class="col-md-2">
-                <!--
-                        this button calls the JavaScript function "sendEmail". See email.js in the JS folder for more info.
-                        Also - this Stackoverflow post was pretty helpful:
-                        https://stackoverflow.com/questions/1947263/using-an-html-button-to-call-a-javascript-function
-                -->
-                <button id="submit" name="submit" class="btn btn-primary" onclick="sendEmail();">Send Message</button>
-            </div>
-
-            <div class="col-md-5"></div>
-        </div>
-
-        <br><br>                <!-- Adding line breaks to make the display nicer. -->
-
-        <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
-        <div class = "center_text_small">
-            <p class = "text-muted"><span class = "highlight">
-                Jason Downing &copy; 2015. All rights reserved.
-                Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
-            </span></p>
-        </div>
-    </div>          <!-- This should be the end div of the main container. -->
+    <br><br>                <!-- Adding line breaks to make the display nicer. -->
 
     <!--
-            These are moved to the bottom of the <body> tag to increase website load time.
-            This stackoverflow post is helpful for this issue:
-            https://stackoverflow.com/questions/6625773/where-should-i-put-the-css-and-javascript-code-in-an-html-webpage
+                I redid this section so that it just shows href links to my GitHub Repositories
+                Before I was using an awesome tool from this GitHub Repository:
+                https://github.com/lepture/github-cards
 
-            See Yahoo's best practice rules as well:
-            https://developer.yahoo.com/performance/rules.html#css_top=
-     -->
+                I now only use one GitHub card, in an effort to speedup the loading of my page.
+    -->
+    <div class = "row">
 
-     <!-- jQuery (required by Bootstrap) -->
-     <script src = "js/jquery.min.js"></script>
+        <!-- These divs are to force the text into the middle and prevent highlighting the whole column! -->
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
 
-    <!-- Latest compiled and minified Bootstrap JavaScript -->
-    <script src = "js/bootstrap.min.js"></script>
+            <!-- Similar to the #About link, this is for the #GitHub link. -->
+            <a class="anchor"  id="GitHub"></a>
 
-    <!-- Email function - powered by Mandrill -->
-    <script src="js/email.js"></script>
+            <p class = "highlight_text_underline_centered">Jason's GitHub Repositories </p>
 
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <br>               <!-- Adding line breaks to make the display nicer. -->
+
+    <!-- GitHub Card row -->
+    <div class = "row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+            <!--
+                    This comes from the following GitHub Repository:
+                    https://github.com/lepture/github-cards
+
+                    It shows some random stats about my GitHub account.
+             -->
+             <div class="center_text_images">
+                <div class="github-card" data-user="JasonD94"></div>
+                <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+            </div>
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+
+    <br>                <!-- Adding line breaks to make the display nicer. -->
+
+    <!-- GitHub Repositories row -->
+    <div class = "row">
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <!--
+                    Unordered list of GitHub Repositories I own, or have contributed to (eg forks).
+                    w3schools had a good overview for this, since I couldn't quite remember how they work.
+                    http://www.w3schools.com/html/html_lists.asp
+             -->
+             <ul>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/College-Public">College-Public</a>: previous semesters work, that
+                    I have put into a GitHub repository as a sort of "portfolio" of my prior classwork.
+                    I keep all my current work in a private repository. You should check out the
+                    <a href="https://education.github.com/pack">GitHub Student Developer Pack</a>
+                    if you want 5 free private GitHub repositories while you're a student.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/UML-Alerts">UML-Alerts</a>: an Android application that I co-developed
+                    for the Android Development class at UMass Lowell. It uses SMS to send messages to a list of contact(s) with
+                    a Google Maps URL embeded at the end of the message with the user's current location.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/Ubuntu-Settings">Ubuntu-Settings</a>:  settings that I customized for
+                    running Ubuntu 14.04 LTS. Includes a few bash scripts that install several of my most used programs.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/iSENSE-API">iSENSE-API</a>: I wrote a C++ API wrapper for a project
+                    called
+                    <a href="http://isenseproject.org">iSENSE.</a>
+                    I also contributed to earlier versions of the JavaScript / Python API wrappers.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/Teaching">isenseDev/Teaching</a>: I wrote some example code for
+                    the C++ API wrapper I mentioned above. I also contributed some early example code in JavaScript / Python.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/HTML-Apps">HTML-Apps</a>: I wrote a variety of HTML5 WebApps for
+                    a project called iSENSE.
+                </li>
+                <li class="white_text">
+                    <a href="https://github.com/JasonD94/HighSchool">HighSchool</a>: contains some random C++ programs
+                    that I wrote for two high school classes.
+                </li>
+             </ul>
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+
+    <br><br>                <!-- Adding line breaks to make the display nicer. -->
+
+    <!-- Contact info -->
+    <div class = "row">
+        <div class="col-md-12">
+            <!-- Removed extra div with class "center" - using just a span instead for easier readability. -->
+            <div class="highlight_centered ">
+                You may contact Jason at either: <a href = "mailto:jdowning@cs.uml.edu">jdowning@cs.uml.edu</a>
+                or <a href = "mailto:jason_downing@student.uml.edu">jason_downing@student.uml.edu</a>
+            </div>
+        </div>
+    </div>
+
+    <br><br>                <!-- Adding line breaks to make the display nicer. -->
+
+    <a class="anchor"  id="Contact"></a>
+    <!--      Contact Form.
+                Powered by Mandrill, a JavaScript API
+                I used the following site as a reference:
+                http://codepen.io/riyadhalnur/pen/gbApi/?editors=101
+
+                I also wrote a similar form here:
+                https://github.com/JohnShep/repair/blob/master/contact.html
+
+                I simplified this one by just using inputs though, and Bootstrap's grid system.      -->
+    <div class = "row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="highlight_centered">
+            Or contact him using the form below:
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+
+    <!-- Name section -->
+    <div class = "row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-2">
+            <div class="highlight_right_aligned">
+            Name:
+            </div>
+        </div>
+        <div class="col-md-4">
+            <input id="name" name="name" type="text" placeholder="Enter your name here"
+            class="form-control input-md" required="">
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+    <!-- Email section -->
+    <div class = "row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-2">
+            <div class="highlight_right_aligned">
+            Email:
+            </div>
+        </div>
+        <div class="col-md-4">
+            <input id="email" name="name" type="text" placeholder="Enter your email here"
+            class="form-control input-md" required="">
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+    <!-- Message section -->
+    <div class = "row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-2">
+            <div class="highlight_right_aligned">
+            Message:
+            </div>
+        </div>
+        <div class="col-md-4">
+            <textarea class="form-control" id="msg" name="msg" cols="6" rows="6"></textarea>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+    <br>                <!-- Adding line breaks to make the display nicer. -->
+
+    <!-- Submit Button -->
+    <div class = "row">
+      <div class="col-md-5"></div>
+
+      <div class="col-md-2">
+          <!--
+                  this button calls the JavaScript function "sendEmail". See email.js in the JS folder for more info.
+                  Also - this Stackoverflow post was pretty helpful:
+                  https://stackoverflow.com/questions/1947263/using-an-html-button-to-call-a-javascript-function
+          -->
+          <button id="submit" name="submit" class="btn btn-primary" onclick="sendEmail();">Send Message</button>
+      </div>
+
+      <div class="col-md-5"></div>
+    </div>
+
+    <br><br>                <!-- Adding line breaks to make the display nicer. -->
+
+    <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
+    <div class = "center_text_small">
+      <p class = "text-muted"><span class = "highlight">
+        Jason Downing &copy; 2015. All rights reserved.
+        Powered by <a href = "http://www.getbootstrap.com/">Bootstrap</a>.
+      </span></p>
+    </div>
+  </div>          <!-- This should be the end div of the main container. -->
+
+  <!--
+      These are moved to the bottom of the <body> tag to increase website load time.
+      This stackoverflow post is helpful for this issue:
+      https://stackoverflow.com/questions/6625773/where-should-i-put-the-css-and-javascript-code-in-an-html-webpage
+
+      See Yahoo's best practice rules as well:
+      https://developer.yahoo.com/performance/rules.html#css_top=
+   -->
+
+   <!-- jQuery (required by Bootstrap) -->
+   <script src = "js/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src = "js/bootstrap.min.js"></script>
+
+  <!-- Email function - powered by Mandrill -->
+  <script src="js/email.js"></script>
 </body>
 </html>
