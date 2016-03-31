@@ -65,6 +65,12 @@ html {
     position: relative;
 }
 
+/* No more weirdness in mobile, there's actually some spacing above / below the profile image! */
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /*
       This is to replace <center> tags so the site will validate. I was using <center> tags to make images and
       text appear centered on mobile devices, since the bootstrap grids I setup for mobile make things
