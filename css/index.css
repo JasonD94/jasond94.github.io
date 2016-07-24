@@ -10,6 +10,12 @@
   color: blue;
 }
 
-.min-bottom-padding {
-  padding-bottom: 3em;
+.min-padding {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.min-padding-top {
+  padding-top: 2em;
+  padding-bottom: 0em;
 }
