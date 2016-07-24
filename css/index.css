@@ -9,3 +9,7 @@
 .text-blue {
   color: blue;
 }
+
+.min-bottom-padding {
+  padding-bottom: 3em;
+}
