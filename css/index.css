@@ -1,3 +1,11 @@
+/*
+    This file contains CSS classes / IDs used to override the Creative Bootstrap Theme
+*/
+
 .text-small {
   font-size: 100%;
+}
+
+.text-blue {
+  color: blue;
 }
