@@ -19,3 +19,19 @@
   padding-top: 2em;
   padding-bottom: 0em;
 }
+
+/*
+    This class is a fix for a bug I noticed on certain screen resolutions.
+    When the width was between ~768px and ~991px (small devices) I noticed that
+    the 2x2 rows were not looking right - the first row of 2 squares looked fine
+    but the the next row was all messed up, one square was higher than the other.
+
+    It turns out if 2 or 3 squares share the same height but one square doesn't,
+    then the alignment is thrown off on the grid.
+
+    This small padding increase fixes the issue by making all 4 squares the same
+    height.
+*/
+.div-padding-fix {
+  padding-bottom: 2em;
+}
