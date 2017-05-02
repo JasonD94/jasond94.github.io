@@ -7,10 +7,15 @@ Contains a copy of my resume, as well as some links to Github.
 
 Built using HTML5 and Bootstrap.
 
-[View it at the following address: https://jasond94.github.io](https://jasond94.github.io)
+[View it at the following address: downing.io](http://downing.io/)
 
-This technically redirects to the domain [downing.io](http://downing.io/).
-But either one works!
+Check out some of my other webpages
+[on my GitHub profile](https://github.com/JasonD94/)
+
+Since I'm using a custom domain on GitHub, my GitHub pages repositories do not
+follow the usual https://GITHUB-USERNAME-HERE.github.io format. If the domain
+fails for some reason, you can still access my site by going to
+[https://jasond94.github.io](https://jasond94.github.io)
 
 Based on the
 [Creative Bootstrap theme](http://startbootstrap.com/template-overviews/creative/)
