@@ -13,7 +13,7 @@ Check out some of my other webpages
 [on my GitHub profile](https://github.com/JasonD94/)
 
 Since I'm using a custom domain on GitHub, my GitHub pages repositories do not
-follow the usual https://GITHUB-USERNAME-HERE.github.io format. If the domain
+follow the usual GITHUB-USERNAME-HERE.github.io format. If the domain
 fails for some reason, you can still access my site by going to
 [https://jasond94.github.io](https://jasond94.github.io)
 
