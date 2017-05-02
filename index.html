@@ -26,8 +26,10 @@
 
   <!-- Custom Fonts -->
   <script src="https://use.fontawesome.com/a0e01af677.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+  rel='stylesheet' type='text/css'>
 
   <!-- Plugin CSS -->
   <link href="css/magnific-popup.css" rel="stylesheet">
@@ -56,9 +58,11 @@
 <body id="page-top">
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
+
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand page-scroll" href="#page-top">Jason Downing</a>
@@ -98,14 +102,16 @@
       <div class="header-content-inner">
         <h1 id="homeHeading">Jason Downing</h1>
         <hr>
-        <p>Mountain Biker. Skier. UMass Lowell Student. Future Software Engineer.</p>
-        <p><i>Currently seeking a full-time opportunity as a Software Engineer starting May 2017</i></p>
+        <p>Mountain Biker. Skier. UMass Lowell Student.
+        Future Software Engineer.</p>
+        <p><i>Currently seeking a full-time opportunity as a
+        Software Engineer starting May 2017</i></p>
         <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More!</a>
       </div>
     </div>
   </header>
 
-  <!-- Education section - brief overview -->
+  <!-- Education Section -->
   <section class="min-padding bg-primary" id="about">
     <div class="container">
 
@@ -138,7 +144,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <i class="fa fa-4x fa-lightbulb-o text-faded sr-icons"></i>
           <h3>Skills</h3>
-          <p class="text-faded">Android Dev, Front-end Web, C / C++ Dev</p>
+          <p class="text-faded">Android and Front-end Web Development</p>
         </div>
       </div>
 
@@ -150,7 +156,7 @@
     </div>
   </section>
 
-  <!-- Work experience section. -->
+  <!-- Work Experience Section. -->
   <section class="min-padding" id="work">
     <div class="container">
       <div class="row">
@@ -189,41 +195,68 @@
     </div>
   </section>
 
-  <!-- GitHub links -->
+  <!-- GitHub Section -->
   <section class="min-padding-top bg-primary" id="github">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <br/>   <!-- total hack to add a break but whatever, it looks nicer :-) -->
           <h2 class="section-heading">GitHub</h2>
-          <a href="https://github.com/JasonD94"><i class="fa fa-4x fa-github-square" style="color:white"></i></a>
-          <p><i>Click the icon for Jason's GitHub page! Or search for his username: JasonD94</i></p>
+          <a href="https://github.com/JasonD94">
+          <i class="fa fa-4x fa-github-square" style="color:white"></i></a>
+          <p><i>Click the icon for Jason's GitHub page!
+          Or search for his username: JasonD94</i></p>
           <hr class="light">
         </div>
       </div>
     </div>
+
+    <!-- GitHub links below -->
     <div class="container-fluid">
       <div class="row no-gutter">
+
+      <!--
+      Redoing the links arrangement. Current thought is it should go:
+      downing.io <-> GUI II <-> Scrabble
+      UML Alerts <-> GUI I  <-> Racket Weather
+
+      In the future, add DB1 and DB2 projects, and maybe one other project
+      to complete the 3rd full row. Possibly College repository. This should
+      be possible after graduation. Could also add the DB2 app.
+
+      3rd future row would be:
+      DB2 Phase 2 <-> DB2 Android app <-> College
+
+      In the future, maybe add ECG lab work too (Teaching and API repositories)
+      -->
+
+        <!-- First Link: source code for downing.io -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/oplS16projects/Racket-Weather" class="portfolio-box">
-            <!-- Thumbnail URL: http://www.gannett-cdn.com/-mm-/3526533239800dac0c978150377d099025f1e52c/c=52-700-4303-3102&r=x1683&c=3200x1680/local/-/media/USATODAY/None/2014/10/03/1412368123000-Mesostorm-Lightning.jpg -->
-            <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+          <a href="https://github.com/JasonD94/jasond94.github.io" class="portfolio-box">
+            <!--  Downing stage coach from Google Photos
+                  (Personal photo taken during DC Trip 2016)
+                  Public URL: ???
+            -->
+            <img src="img/portfolio/thumbnails/downing-io.jpg" class="img-responsive" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
-                  Racket Weather
+                  downing.io
                 </div>
                 <div class="project-name">
-                  OPL Project. Visualizations in Racket using data from the OpenWeatherMap API.
+                  Source code for this personal website
                 </div>
               </div>
             </div>
           </a>
         </div>
+
+        <!-- Second Link: source code for GUI II Project (Ski Maps) -->
         <div class="col-lg-4 col-sm-6">
           <a href="http://downing.io/Ski-Maps/" class="portfolio-box">
-            <!-- Photo from Google Photos, January 30 2016 trip to Bretton Woods -->
-            <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+            <!--  Photo from Google Photos, January 30 2016 trip to Bretton Woods
+                  Public URL: ???
+            -->
+            <img src="img/portfolio/thumbnails/ski-maps.jpg" class="img-responsive" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -236,26 +269,14 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/GUI" class="portfolio-box">
-            <!-- Thumbnail from: http://www.dtelepathy.com/blog/wp-content/uploads/2015/06/Technique-for-Faster-Web-Development.jpg -->
-            <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  GUI
-                </div>
-                <div class="project-name">
-                  GUI I GitHub repository. Front-end web pages.
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+
+        <!-- Third Link: source code for GUI I last assignment (Scrabble) -->
         <div class="col-lg-4 col-sm-6">
           <a href="https://github.com/JasonD94/scrabble" class="portfolio-box">
-            <!-- Thumbnail from: https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg -->
-            <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+            <!--  Thumbnail from Wikipedia
+            URL: https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg
+            -->
+            <img src="img/portfolio/thumbnails/scrabble.jpg" class="img-responsive" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -268,33 +289,60 @@
             </div>
           </a>
         </div>
+
+        <!-- Fourth Link: source code for UMass Lowell Mobile Dev class (UML Alerts) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/repair" class="portfolio-box">
-            <!-- Thumbnail from: http://iphonerepairnevada.com/wp-content/uploads/2016/05/iphone-repair-cracked-screen.png -->
-            <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+          <a href="https://github.com/JasonD94/UML-Alerts" class="portfolio-box">
+            <!-- Thumbnail from:
+
+            -->
+            <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
-                  iPhone Repair
+                  UML Alerts
                 </div>
                 <div class="project-name">
-                  Front-end web project for an iPhone repair business.
+                  Android App Project for UMass Lowell Android App Development class.
                 </div>
               </div>
             </div>
           </a>
         </div>
+
+        <!-- Fifth Link: source code for entire GUI I class (GUI I) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/jasond94.github.io" class="portfolio-box">
-            <!-- Downing stage coach from Google Photos (Personal photo taken during DC Trip 2016) -->
-            <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+          <a href="https://github.com/JasonD94/GUI" class="portfolio-box">
+            <!-- Thumbnail from dtelepathy.com
+            URL: http://www.dtelepathy.com/blog/wp-content/uploads/2015/06/Technique-for-Faster-Web-Development.jpg -->
+            <img src="img/portfolio/thumbnails/gui.jpg" class="img-responsive" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
-                  downing.io
+                  GUI
                 </div>
                 <div class="project-name">
-                  Source code for this personal website
+                  GUI I GitHub repository. Front-end web pages.
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Sixth Link: source code for OPL Project (Racket Weather) -->
+        <div class="col-lg-4 col-sm-6">
+          <a href="https://github.com/oplS16projects/Racket-Weather" class="portfolio-box">
+            <!-- Thumbnail from gannett-cdn.com
+            URL: http://www.gannett-cdn.com/-mm-/3526533239800dac0c978150377d099025f1e52c/c=52-700-4303-3102&r=x1683&c=3200x1680/local/-/media/USATODAY/None/2014/10/03/1412368123000-Mesostorm-Lightning.jpg -->
+            <img src="img/portfolio/thumbnails/racket-weather.jpg" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  Racket Weather
+                </div>
+                <div class="project-name">
+                  OPL Project. Visualizations in Racket using data from
+                  the OpenWeatherMap API.
                 </div>
               </div>
             </div>
@@ -309,9 +357,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="section-heading">Contact <a href="mailto:jason[AT]downing.io">Jason</a></h2>
+          <h2 class="section-heading">
+          Contact <a href="mailto:jason[AT]downing.io">Jason</a></h2>
           <hr class="primary">
-          <p>Interested in hiring Jason? Have a cool open source project you need help with? Feel free to reach out to him at the following email address, or on LinkedIn. He is interested in working on challenging projects, especially in the mobile and web development areas.</p>
+          <p>Interested in hiring Jason? Have a cool open source project you
+          need help with? Feel free to reach out to him at the following email
+          address, or on LinkedIn. He is interested in working on challenging
+          projects, especially in the mobile and web development areas of CS.</p>
           <p>You can also find him on
           <a href="https://github.com/JasonD94">GitHub</a>
           and view the cool stuff he works on in his free time.</p>
@@ -337,14 +389,16 @@
     </div>
   </section>
 
-  <!-- THIS IS THE FOOTER - displays a copyright notice and that Bootstrap powers this webpage. -->
+  <!--  THIS IS THE FOOTER - displays a copyright notice and
+        that Bootstrap powers this web page. -->
   <div class="container">
     <p class="text-center text-muted text-small">
       Jason Downing &copy; 2016. All rights reserved.
       Powered by <a href="http://www.getbootstrap.com/">Bootstrap</a>.
       Source on <a href="https://github.com/JasonD94/jasond94.github.io">GitHub</a>.
-      Theme based on the <a href="http://startbootstrap.com/template-overviews/creative/">Creative Bootstrap Theme</a> by
-      <a href="http://startbootstrap.com/">Start Bootstrap</a>.
+      Theme based on the
+      <a href="http://startbootstrap.com/template-overviews/creative/">Creative Bootstrap Theme</a>
+      by <a href="http://startbootstrap.com/">Start Bootstrap</a>.
     </p>
   </div>
 
@@ -354,7 +408,7 @@
   <!-- Bootstrap Core JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- Plugin JavaScript -->
+  <!-- Plugin JavaScript (for the GitHub links) -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
