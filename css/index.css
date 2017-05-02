@@ -18,6 +18,36 @@
   color: blue;
 }
 
+/*  For the GitHub Section link
+    These styles make the GitHub Section header appear white all the time,
+    unless hovered on. Makes for a better style, and clearer that it is a link.
+    From: https://www.w3schools.com/css/css_link.asp
+    and: https://www.w3schools.com/css/tryit.asp?filename=trycss_link2;
+*/
+.text-white {
+  color: white;
+}
+
+/* Link color when it is unvisited */
+a.text-white:link  {
+  color: white;
+}
+
+/* Link color after being clicked on and visited */
+a.text-white:visited {
+  color: white;
+}
+
+/* Link color while being hovered on */
+a.text-white:hover {
+  color: blue;
+}
+
+/* Link color the moment it is clicked */
+a.text-white:active {
+  color: white;
+}
+
 .min-padding {
   padding-top: 2em;
   padding-bottom: 2em;
