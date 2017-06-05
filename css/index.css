@@ -26,26 +26,31 @@
 */
 .text-white {
   color: white;
+  text-decoration: underline;
 }
 
 /* Link color when it is unvisited */
 a.text-white:link  {
   color: white;
+  text-decoration: underline;
 }
 
 /* Link color after being clicked on and visited */
 a.text-white:visited {
   color: white;
+  text-decoration: underline;
 }
 
 /* Link color while being hovered on */
 a.text-white:hover {
   color: blue;
+  text-decoration: underline;
 }
 
 /* Link color the moment it is clicked */
 a.text-white:active {
   color: white;
+  text-decoration: underline;
 }
 
 .min-padding {
