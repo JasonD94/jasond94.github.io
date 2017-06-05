@@ -14,43 +14,69 @@
   font-size: 100%;
 }
 
-.text-blue {
-  color: blue;
-}
-
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
-    unless hovered on. Makes for a better style, and clearer that it is a link.
-    From: https://www.w3schools.com/css/css_link.asp
-    and: https://www.w3schools.com/css/tryit.asp?filename=trycss_link2;
+    unless hovered on, in which case they turn blue. I like this style better.
+
+    I also decided to use borders instead of underlines since the J in Jason gets cut
+    off by an underline, but not by a border (which looks exactly like an underline only
+    I can control it better). This resulted in a MUCH nicer looking underline!
+    I used this link from Stackoverflow for this:
+    https://stackoverflow.com/questions/9586596/control-underline-position-on-text-decoration-underline
+
+    These links were also helpful:
+    https://www.w3schools.com/css/css_link.asp
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_link2
 */
+.text-blue {
+  color: blue;
+  border-bottom: 1px solid currentColor;
+}
 .text-white {
   color: white;
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 /* Link color when it is unvisited */
+a.text-blue:link  {
+  color: blue;
+  border-bottom: 1px solid currentColor;
+}
 a.text-white:link  {
   color: white;
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 /* Link color after being clicked on and visited */
+a.text-blue:visited {
+  color: blue;
+  border-bottom: 1px solid currentColor;
+}
 a.text-white:visited {
   color: white;
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 /* Link color while being hovered on */
+a.text-blue:hover {
+  color: blue;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
 a.text-white:hover {
   color: blue;
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
 }
 
 /* Link color the moment it is clicked */
+a.text-blue:active {
+  color: blue;
+  border-bottom: 1px solid currentColor;
+}
 a.text-white:active {
   color: white;
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .min-padding {
