@@ -1,9 +1,8 @@
 # downing.io
 
-Source code for my personal website. MIT Licensed. Do whatever you want it.
-Just don't sue me. 👍
+Source code for my personal website. MIT Licensed. 👍
 
-Contains a copy of my resume, as well as some links to Github.
+Contains a copy of my resume, as well as some links to Github. :octocat:
 
 Built using HTML5 and Bootstrap.
 
