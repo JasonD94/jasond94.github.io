@@ -14,6 +14,15 @@
   font-size: 100%;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
+/* Making the "text-muted" class smaller, seems a bit too large. */
+.text-muted {
+  font-size: 97%;
+}
+
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
     unless hovered on, in which case they turn blue. I like this style better.
