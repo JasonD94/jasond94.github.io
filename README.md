@@ -1,6 +1,6 @@
 # downing.io
 
-Source code for my personal website. MIT Licensed. 👍
+Source code for my personal website. MIT Licensed. :shipit:
 
 Contains a copy of my resume, as well as some links to Github. :octocat:
 
@@ -27,4 +27,4 @@ Built using [Bootstrap](http://getbootstrap.com/) for CSS,
 [GitHub Pages](https://pages.github.com/) for hosting, and
 [git](https://git-scm.com/) for source control
 
-Check out the source code if you like! ☺
+Check out the source code if you like! :eyes:
