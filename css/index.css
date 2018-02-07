@@ -23,6 +23,14 @@
   font-size: 97%;
 }
 
+/* Removing the bottom margin in the Languages and Skills area */
+#about > div > div:nth-child(2) > div:nth-child(3) > p.text-faded.no-margin {
+    margin-bottom: 0;
+}
+#about > div > div:nth-child(2) > div:nth-child(4) > p.text-faded.no-margin {
+  margin-bottom: 0;
+}
+
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
     unless hovered on, in which case they turn blue. I like this style better.
