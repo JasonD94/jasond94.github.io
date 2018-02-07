@@ -110,8 +110,7 @@
         <hr>
         <p>Mountain Biker. Skier. UMass Lowell Grad.</p>
         <p class="text-italic">
-          Software Developer at  
-          <a class="text-white" href="http://www.creativelogistics.com/" class="text-blue">Creative Logistics Solutions (CLS)</a>
+          Software Developer at Creative Logistics Solutions (CLS)</a>
         </p>
         <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More!</a>
       </div>
@@ -378,34 +377,66 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <h2 class="section-heading">
-            Contact <a href="mailto:jason[AT]downing.io" class="text-blue">Jason</a></h2>
+          
+          <!-- Attempting to avoid spam by removing @ and the dot in my domain -->
+            Contact Jason</h2>
           <hr class="primary">
-          <p>Interested in hiring Jason? Have an open source project you
-            need help with? Feel free to reach out to him at the following email
-            address, or on LinkedIn. He is interested in working on challenging
-            projects, especially in the mobile and web development areas of 
-            Computer Science.</p>
-          <p>You can also find him on
-            <a href="https://github.com/JasonD94" class="text-blue">GitHub</a>
-            and view the projects that he works on in his free time.</p>
+          <p>Jason is happily employed by CLS, and located in 
+          <a href="https://www.visitnh.gov/" class="text-blue text-italic">New Hampshire</a> which
+          he loves. 😊</p>
+          <p>If you have an interesting opportunity in the New Hampshire area, you
+            can still shoot him a message using the form below.</p>
+          
+          <!-- Really avoiding spam by sending emails to the spam box
+               Docs URL: https://formspree.io/ 
+               Also, Bootstrap forms: https://getbootstrap.com/docs/3.3/css/#forms -->
+          <form action="https://formspree.io/info@downing.io" method="POST" class="form-horizontal" role="form">
+            <!-- Need a name, reply to email, and a message -->
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your message" class="form-control"></textarea>
+            </div>
+            <!-- Hidden elements here -->
+            <input type="hidden" name="_subject" value="New email from Contact Me Form!" class="form-control">
+            <input type="hidden" name="_next" value="thanks.html" />
+            <!-- Submit button -->
+            <div class="form-group">
+              <input type="submit" value="Email Jason" class="btn btn-primary btn-xl">
+            </div>
+          </form>
         </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p>You can also find him on LinkedIn and GitHub too.</p>
+        </div>
+      
+        <!-- Email, LinkedIn, and GitHub links -->
         <div class="col-xs-4 col-lg-2 col-lg-offset-3 text-center">
-          <a href="mailto:jason[AT]downing.io">
-            <i class="fa fa-envelope fa-5x sr-icons"></i>
+          <a href="mailto:jason[AT]downing[DOT]io">
+            <i class="fa fa-envelope fa-4x sr-icons"></i>
           </a>
-          <p><a href="mailto:jason[AT]downing.io" class="text-blue">Email Jason</a></p>
+          <p><a href="mailto:jason[AT]downing[DOT]io" class="text-blue">Email</a></p>
         </div>
+        
         <div class="col-xs-4 col-lg-2 text-center">
           <a href="https://www.linkedin.com/in/jasonpdowning">
-            <i class="fa fa-linkedin-square fa-5x sr-icons"></i>
+            <i class="fa fa-linkedin-square fa-4x sr-icons"></i>
           </a>
-          <p><a href="https://www.linkedin.com/in/jasonpdowning" class="text-blue">Find Jason on LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jasonpdowning" class="text-blue">LinkedIn</a></p>
         </div>
+        
         <div class="col-xs-4 col-lg-2 text-center">
           <a href="https://github.com/JasonD94">
-            <i class="fa fa-github-square fa-5x sr-icons"></i>
+            <i class="fa fa-github-square fa-4x sr-icons"></i>
           </a>
-          <p><a href="https://github.com/JasonD94" class="text-blue">View Jason's GitHub</a></p>
+          <p><a href="https://github.com/JasonD94" class="text-blue">GitHub</a></p>
         </div>
       </div>
     </div>
