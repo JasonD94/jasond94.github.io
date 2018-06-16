@@ -49,7 +49,10 @@
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-.text-white {
+  /* 6/15/2018: Renamed because Creative Bootstrap ALSO has a text-white class,
+                and my own text-white class was adding a border on the H2 'Education'
+                header text. */
+.text-white-link {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -59,7 +62,7 @@ a.text-blue:link  {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white:link  {
+a.text-white-link:link  {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -69,7 +72,7 @@ a.text-blue:visited {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white:visited {
+a.text-white-link:visited {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -80,7 +83,7 @@ a.text-blue:hover {
   border-bottom: 1px solid currentColor;
   text-decoration: none;
 }
-a.text-white:hover {
+a.text-white-link:hover {
   color: blue;
   border-bottom: 1px solid currentColor;
   text-decoration: none;
@@ -91,7 +94,7 @@ a.text-blue:active {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white:active {
+a.text-white-link:active {
   color: white;
   border-bottom: 1px solid currentColor;
 }

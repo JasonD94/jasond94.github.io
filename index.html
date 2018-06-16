@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--
     File: index.html
@@ -23,7 +22,8 @@
   <title>Jason Downing</title>
 
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- 6/15/2018: Updated to the latest version of Bootstrap (4.1.1) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
   <!-- Custom Fonts -->
   <script src="https://use.fontawesome.com/4dfd1d7bab.js"></script>
@@ -58,44 +58,39 @@
 </head>
 
 <body id="page-top">
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
 
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-        data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand page-scroll" href="#page-top">Jason Downing</a>
-      </div>
+      <!-- Updated with latest Creative -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Jason Downing</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="page-scroll" href="#page-top">Home</a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
           </li>
-          <li>
-            <a class="page-scroll" href="#about">Education</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Education</a>
           </li>
-          <li>
-            <a class="page-scroll" href="#work">Work</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#work">Work</a>
           </li>
-          <li>
-            <a class="page-scroll" href="#github">GitHub</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#github">GitHub</a>
           </li>
-          <li>
-            <a class="page-scroll" href="#contact">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
-          <li>
-            <a class="page-scroll" href="img/resume.pdf">Resume</a>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="img/resume.pdf">Resume</a>
           </li>
         </ul>
       </div>
-      <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
   </nav>
 
   <!--  Intro Section
@@ -103,55 +98,59 @@
         Header image found at the following URL:
         https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
    -->
-  <header>
-    <div class="header-content">
-      <div class="header-content-inner">
-        <h1 id="homeHeading">Jason Downing</h1>
-        <hr>
-        <p>Mountain Biker. Skier. UMass Lowell Grad.</p>
-        <p class="text-italic">
-          Software Developer at Creative Logistics Solutions (CLS)</a>
-        </p>
-        <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More!</a>
+  <header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <strong>Jason Downing</strong>
+          </h1>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">Mountain Biker. Skier. UMass Lowell Grad.</p>
+          <p class="text-italic mb-5">
+            Software Engineer</a>
+          </p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Education Section -->
-  <section class="min-padding bg-primary" id="about">
+  <section class="bg-primary" id="about">
     <div class="container">
-
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Education</h2>
-          <hr class="light">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-white">Education</h2>
+          <hr class="light my-4">
         </div>
-
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <i class="fa fa-4x fa-id-card-o text-faded sr-icons"></i>
-          <h3>Degree</h3>
+          <h3 class="text-white">Degree</h3>
           <p class="text-faded">Bachelor of Science in Computer Science from
-          <a class="text-white" href="https://www.uml.edu/" class="text-blue">UMass Lowell</a></p>
+          <a class="text-white-link" href="https://www.uml.edu/" class="text-blue">UMass Lowell</a></p>
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center div-padding-fix">
           <i class="fa fa-4x fa-graduation-cap text-faded sr-icons"></i>
-          <h3>Graduation</h3>
+          <h3 class="text-white">Graduation</h3>
           <p class="text-faded">Graduated in May 2017 with Cum Laude Honors</p>
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <i class="fa fa-4x fa-code text-faded sr-icons"></i>
-          <h3>Languages</h3>
+          <h3 class="text-white">Languages</h3>
           <p class="text-faded no-margin">C#, JavaScript, Java</p>
           <p class="text-faded">Python, and C / C++</p>
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <i class="fa fa-4x fa-file-code-o text-faded sr-icons"></i>
-          <h3>Skills</h3>
+          <h3 class="text-white">Skills</h3>
           <p class="text-faded no-margin">C# .NET Back end</p>
           <p class="text-faded">HTML5 Front end</p>
         </div>
@@ -159,48 +158,51 @@
 
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-          <a href="#work" class="page-scroll btn btn-default btn-xl sr-button">Wait There's More!</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#work">Wait There's More!</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Work Experience Section. -->
-  <section class="min-padding" id="work">
+  <section id="work">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Work</h2>
           <hr class="primary">
         </div>
-        <!-- Adding CLS to the work section -->
+        <div class="col-lg-3 col-sm-6 text-center">
+          <i class="fa fa-4x fa-fighter-jet text-primary sr-icons"></i>
+          <h3 class="mt-4 mb-4">System Engineer</h3>
+          <p class="text-muted">Apr 2018 to Present: System Engineer at BAE</p>
+        </div>
         <div class="col-lg-3 col-sm-6 text-center">
           <i class="fa fa-4x fa-truck text-primary sr-icons"></i>
-          <h3>Software Developer</h3>
-          <p class="text-muted">Summer 2017 to present: C# Web API
-            development for Creative Logistics Solutions (CLS)
+          <h3 class="mt-4 mb-4">Software Developer</h3>
+          <p class="text-muted">Jul 2017 to Apr 2018: C# Web API
+            development for Creative Logistics Solutions (CLS)</p>
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
+          <!-- TIL: Bootstrap has awesome spacing classes
+                    https://getbootstrap.com/docs/4.0/utilities/spacing/ -->
           <i class="fa fa-4x fa-android text-primary sr-icons"></i>
-          <h3>Android Intern</h3>
-          <p class="text-muted">Summer 2016: Android features & improvements
-            for Fidelity's Personal Investing (PI) division</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 text-center div-padding-fix">
-          <i class="fa fa-4x fa-server text-primary sr-icons"></i>
-          <h3>Mainframe Intern</h3>
-          <p class="text-muted">Summer 2015: COBOL & JCL projects for
-            Fidelity's Fidelity Institutional (FI) division</p>
+          <i class="fa fa-4x fa-server text-primary sr-icons ml-4"></i>
+          <h3 class="mt-4 mb-4">Technical Intern</h3>
+          <p class="text-muted mb-4">Summer 2015: COBOL projects for
+            Fidelity Institutional (FI)</p>
+          <p class="text-muted mb-5">Summer 2016: Android features & improvements
+            for Fidelity Personal Investing (PI) </p>
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
           <i class="fa fa-4x fa-pied-piper text-primary sr-icons"></i>
-          <h3>Research Assistant</h3>
+          <h3 class="mt-4 mb-4">Research Assistant</h3>
           <p class="text-muted">Summer 2014: C++ & JavaScript API work for 
             UMass Lowell's Engaging Computing Group Research Lab</p>
         </div>
       </div>
       <div class="text-center">
-        <a href="#github" class="btn btn-primary btn-xl page-scroll">
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#github">
         Show me the <&nbsp;&frasl;&nbsp;CODE&nbsp;></a>
       </div>
     </div>
@@ -208,7 +210,7 @@
 
   <!-- GitHub Section -->
   <section class="min-padding-top bg-primary" id="github">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 text-center">
 
@@ -216,7 +218,7 @@
           page, without adding the silly extra "CLICK THIS ICON" text that was
           there before. -->
           <h2 class="section-heading">
-            <a class="text-white" href="https://github.com/JasonD94" class="text-white">GitHub: JasonD94
+            <a class="text-white-link" href="https://github.com/JasonD94" class="text-white">GitHub: JasonD94
               <i class="fa fa-1x fa-github-square" style="color:white"></i>
             </a>
           </h2>
@@ -226,8 +228,8 @@
     </div>
 
     <!-- GitHub links below -->
-    <div class="container-fluid">
-      <div class="row no-gutter">
+    <div class="container-fluid p-0">  <!-- p-0 makes the images go edge to edge (no padding) -->
+      <div class="row no-gutters">
 
         <!--
         Redoing the links arrangement. Current thought is it should go:
@@ -252,11 +254,11 @@
 
         <!-- First Link: source code for downing.io -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/jasond94.github.io" class="portfolio-box">
+          <a class="portfolio-box" href="https://github.com/JasonD94/jasond94.github.io">
             <!--  Same photo as the header, but resized.
                   URL: https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
             -->
-            <img src="img/portfolio/thumbnails/downing-io.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/downing-io.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -272,12 +274,12 @@
 
         <!-- Second Link: source code for GUI II Project (Ski Maps) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="http://downing.io/Ski-Maps/" class="portfolio-box">
+          <a class="portfolio-box" href="http://downing.io/Ski-Maps/">
             <!--  Awesome photo of JT and random skiers from Google Photos
                   (Personal photo taken March 15 2017 at Cannon Mt)
                   Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
             -->
-            <img src="img/portfolio/thumbnails/ski-maps.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/ski-maps.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -293,11 +295,11 @@
 
         <!-- Third Link: source code for GUI I last assignment (Scrabble) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/scrabble" class="portfolio-box">
+          <a class="portfolio-box" href="https://github.com/JasonD94/scrabble">
             <!--  Thumbnail from Wikipedia
             URL: https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg
             -->
-            <img src="img/portfolio/thumbnails/scrabble.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/scrabble.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -313,11 +315,11 @@
 
         <!-- Fourth Link: source code for UMass Lowell Mobile Dev class (UML Alerts) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/UML-Alerts" class="portfolio-box">
+          <a class="portfolio-box" href="https://github.com/JasonD94/UML-Alerts">
             <!-- Thumbnail from alphr.com
             URL: http://cdn1.alphr.com/sites/alphr/files/2016/05/best_android_apps.jpg
             -->
-            <img src="img/portfolio/thumbnails/uml-alerts.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/uml-alerts.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -333,10 +335,10 @@
 
         <!-- Fifth Link: source code for entire GUI I class (GUI I) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/JasonD94/GUI" class="portfolio-box">
+          <a class="portfolio-box" href="https://github.com/JasonD94/GUI">
             <!-- Thumbnail from dtelepathy.com
             URL: http://www.dtelepathy.com/blog/wp-content/uploads/2015/06/Technique-for-Faster-Web-Development.jpg -->
-            <img src="img/portfolio/thumbnails/gui.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/gui.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -352,10 +354,10 @@
 
         <!-- Sixth Link: source code for OPL Project (Racket Weather) -->
         <div class="col-lg-4 col-sm-6">
-          <a href="https://github.com/oplS16projects/Racket-Weather" class="portfolio-box">
+          <a class="portfolio-box" href="https://github.com/oplS16projects/Racket-Weather">
             <!-- Thumbnail from gannett-cdn.com
             URL: http://www.gannett-cdn.com/-mm-/3526533239800dac0c978150377d099025f1e52c/c=52-700-4303-3102&r=x1683&c=3200x1680/local/-/media/USATODAY/None/2014/10/03/1412368123000-Mesostorm-Lightning.jpg -->
-            <img src="img/portfolio/thumbnails/racket-weather.jpg" class="img-responsive" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/racket-weather.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">
@@ -376,18 +378,17 @@
   <!-- Contact section -->
   <section class="min-padding" id="contact">
     <div class="container">
+    
+      <!-- Contact Jason Row -->
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
+        <div class="col-lg-8 mx-auto text-center">
           <h2 class="section-heading">
           
           <!-- Attempting to avoid spam by removing @ and the dot in my domain -->
             Contact Jason</h2>
           <hr class="primary">
-          <p>Jason is happily employed by CLS, and located in 
-          <a href="https://www.visitnh.gov/" class="text-blue text-italic">New Hampshire</a> which
-          he loves. 😊</p>
-          <p>If you have an interesting opportunity in the New Hampshire area, you
-            can still shoot him a message using the form below.</p>
+          <p>If you have an interesting opportunity in the <strong>New Hampshire area</strong>, you
+            can send / spam him a message using the form below.</p>
           
           <!-- Really avoiding spam by sending emails to the spam box
                Docs URL: https://formspree.io/ 
@@ -412,29 +413,32 @@
             </div>
           </form>
         </div>
-        
       </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p>You can also find him on LinkedIn and GitHub too.</p>
-        </div>
       
-        <!-- Email, LinkedIn, and GitHub links -->
-        <div class="col-xs-4 col-lg-2 col-lg-offset-3 text-center">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>You can also find his personal email, LinkedIn and GitHub below too.</p>
+        </div>
+      </div>
+      
+      <!-- Email, LinkedIn, and GitHub links -->
+      <div class="row">
+      
+        <div class="col-4 col-sm-4 col-lg-2 offset-lg-3 text-center">
           <a href="mailto:jason[AT]downing[DOT]io">
             <i class="fa fa-envelope fa-4x sr-icons"></i>
           </a>
           <p><a href="mailto:jason[AT]downing[DOT]io" class="text-blue">Email</a></p>
         </div>
         
-        <div class="col-xs-4 col-lg-2 text-center">
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
           <a href="https://www.linkedin.com/in/jasonpdowning">
             <i class="fa fa-linkedin-square fa-4x sr-icons"></i>
           </a>
           <p><a href="https://www.linkedin.com/in/jasonpdowning" class="text-blue">LinkedIn</a></p>
         </div>
         
-        <div class="col-xs-4 col-lg-2 text-center">
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
           <a href="https://github.com/JasonD94">
             <i class="fa fa-github-square fa-4x sr-icons"></i>
           </a>
@@ -457,18 +461,23 @@
     </p>
   </div>
 
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript (for the GitHub links) -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!-- 6/15/2018: Updated jQuery, added Popper.js, and updated Bootstrap JS to 4.1.1 -->
+  <!-- Also pulling in the Bootstrap 4 update from Start Bootstrap too
+       https://github.com/BlackrockDigital/startbootstrap-creative  -->
+       
+  <!-- jQuery 3.3.1 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap 4.1 JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
+  <!-- Plugin & Theme JavaScript (With Bootstrap 4 Update) -->
+  <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-
-  <!-- Theme JavaScript -->
   <script src="js/creative.min.js"></script>
+  
 </body>
 </html>
