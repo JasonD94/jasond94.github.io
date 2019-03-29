@@ -124,3 +124,54 @@ a.text-white-link:active {
 .div-padding-fix {
   padding-bottom: 2em;
 }
+
+/* Adding some background color options */
+.bg-green {
+	/* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
+	background-color: #1DB954 !important;
+}
+
+/* Black button to go with the Spotify Green. The active/focus/etc stuff is for when you
+   hover / click on the button. */
+.btn-black {
+	color: #fff;
+	background-color: #000000 !important;
+}
+.btn-black:active, .btn-black:focus, .btn-black:hover {
+	color: #fff;
+	background-color: #262626 !important;
+}
+.btn-black:active, .btn-black:focus {
+	box-shadow:0 0 0 .2rem rgba(240,95,64,.5)!important;
+}
+
+/* Black hrefs & hrs too */
+.href-black {
+	color: #000000;
+}
+.hr-black {
+	border-color: #000000;
+	color: #000000;
+}
+
+/* 	Vertically center the images on the "Fun Stuff" section
+		https://stackoverflow.com/a/37163431
+*/
+.images-vcenter {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* 	Add border to the images on the "Fun Stuff" section 
+		https://www.w3schools.com/csS/css3_images.asp
+*/
+.images-border {
+	border: .5em solid #000000;
+	border-radius: 3em;
+}
+
+.images-border-skiing {
+	border: .5em solid #000000;
+	border-radius: 50%;
+}
