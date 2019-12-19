@@ -4,6 +4,14 @@ downing.io
 Source code for my personal website. MIT Licensed. Contains a copy of my resume, 
 as well as some links to Github. :octocat:
 
+## Forking Note
+
+If you fork this repo, please change the **form action** to an email address you own before trying it out. [Thaaaanks!](https://i.imgur.com/TpBVEjv.jpg)
+
+```
+<form action="https://formspree.io/your-email@here.com" method="POST" class="form-horizontal" role="form">
+```
+
 Built using:
 --------------------------------------------------------------------------------
 [HTML5](https://developers.google.com/web/)  
