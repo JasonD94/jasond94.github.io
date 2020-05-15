@@ -57,6 +57,11 @@
   border-bottom: 1px solid currentColor;	
   text-decoration:none;
 }
+.text-grey-link {
+  color: #525252;
+  border-bottom: 1px solid currentColor;	
+  text-decoration:none;
+}
 
 /* Link color when it is unvisited */
 a.text-blue:link  {
