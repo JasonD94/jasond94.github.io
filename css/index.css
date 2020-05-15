@@ -72,7 +72,11 @@ a.text-white-link:link  {
   color: white;
   border-bottom: 1px solid currentColor;
 }
-
+a.text-grey-link:link {
+  color: #525252;
+  border-bottom: 1px solid currentColor;	
+  text-decoration:none;
+}
 /* Link color after being clicked on and visited */
 a.text-blue:visited {
   color: blue;
