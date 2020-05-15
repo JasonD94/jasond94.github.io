@@ -54,7 +54,8 @@
                 header text. */
 .text-white-link {
   color: white;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;	
+  text-decoration:none;
 }
 
 /* Link color when it is unvisited */
