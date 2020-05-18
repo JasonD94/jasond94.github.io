@@ -1,0 +1,133 @@
+input:invalid:required {
+                background-color: #fffee3;
+            }
+
+            input:valid {
+                border: 2px solid black;
+            }
+            body,
+            html {
+                min-height: 100%;
+            }
+            body,
+            div,
+            form,
+            input,
+            p,
+            select {
+                padding: 0;
+                margin: 0;
+                outline: none;
+                font-family: Roboto, Arial, sans-serif;
+                font-size: 14px;
+                color: #666;
+                line-height: 22px;
+            }
+            h1 {
+                margin: 15px 0;
+                font-weight: 400;
+            }
+            .testbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+                padding: 3px;
+            }
+            form {
+                position: absolute;
+                top: 18%;
+                height: 380px;
+                width: 650px;
+                padding: 35px;
+                background: #fff;
+                box-shadow: 0 4px 30px #ccc;
+                border-radius: 10px;
+            }
+            input,
+            select,
+            textarea {
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            <!-- change calc% for change in textbox width% -- > input {
+                width: calc(10% - 10px);
+                padding: 5px;
+            }
+            select {
+                width: 100%;
+                padding: 7px 0;
+                background: transparent;
+            }
+            textarea {
+                width: calc(100% - 6px);
+            }
+            .item {
+                position: relative;
+                margin: 10px 0;
+            }
+            .item:hover i,
+            .item:hover p {
+                color: #095484;
+            }
+            input:hover,
+            select:hover,
+            textarea:hover {
+                box-shadow: 0 0 5px 0 #095484;
+            }
+
+            .btn-block {
+                margin-top: 20px;
+                text-align: center;
+            }
+            button {
+                width: auto;
+                padding: 10px;
+                border: none;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                background-color: #095484;
+                font-size: 18px;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0666a3;
+            }
+
+            @media (min-width: 200px) {
+                .int-item,
+                .name-item {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .int-item input,
+                .name-item input {
+                    width: calc(40% - 20px);
+                }
+                .int-item select {
+                    width: calc(50% - 8px);
+                }
+
+            }
+            option,
+            select {
+                height: 25px;
+                width: 180px;
+                padding: 0;
+            }
+            select:invalid {
+                background-color: #fffee3;
+            }
+            select option[value="anionic"] {
+                background: #ffffff;
+            }
+            select:valid {
+                border: 2px solid black;
+            }
+            select option[value="cationic"] {
+                background: #ffffff;
+            }
