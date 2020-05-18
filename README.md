@@ -27,15 +27,5 @@ Based on the
 from [Start Bootstrap](http://startbootstrap.com/).
 The theme is also MIT Licensed.
 
-View it here: [downing.io](https://downing.io/)
 
-Check out some of my other webpages at 
-[github.com/JasonD94/](https://github.com/JasonD94/)
 
-##### NOTE:
-
-I have a custom domain connected to GitHub, so my GitHub Pages repositories 
-do not follow the usual GITHUB-USERNAME-HERE.github.io/REPOSITORY-NAME-HERE format. 
-Instead they follow a "downing.io/REPOSITORY-NAME-HERE" format. 
-If the domain fails for some reason, you can still access my site by going to 
-[https://jasond94.github.io](https://jasond94.github.io)
