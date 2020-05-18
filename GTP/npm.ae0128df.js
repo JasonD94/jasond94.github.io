@@ -24423,8 +24423,8 @@ parcelRequire = function(e, r, t, n) { var i, o = "function" == typeof parcelReq
         "Focm": [function(require, module, exports) {
             "use strict";
             var e = o(require("@tensorflow/tfjs")),
-                t = o(require("./json/anionic_raw_train_data.json")),
-                n = o(require("./json/cationic_raw_train_data.json"));
+                t = o(require("json/anionic_raw_train_data.json")),
+                n = o(require("json/cationic_raw_train_data.json"));
 
             function r() { if ("function" != typeof WeakMap) return null; var e = new WeakMap; return r = function() { return e }, e }
 
@@ -24468,7 +24468,7 @@ parcelRequire = function(e, r, t, n) { var i, o = "function" == typeof parcelReq
                     else F = o, D = r;
                     P.push(F), S.push(D) }
                 w = T(u), E = A(s), B = N(w), M = L(P), q = L(S), x = N(E), B = B[B.length - 1].slice(0, B.length - 1), M = M[M.length - 1].slice(0, M.length - 1), q = q[q.length - 1].slice(0, q.length - 1), x = x[x.length - 1].slice(0, x.length - 1); var G = a.sqrt(a.add(a.dotMultiply(B, B), a.dotMultiply(M, M), a.dotMultiply(q, q), a.dotMultiply(x, x))),
-                    k = (G = e.tensor1d(G), G = e.reshape(G, [1, l.length - 1]), require("./json/cationic_fit_data.json")),
+                    k = (G = e.tensor1d(G), G = e.reshape(G, [1, l.length - 1]), require("json/cationic_fit_data.json")),
                     z = j(G, C, e.tensor2d(k.weights)); return console.log(z), z }
             var I, b, w = 114,
                 E = "NaCl",
@@ -24529,7 +24529,7 @@ parcelRequire = function(e, r, t, n) { var i, o = "function" == typeof parcelReq
                     else h = n;
                     s.push(h) }
                 m = N(T(d)), f = L(s), y = L(c), m = m[m.length - 1].slice(0, m.length - 1), f = f[f.length - 1].slice(0, f.length - 1), y = y[y.length - 1].slice(0, y.length - 1); var b = a.sqrt(a.add(a.dotMultiply(m, m), a.dotMultiply(f, f), a.dotMultiply(y, y))),
-                    w = (b = e.tensor1d(b), b = e.reshape(b, [1, c.length - 1]), require("./json/anionic_fit_data.json")); return j(b, v, e.tensor2d(w.weights)) }
+                    w = (b = e.tensor1d(b), b = e.reshape(b, [1, c.length - 1]), require("json/anionic_fit_data.json")); return j(b, v, e.tensor2d(w.weights)) }
             s("#new_gel_type").change(function() { s("#prediction_box").hide(), s("#notes").hide(); var e = document.getElementById("new_gel_type").value; "anionic" == e ? (s("#chem_struc_anionic_field").show(), s("#chem_struc_cationic_field").hide(), s("#gel_conc_anionic_field").show(), s("#gel_conc_cationic_field").hide(), s("#equivalent_gdl_field").show(), s("#salt_type_field").hide(), s("#salt_conc_field").hide(), document.getElementById("new_salt_type").required = !1, document.getElementById("new_salt_added_cationic").required = !1, document.getElementById("new_gel_conc_anionic").required = !0, document.getElementById("new_gel_conc_cationic").required = !1, document.getElementById("new_Gdl_added_anionic").required = !0, document.getElementById("new_chem_struct_anionic").required = !0, document.getElementById("new_chem_struct_cationic").required = !1, s("#input").css("height", "380px")) : "cationic" == e ? (s("#chem_struc_anionic_field").hide(), s("#chem_struc_cationic_field").show(), s("#gel_conc_anionic_field").hide(), s("#gel_conc_cationic_field").show(), s("#salt_type_field").show(), s("#salt_conc_field").show(), s("#equivalent_gdl_field").hide(), document.getElementById("new_gel_conc_anionic").required = !1, document.getElementById("new_gel_conc_cationic").required = !0, document.getElementById("new_Gdl_added_anionic").required = !0, document.getElementById("new_salt_type").required = !0, document.getElementById("new_salt_added_cationic").required = !0, document.getElementById("new_Gdl_added_anionic").required = !1, document.getElementById("new_chem_struct_anionic").required = !1, document.getElementById("new_chem_struct_cationic").required = !0, s("#input").css("height", "450px")) : (document.getElementById("chem_struc_anionic_field").style.display = "none", document.getElementById("chem_struc_cationic_field").style.display = "none", document.getElementById("gel_conc_anionic_field").style.display = "none", document.getElementById("gel_conc_cationic_field").style.display = "none", document.getElementById("equivalent_gdl_field").style.display = "none", document.getElementById("salt_type_field").style.display = "none", document.getElementById("salt_conc_field").style.display = "none") }), s("#new_gel_type").trigger("change"), document.addEventListener("DOMContentLoaded", function() { var e = document.getElementById("input");
                 document.getElementById("output"), document.getElementById("getDataBtn"), document.getElementById("new_gel_type").value;
                 e.addEventListener("submit", function(e) { e.preventDefault(); var t = document.getElementById("new_gel_type").value; if ("anionic" == t) { var n = S(document.getElementById("new_chem_struct_anionic").value, document.getElementById("new_gel_conc_anionic").value, document.getElementById("new_Gdl_added_anionic").value);
