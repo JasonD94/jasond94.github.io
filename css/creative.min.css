@@ -228,7 +228,7 @@ header.masthead p {
 .portfolio-box {
     position: relative;
     display: block;
-    max-width: 650px;
+    max-width: 490px;
     margin: 0 auto;
     border-radius: 20px;
 }
