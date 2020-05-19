@@ -11,25 +11,31 @@
 */
 
 .text-small {
-  font-size: 100%;
+    font-size: 100%;
 }
 
 .text-italic {
-  font-style: italic;
+    font-style: italic;
 }
+
 
 /* Making the "text-muted" class smaller, seems a bit too large. */
+
 .text-muted {
-  font-size: 97%;
+    font-size: 97%;
 }
 
+
 /* Removing the bottom margin in the Languages and Skills area */
-#about > div > div:nth-child(2) > div:nth-child(3) > p.text-faded.no-margin {
+
+#about>div>div:nth-child(2)>div:nth-child(3)>p.text-faded.no-margin {
     margin-bottom: 0;
 }
-#about > div > div:nth-child(2) > div:nth-child(4) > p.text-faded.no-margin {
-  margin-bottom: 0;
+
+#about>div>div:nth-child(2)>div:nth-child(4)>p.text-faded.no-margin {
+    margin-bottom: 0;
 }
+
 
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
@@ -45,79 +51,99 @@
     https://www.w3schools.com/css/css_link.asp
     https://www.w3schools.com/css/tryit.asp?filename=trycss_link2
 */
+
 .text-blue {
-  color: blue;
-  border-bottom: 1px solid currentColor;
+    color: blue;
+    border-bottom: 1px solid currentColor;
 }
-  /* 6/15/2018: Renamed because Creative Bootstrap ALSO has a text-white class,
+
+
+/* 6/15/2018: Renamed because Creative Bootstrap ALSO has a text-white class,
                 and my own text-white class was adding a border on the H2 'Education'
                 header text. */
+
 .text-white-link {
-  color: white;
-  border-bottom: 1px solid currentColor;	
-  text-decoration:none;
+    color: white;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
 }
+
 .text-grey-link {
-  color: #525252;
-  border-bottom: 1px solid currentColor;	
-  text-decoration:none;
+    color: #525252;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
 }
+
 
 /* Link color when it is unvisited */
-a.text-blue:link  {
-  color: blue;
-  border-bottom: 1px solid currentColor;
+
+a.text-blue:link {
+    color: blue;
+    border-bottom: 1px solid currentColor;
 }
-a.text-white-link:link  {
-  color: white;
-  border-bottom: 1px solid currentColor;
+
+a.text-white-link:link {
+    color: white;
+    border-bottom: 1px solid currentColor;
 }
+
 a.text-grey-link:link {
-  color: #525252;
-  border-bottom: 1px solid currentColor;	
-  text-decoration:none;
+    color: #525252;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
 }
+
+
 /* Link color after being clicked on and visited */
+
 a.text-blue:visited {
-  color: blue;
-  border-bottom: 1px solid currentColor;
+    color: blue;
+    border-bottom: 1px solid currentColor;
 }
+
 a.text-white-link:visited {
-  color: white;
-  border-bottom: 1px solid currentColor;
+    color: white;
+    border-bottom: 1px solid currentColor;
 }
+
 
 /* Link color while being hovered on */
+
 a.text-blue:hover {
-  color: blue;
-  border-bottom: 1px solid currentColor;
-  text-decoration: none;
-}
-a.text-white-link:hover {
-  color: blue;
-  border-bottom: 1px solid currentColor;
-  text-decoration: none;
+    color: blue;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
 }
 
-/* Link color the moment it is clicked */
-a.text-blue:active {
-  color: blue;
-  border-bottom: 1px solid currentColor;
+a.text-white-link:hover {
+    color: blue;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
 }
+
+
+/* Link color the moment it is clicked */
+
+a.text-blue:active {
+    color: blue;
+    border-bottom: 1px solid currentColor;
+}
+
 a.text-white-link:active {
-  color: white;
-  border-bottom: 1px solid currentColor;
+    color: white;
+    border-bottom: 1px solid currentColor;
 }
 
 .min-padding {
-  padding-top: 2em;
-  padding-bottom: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .min-padding-top {
-  padding-top: 2em;
-  padding-bottom: 0em;
+    padding-top: 2em;
+    padding-bottom: 0em;
 }
+
 
 /*
     This class is a fix for a bug I noticed on certain screen resolutions.
@@ -131,63 +157,91 @@ a.text-white-link:active {
     This small padding increase fixes the issue by making all 4 squares the same
     height.
 */
+
 .div-padding-fix {
-  padding-bottom: 2em;
+    padding-bottom: 2em;
 }
 
+
 /* Adding some background color options */
-.bg-green {
-	/* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
-	background-color: #1DB954 !important;
+
+.bg-red {
+    /* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
+    background-color: #d43d3d !important;
+    padding-bottom: 5em;
+    padding-top: 3em;
 }
+
+.bg-yellow {
+    /* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
+    background-color: #feffd6 !important;
+    padding-bottom: 3em;
+    padding-top: 3em;
+}
+
 
 /* Black button to go with the Spotify Green. The active/focus/etc stuff is for when you
    hover / click on the button. */
+
 .btn-black {
-	color: #fff;
-	background-color: #000000 !important;
-}
-.btn-black:active, .btn-black:focus, .btn-black:hover {
-	color: #fff;
-	background-color: #262626 !important;
-}
-.btn-black:active, .btn-black:focus {
-	box-shadow:0 0 0 .2rem rgba(240,95,64,.5)!important;
+    color: #fff;
+    background-color: #000000 !important;
 }
 
+.btn-black:active,
+.btn-black:focus,
+.btn-black:hover {
+    color: #fff;
+    background-color: #262626 !important;
+}
+
+.btn-black:active,
+.btn-black:focus {
+    box-shadow: 0 0 0 .2rem rgba(240, 95, 64, .5)!important;
+}
+
+
 /* Black hrefs & hrs too */
+
 .href-black {
-	color: #000000;
+    color: #000000;
 }
+
 .hr-black {
-	border-color: #000000;
-	color: #000000;
+    border-color: #000000;
+    color: #000000;
 }
+
 
 /* 	Vertically center the images on the "Fun Stuff" section
 		https://stackoverflow.com/a/37163431
 */
+
 .images-vcenter {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 
 /* 	Add border to the images on the "Fun Stuff" section 
 		https://www.w3schools.com/csS/css3_images.asp
 */
+
 .images-border {
-	border: .5em solid #000000;
-	border-radius: 3em;
+    border: .5em solid #000000;
+    border-radius: 3em;
 }
 
 .images-border-skiing {
-	border: .5em solid #000000;
-	border-radius: 50%;
+    border: .5em solid #000000;
+    border-radius: 50%;
 }
 
+
 /* Rtn Red Color */
+
 .RtnRed {
-	color: #E61231 !important;
-	font-weight: bold;
+    color: #E61231 !important;
+    font-weight: bold;
 }
