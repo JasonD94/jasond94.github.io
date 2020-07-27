@@ -297,6 +297,7 @@ header.masthead p {
     position: relative;
     display: block;
     max-height: 250px;
+    max-width: 250px;
     margin: 0 auto;
     border-radius: 20px;
 }
@@ -346,6 +347,7 @@ header.masthead p {
     border-radius: 20px;
     border: 4px solid #f7ff59;
     max-height: 250px;
+    max-width: 250px;
 }
 
 .portfolio-boxM:focus {
