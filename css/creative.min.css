@@ -331,13 +331,13 @@ header.masthead p {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.portfolio-boxM .portfolio-box-caption .portfolio-boxM-caption-content .project-category {
+.portfolio-boxM .portfolio-boxM-caption .portfolio-boxM-caption-content .project-category {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase
 }
 
-.portfolio-boxM .portfolio-box-caption .portfolio-boxM-caption-content .project-name {
+.portfolio-boxM .portfolio-boxM-caption .portfolio-boxM-caption-content .project-name {
     font-size: 18px
 }
 
@@ -355,7 +355,7 @@ header.masthead p {
     .portfolio-boxM .portfolio-boxM-caption .portfolio-boxM-caption-content .project-category {
         font-size: 16px
     }
-    .portfolio-boxM .portfolio-box-caption .portfolio-boxM-caption-content .project-name {
+    .portfolio-boxM .portfolio-boxM-caption .portfolio-boxM-caption-content .project-name {
         font-size: 22px
     }
 }
