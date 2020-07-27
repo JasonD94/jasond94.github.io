@@ -345,6 +345,7 @@ header.masthead p {
     opacity: 1;
     border-radius: 20px;
     border: 4px solid #f7ff59;
+    max-height: 250px;
 }
 
 .portfolio-boxM:focus {
