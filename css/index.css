@@ -172,6 +172,13 @@ a.text-white-link:active {
     padding-top: 3em;
 }
 
+.bg-green {
+    /* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
+    background-color: #14C9CB !important;
+    padding-bottom: 5em;
+    padding-top: 3em;
+}
+
 .bg-yellow {
     /* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
     background-color: #feffd6 !important;
