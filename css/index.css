@@ -157,6 +157,13 @@ a.text-white-link:active {
     This small padding increase fixes the issue by making all 4 squares the same
     height.
 */
+iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 .div-padding-fix {
     padding-bottom: 2em;
