@@ -448,7 +448,7 @@
             Contact Jason</h2>
           <hr class="primary">
           <p>If you have an interesting opportunity in the <strong>Boston area</strong>, you
-            can send (please no spam 🙁) him a message using the form below.</p>
+            can send (pleeeeease no spam 🙁) him a message using the form below.</p>
           
           <!-- Really avoiding spam by sending emails to the spam box
                Docs URL: https://formspree.io/ 
@@ -488,11 +488,15 @@
       <!-- Email, LinkedIn, and GitHub links -->
       <div class="row">
       
+			  <!-- Removed email link, because spam bots just figure it out and I get hit with 10s of thousands of
+              requests a month so... not doing that. If you can read this, just open up my resume ;P      -->
         <div class="col-4 col-sm-4 col-lg-2 offset-lg-3 text-center">
-          <a href="mailto:jason[AT]downing[DOT]io">
-            <i class="fa fa-envelope fa-4x sr-icons"></i>
-          </a>
-          <p><a href="mailto:jason [ AT ] [ ~my domain here~ ]" class="text-blue">Email</a></p>
+				  <a href="img/resume.pdf">
+						<i class="fa fa-envelope fa-4x sr-icons"></i>
+					</a>
+					<a href="img/resume.pdf">
+						<p>Email - <span class="text-blue text-italic font-weight-bold">see resume</span></p>
+					</a>
         </div>
         
         <div class="col-4 col-sm-4 col-lg-2 text-center">
@@ -519,7 +523,7 @@
                    set to 1 (awesome new bootstrap 4 mb-1 class)-->
   <div class="container">
     <p class="text-center text-muted text-small mb-1">
-      Jason Downing &copy; 2015 - 2020. All rights reserved.
+      Jason Downing &copy; 2015 - <span id="copyright-year"></span>. All rights reserved.
       Powered by <a href="http://www.getbootstrap.com/" class="text-blue">Bootstrap</a>.
     </p>
     <p class="text-center text-muted text-small">
@@ -528,6 +532,7 @@
       <a href="http://startbootstrap.com/template-overviews/creative/" class="text-blue">Creative Bootstrap Theme</a>
       by <a href="http://startbootstrap.com/" class="text-blue">Start Bootstrap</a>.
     </p>
+		<br/>
   </div>
 
   <!-- 6/15/2018: Updated jQuery, added Popper.js, and updated Bootstrap JS to 4.1.1 -->
@@ -547,6 +552,11 @@
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/creative.min.js"></script>
+	
+	<!-- Automagically update the copyright year - why did I ever hardcode that? RIP lazy 2015 - 2020 me. -->
+	<script>
+		document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+	</script>
   
 </body>
 </html>
