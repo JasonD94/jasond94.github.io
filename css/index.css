@@ -1,11 +1,11 @@
 /*
     File: index.css
-    Jason Downing
-    Contact: jason@downing.io
+    Jacob Rozran
+    Contact: jacob.rozran@gmail.com
     MIT Licensed - see http://opensource.org/licenses/MIT for details.
     Anyone may freely use this code. Just don't sue me if it breaks stuff.
-    Created: September 3rd, 2015.
-    Last Updated: Feb 18th, 2021.
+    Created: May 6, 2021
+    Last Updated: May 6, 2021
 
     This file contains CSS classes / IDs used to override the Creative Bootstrap Theme
 */
@@ -132,6 +132,12 @@ a.text-white-link:active {
 */
 .div-padding-fix {
   padding-bottom: 2em;
+}
+
+/* Adding some background color options */
+.bg-primary {
+	/* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
+	background-color: #99CCFF !important;
 }
 
 /* Adding some background color options */
