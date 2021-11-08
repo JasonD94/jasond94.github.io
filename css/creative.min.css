@@ -40,7 +40,7 @@ h6 {
 
 .bg-primary {
     background-color: #295d91!important;
-    padding-bottom: 3em;
+    padding-bottom: 0em;
     padding-top: 3em;
 }
 
@@ -293,11 +293,9 @@ header.masthead p {
     }
 }
 
-
 .portfolio-boxM {
     position: relative;
     display: block;
-    
     max-width: 320px;
     margin: 0 auto;
     border-radius: 20px;
@@ -363,9 +361,6 @@ header.masthead p {
         font-size: 22px
     }
 }
-
-
-
 
 .text-primary {
     color: #f05f40!important
