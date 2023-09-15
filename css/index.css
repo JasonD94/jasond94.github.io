@@ -26,6 +26,23 @@
 }
 
 
+.thicker-text {
+    font-weight: bold;
+    font-weight: 900; /* Maximum thickness */
+    text-shadow: 2px 2px 4px #000000; /* Shadow for more depth */
+  }
+
+  .moving-text-container {
+    font-size: 0.7em;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type-animation 3s steps(50, end) infinite;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+
+
 /* Removing the bottom margin in the Languages and Skills area */
 
 #about>div>div:nth-child(2)>div:nth-child(1)>p.text-faded.no-margin {

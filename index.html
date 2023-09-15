@@ -62,6 +62,43 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-68657454-1', 'auto');
     ga('send', 'pageview');
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+  const container = document.querySelector('.moving-text-container');
+  const sentences = [
+    "I am an AI enthusiast.",
+    "I am a Chemical Engineer.",
+    "I am an adventurer."
+  ];
+  
+  let i = 0; // index for sentences
+  let j = 0; // index for characters within a sentence
+  let currentSentence = sentences[i];
+
+  function typeText() {
+    if (j < currentSentence.length) {
+      container.innerHTML += currentSentence.charAt(j);
+      j++;
+      setTimeout(typeText, 200);
+    } else {
+      i = (i + 1) % sentences.length; // Loop back to the first sentence when we reach the end
+      currentSentence = sentences[i];
+      j = 0;
+      setTimeout(() => {
+        container.innerHTML = ''; // Clear the container
+        typeText();
+      }, 2000); // Wait 2 seconds before clearing
+    }
+  }
+
+  typeText();
+
+  addTextEffect("header-title");
+  addTextEffect("header-subtitle");
+  addTextEffect("header-description");
+});
+
+
   </script>
 
 </head>
@@ -125,25 +162,26 @@
         Header image found at the following URL:
         https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
    -->
-  <header class="masthead text-center text-white d-flex">
+   <header class="masthead text-center text-white d-flex">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1 class="text-uppercase">
-            <strong>Mehrad Ansari</strong>
+            <strong class="thicker-text">Mehrad Ansari</strong>
           </h1>
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-          <p class="text-faded mb-5">Chemical Engineer. AI Enthusiast. Adventurer.</p>
-          <p class="text-italic mb-5">
-            Acceleration Consortium Research Fellow</a>
-          </p>
+          <h1 class="text-uppercase">
+            <strong class="thicker-text moving-text-container"></strong>
+          </h1>
+          <p class="text-italic mb-5">Acceleration Consortium Research Fellow</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
         </div>
       </div>
     </div>
   </header>
+  
 
   <!-- Education Section -->
   <section class="bg-primary" id="about">
