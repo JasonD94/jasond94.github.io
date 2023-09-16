@@ -62,6 +62,63 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-68657454-1', 'auto');
     ga('send', 'pageview');
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const phrases = ['I am a scientist.','I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let currentText = '';
+  const container = document.querySelector('.moving-text-container');
+  const cursor = document.querySelector('.cursor');
+  let erasing = false;
+  let paused = false;
+
+  // Cursor blinking
+  setInterval(function() {
+    cursor.style.visibility = (cursor.style.visibility === 'visible') ? 'hidden' : 'visible';
+  }, 600);
+
+  function type() {
+    let speed = 160;
+
+    if (paused) {
+      paused = false;
+      setTimeout(type, 1000);
+      return;
+    }
+
+    if (!erasing) {
+      currentText = phrases[phraseIndex].substr(0, ++letterIndex);
+      container.textContent = currentText;
+
+      if (letterIndex === phrases[phraseIndex].length) {
+        erasing = true;
+        paused = true;
+      }
+    } else {
+      speed = 80;
+      currentText = phrases[phraseIndex].substr(0, --letterIndex);
+      container.textContent = currentText;
+
+      if (currentText === "I am") {
+        erasing = false;
+        letterIndex = 4;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+
+    if (!paused) {
+      setTimeout(type, speed);
+    } else {
+      setTimeout(type, 1000);
+    }
+  }
+
+  type(); // Initial call
+
+  // Add your additional text effects here.
+});
+
   </script>
 
 </head>
@@ -125,25 +182,27 @@
         Header image found at the following URL:
         https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
    -->
-  <header class="masthead text-center text-white d-flex">
+   <header class="masthead text-center text-white d-flex">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1 class="text-uppercase">
-            <strong>Mehrad Ansari</strong>
+            <strong class="thicker-text">Mehrad Ansari</strong>
           </h1>
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
-          <p class="text-faded mb-5">Chemical Engineer. AI Enthusiast. Adventurer.</p>
-          <p class="text-italic mb-5">
-            Acceleration Consortium Research Fellow</a>
-          </p>
+          <h1 class="text-uppercase">
+            <strong class="thinner-text moving-text-container"></strong>
+            <span class="cursor">|</span>
+          </h1>
+          <p class="text-italic mb-5">Acceleration Consortium Research Fellow</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
         </div>
       </div>
     </div>
   </header>
+  
 
   <!-- Education Section -->
   <section class="bg-primary" id="about">
