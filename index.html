@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180352186-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-180352186-1');
@@ -30,15 +31,18 @@
 
   <!-- Bootstrap Core CSS -->
   <!-- 6/15/2018: Updated to the latest version of Bootstrap (4.1.1) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
   <!-- Custom Fonts -->
   <script src="https://use.fontawesome.com/4dfd1d7bab.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-  rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
-  rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+    rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/academicons.css">
 
   <!-- Plugin CSS -->
@@ -56,68 +60,82 @@
   <!-- Google Analytics Tracking Tag. Track how people access my site and such.
        (assuming they don't block ads or whatever from Google) -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-68657454-1', 'auto');
     ga('send', 'pageview');
 
-    document.addEventListener('DOMContentLoaded', function() {
-  const phrases = ['I am a scientist.','I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
-  let phraseIndex = 0;
-  let letterIndex = 0;
-  let currentText = '';
-  const container = document.querySelector('.moving-text-container');
-  const cursor = document.querySelector('.cursor');
-  let erasing = false;
-  let paused = false;
+    document.addEventListener('DOMContentLoaded', function () {
+    const phrases = ['I am a scientist.', 'I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentText = '';
+    const container = document.querySelector('.moving-text-container');
+    const cursor = document.querySelector('.cursor');
+    let erasing = false;
+    let paused = false;
 
-  // Cursor blinking
-  setInterval(function() {
-    cursor.style.visibility = (cursor.style.visibility === 'visible') ? 'hidden' : 'visible';
-  }, 600);
+    // Cursor blinking
+    setInterval(function () {
+        cursor.style.visibility = (cursor.style.visibility === 'visible') ? 'hidden' : 'visible';
+    }, 600);
 
-  function type() {
-    let speed = 160;
+    function type() {
+        let speed = 150;
 
-    if (paused) {
-      paused = false;
-      setTimeout(type, 1000);
-      return;
+        if (paused) {
+            paused = false;
+            setTimeout(type, 900);
+            return;
+        }
+
+        if (!erasing) {
+            currentText = phrases[phraseIndex].substr(0, ++letterIndex);
+            if (letterIndex <= 4) {
+                container.innerHTML = currentText;
+            } else if (letterIndex === phrases[phraseIndex].length) {
+                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5, currentText.length - 6) + '</span><span style="color: white;">.</span>';
+            } else {
+                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+            }
+
+            if (letterIndex === phrases[phraseIndex].length) {
+                erasing = true;
+                paused = true;
+            }
+        } else {
+            speed = 70;
+            currentText = phrases[phraseIndex].substr(0, --letterIndex);
+            if (letterIndex <= 4) {
+                container.innerHTML = currentText;
+            } else if (letterIndex === phrases[phraseIndex].length - 1) {
+                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+            } else {
+                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+            }
+
+            if (currentText === "I am") {
+                erasing = false;
+                letterIndex = 4;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+        }
+
+        if (!paused) {
+            setTimeout(type, speed);
+        } else {
+            setTimeout(type, 900);
+        }
     }
 
-    if (!erasing) {
-      currentText = phrases[phraseIndex].substr(0, ++letterIndex);
-      container.textContent = currentText;
-
-      if (letterIndex === phrases[phraseIndex].length) {
-        erasing = true;
-        paused = true;
-      }
-    } else {
-      speed = 80;
-      currentText = phrases[phraseIndex].substr(0, --letterIndex);
-      container.textContent = currentText;
-
-      if (currentText === "I am") {
-        erasing = false;
-        letterIndex = 4;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
-    }
-
-    if (!paused) {
-      setTimeout(type, speed);
-    } else {
-      setTimeout(type, 1000);
-    }
-  }
-
-  type(); // Initial call
-
-  // Add your additional text effects here.
+    type(); // Initial call
 });
+
+
 
   </script>
 
@@ -127,10 +145,9 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container" width="60px">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Mehrad Ansari</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" 
-              data-toggle="collapse" data-target="#navbarResponsive" 
-              aria-controls="navbarResponsive" aria-expanded="true" 
-              aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -157,32 +174,38 @@
             <a class="nav-link js-scroll-trigger" href="img/resume.pdf">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://www.youtube.com/channel/UCIamAGo52tAZIoXeBEORieA/videos"><i class="fa fa-youtube fa-2x sr-icons"></i></a>
+            <a class="nav-link js-scroll-trigger"
+              href="https://www.youtube.com/channel/UCIamAGo52tAZIoXeBEORieA/videos"><i
+                class="fa fa-youtube fa-2x sr-icons"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://linkedin.com/in/mehrad-ansari-baa732b9/"><i class="fa fa-linkedin-square fa-2x sr-icons"></i></a>
+            <a class="nav-link js-scroll-trigger" href="https://linkedin.com/in/mehrad-ansari-baa732b9/"><i
+                class="fa fa-linkedin-square fa-2x sr-icons"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://github.com/mehradans92"><i class="fa fa-github-square fa-2x sr-icons"></i></a>
+            <a class="nav-link js-scroll-trigger" href="https://github.com/mehradans92"><i
+                class="fa fa-github-square fa-2x sr-icons"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://scholar.google.com/citations?user=0Rmr7TwAAAAJ&hl=en"><i class="ai ai-google-scholar-square fa-2x sr-icons"></i></a>
+            <a class="nav-link js-scroll-trigger" href="https://scholar.google.com/citations?user=0Rmr7TwAAAAJ&hl=en"><i
+                class="ai ai-google-scholar-square fa-2x sr-icons"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://twitter.com/MehradAnsari"><i class="fa fa-twitter-square fa-2x sr-icons"></i></a>
+            <a class="nav-link js-scroll-trigger" href="https://twitter.com/MehradAnsari"><i
+                class="fa fa-twitter-square fa-2x sr-icons"></i></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
+
 
   <!--  Intro Section
 
         Header image found at the following URL:
         https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
    -->
-   <header class="masthead text-center text-white d-flex">
+  <header class="masthead text-center text-white d-flex">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -202,7 +225,7 @@
       </div>
     </div>
   </header>
-  
+
 
   <!-- Education Section -->
   <section class="bg-primary" id="about">
@@ -217,72 +240,84 @@
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <i class="fa fa-4x fa-graduation-cap text-faded sr-icons"></i>
           <h3 class="text-white">Degrees</h3>
-          <p class="text-faded" style="margin: 0; padding: 0;"><b><br/> Chemical Engineering, Ph.D.</b>
-            <a class="text-white-link" href="https://www.rochester.edu/" class="text-blue"><center>University of Rochester</center></a>
-            <img src="img/UR_logo.png" class="img-fluid" width="60px" style="transform: translateX(180px) translateY(-55px);"
-              alt="UofR"/>
+          <p class="text-faded" style="margin: 0; padding: 0;"><b><br /> Chemical Engineering, Ph.D.</b>
+            <a class="text-white-link" href="https://www.rochester.edu/" class="text-blue">
+              <center>University of Rochester</center>
+            </a>
+            <img src="img/UR_logo.png" class="img-fluid" width="60px"
+              style="transform: translateX(180px) translateY(-50px);" alt="UofR" />
           </p>
-          <p class="text-faded" style="margin: 0; padding: 0;"><b><br/> Chemical Engineering, M .Sc.</b>
-            <a class="text-white-link" href="https://www.rochester.edu/" class="text-blue"><center>University of Rochester</center></a>
-            <img src="img/UR_logo.png" class="img-fluid" width="60px" style="transform: translateX(180px) translateY(-55px);"
-              alt="UofR"/>
+          <p class="text-faded" style="margin: 0; padding: 0;"><b>Chemical Engineering, M .Sc.</b>
+            <a class="text-white-link" href="https://www.rochester.edu/" class="text-blue">
+              <center>University of Rochester</center>
+            </a>
+            <img src="img/UR_logo.png" class="img-fluid" width="60px"
+              style="transform: translateX(180px) translateY(-50px);" alt="UofR" />
           </p>
           <p class="text-faded" style="margin: 0; padding: 0;"><b>Environmental Engineering, M .Sc.</b>
-            <a class="text-white-link" href="https://www.mst.edu/" class="text-blue"><center>Missouri S&T</center></a>
-            <img src="img/MST_logo.png" class="img-fluid" width="55px" style="transform: translateX(180px) translateY(-50px);"
-              alt="MST"/>
+            <a class="text-white-link" href="https://www.mst.edu/" class="text-blue">
+              <center>Missouri S&T</center>
+            </a>
+            <img src="img/MST_logo.png" class="img-fluid" width="55px"
+              style="transform: translateX(180px) translateY(-50px);" alt="MST" />
           </p>
           <p class="text-faded" style="margin: 0; padding: 0;"><b>Chemical Engineering, B .Sc.</b>
-            <a class="text-white-link" href="https://ut.ac.ir/en" class="text-blue"><center>University of Tehran</center></a>
-            <img src="img/UT_logo.png" class="img-fluid" width="55px" style="transform: translateX(180px) translateY(-50px);"
-              alt="UT"/>
+            <a class="text-white-link" href="https://ut.ac.ir/en" class="text-blue">
+              <center>University of Tehran</center>
+            </a>
+            <img src="img/UT_logo.png" class="img-fluid" width="55px"
+              style="transform: translateX(180px) translateY(-50px);" alt="UT" />
           </p>
         </div>
-        
+
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-4x fa-code text-faded sr-icons"></i>
-          <h3 class="text-white">Languages</h3>
-          <p class="text-faded no-margin"><br/>Python<br/><br/>MATLAB<br/><br/>JavaScript<br /><br/>HTML5<br/><br/>CSS</p>
-    
+          <h3 class="text-white">Languages & Tools</h3>
+          <p class="text-faded no-margin">
+            <br />Python<br /><br />MATLAB<br /><br />JavaScript<br /><br />HTML5<br /><br />CSS<br /><br />TensorFlow<br /><br />PyTorch<br /><br />Scikit-learn
+          </p>
+
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-4x fa-file-code-o text-faded sr-icons"></i>
           <h3 class="text-white">Skills</h3>
-          <p class="text-faded no-margin"><br/>Deep Learning<br/><br/>Large Language Models<br/> <br/>Cloud (AWS)<br/><br/>High Performance Computing<br/><br/>Computational Fluid Dynamics<br/><br />Molecular Dynamics Simulations<br/><br/>Software Development<br/><br />Web Development</p>
-        </div> 
-	 
-	      <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
+          <p class="text-faded no-margin"><br />Deep Learning<br /><br />Large Language Models<br /> <br />Cloud
+            (AWS)<br /><br />High Performance Computing<br /><br />Computational Fluid Dynamics<br /><br />Molecular
+            Dynamics Simulations<br /><br />Software Development<br /><br />Web Development</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-4x fa-trophy text-faded sr-icons" aria-hidden="true"></i>
           <h3 class="text-white">Awards</h3>
+          <p><a class="text-white-link" href="https://acceleration.utoronto.ca/fellowships"
+              class="text-blue"><br />Acceleration Consortium Postdoc Fellowship (2023)</a></p>
+          <p><a class="text-white-link" href="https://www.kaggle.com/competitions/beep-competition/leaderboard"
+              class="text-blue"><br />Battery Informatics & ML Competition, Materials Research Society (2022)</a></p>
           <p><a class="text-white-link"
-            href="https://acceleration.utoronto.ca/fellowships"
-            class="text-blue"><br />Acceleration Consortium Postdoc Fellowship (2023)</a></p>
-          <p><a class="text-white-link"
-            href="https://www.kaggle.com/competitions/beep-competition/leaderboard"
-            class="text-blue"><br />Battery Informatics & ML Competition, Materials Research Society (2022)</a></p>
-          <p><a class="text-white-link"
-               href="https://www.hajim.rochester.edu/che/graduate/prizes-fellowships/kylcw-fellowship.html"
-               class="text-blue"><br />Kwang-Yu and Lee-Chien Wang Fellowship (2021)</a></p>
+              href="https://www.hajim.rochester.edu/che/graduate/prizes-fellowships/kylcw-fellowship.html"
+              class="text-blue"><br />Kwang-Yu and Lee-Chien Wang Fellowship (2021)</a></p>
           <p class="text-faded">Earl W. Costich Fellowship (2020)</p>
-          <p><a class="text-white-link" href="http://sections.asce.org/stlouis/documents/November_2017_Newsletter_Final.pdf" class="text-blue">Mike Alizadeh Scholarship (2017)</a></p>
+          <p><a class="text-white-link"
+              href="http://sections.asce.org/stlouis/documents/November_2017_Newsletter_Final.pdf"
+              class="text-blue">Mike Alizadeh Scholarship (2017)</a></p>
           <p class="text-faded no-margin">University of Sharif Computer-Aided Chemical Engineering Contest (2014)</p>
         </div>
-    </div>
+      </div>
 
-    <div class="row" style="margin : 0; transform: translateY(-50px);">
+      <div class="row" style="margin : 0; transform: translateY(-50px);">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#work">Wait There's More!</a>
         </div>
-    </div>
+      </div>
     </div>
   </section>
 
   <!-- Work Experience Section. -->
   <section class="bg-yellow" id="work">
     <div class="container-fluid">
-      
+
       <div class="row d-flex justify-content-center">
         <div class="col-lg-12 text-center">
           <h1 class="section-heading"><strong>Work</strong></h1>
@@ -291,316 +326,306 @@
       </div>
       <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-sm-6 text-center">
-          <img src="img/AC_logo.png"  class="img-fluid" width="291" alt="AC logo">
+          <img src="img/AC_logo.png" class="img-fluid" width="291" alt="AC logo">
           <h3 class="mt-4 mb-4">Research Fellow</h3>
-          <p class="text-muted"><span class="RtnRed">Acceleration Consortium</span></br>Toronto, ON</br>(June 2023 - Present)</p>
+          <p class="text-muted"><span class="RtnRed">Acceleration Consortium</span></br>Toronto, ON</br>(June 2023 -
+            Present)</p>
         </div>
-          <div class="col-lg-3 col-sm-6 text-center">
-            <img src="img/UR_logo.png"  class="img-fluid" width="120px" alt="UR logo">
-            <h3 class="mt-4 mb-4">Research Assistant</h3>
-            <p class="text-muted"><span>University of Rochester</span></br>Rochester, NY</br>(Jan 2019 - May 2023)</p>
-          </div>
-          <div class="col-lg-3 col-sm-6 text-center">
-            <img src="img/TRI.jpg"
-                  class="img-fluid"
-                  width="250px"
-                  alt="UR logo">
-            <h3 class="mt-4 mb-4">Energy & Materials Research Engineer</h3>
-            <p class="text-muted"><span>Toyota Research Institute</span></br>Los Altos, CA</br>(May 2022 - March 2023)
-            </p>
-          </div>
+        <div class="col-lg-3 col-sm-6 text-center">
+          <img src="img/UR_logo.png" class="img-fluid" width="120px" alt="UR logo">
+          <h3 class="mt-4 mb-4">Research Assistant</h3>
+          <p class="text-muted"><span>University of Rochester</span></br>Rochester, NY</br>(Jan 2019 - May 2023)</p>
         </div>
-      
+        <div class="col-lg-3 col-sm-6 text-center">
+          <img src="img/TRI.jpg" class="img-fluid" width="250px" alt="UR logo">
+          <h3 class="mt-4 mb-4">Energy & Materials Research Engineer</h3>
+          <p class="text-muted"><span>Toyota Research Institute</span></br>Los Altos, CA</br>(May 2022 - March 2023)
+          </p>
+        </div>
+      </div>
+
       <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-sm-6 text-center">
-          <img src="img/SOLAR_logo.jpg"  class="img-fluid" width="100px" alt="solar logo">
+          <img src="img/SOLAR_logo.jpg" class="img-fluid" width="100px" alt="solar logo">
           <h3 class="mt-4 mb-4">Lead CFD Analyst</h3>
           <p class="text-muted">Missouri S&T Solar Car Design Team</br>Rolla, MO</br>(2016 - 2018)</p>
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
-          <img src="img/MST_logo.jpg"  class="img-fluid" width="100px" alt="MST logo">
+          <img src="img/MST_logo.jpg" class="img-fluid" width="100px" alt="MST logo">
           <h3 class="mt-4 mb-4">Research Assistant</h3>
           <p class="text-muted">Missouri S&T</br>Rolla, MO</br>(2016 - 2018)</p>
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
           <!-- TIL: Bootstrap has awesome spacing classes
                     https://getbootstrap.com/docs/4.0/utilities/spacing/ -->
-          <img src="img/Goodyear_logo.png"  class="img-fluid" width="100px" alt="Goodyear logo">
+          <img src="img/Goodyear_logo.png" class="img-fluid" width="100px" alt="Goodyear logo">
           <h3 class="mt-4 mb-4">Manufacturing Process Modeling Intern</h3>
           <p class="text-muted">Goodyear Tire & Rubber Co.</br>Akron, OH</br>(May - Dec 2017)</p>
-          
+
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
-          <img src="img/emden_leer_logo.png"  class="img-fluid" width="100px" alt="emden logo">
+          <img src="img/emden_leer_logo.png" class="img-fluid" width="100px" alt="emden logo">
           <h3 class="mt-4 mb-4">Engineering Intern</h3>
           <p class="text-muted">Emden-Leer University of Applied Sciences</br>Emden, Germany</br>(July - Sep 2014)</p>
         </div>
 
-      
-        
+
+
       </div>
       <div class="text-center">
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#software">
-        Boring, show me some cool apps!</a>
+          Boring, show me some cool apps!</a>
       </div>
     </div>
   </section>
-  
+
   <!-- Software Section -->
   <section class="bg-dark" id="software">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 text-center">
-
-          <!-- Tweaking this part so the title links straight to my GitHub
-          page, without adding the silly extra "CLICK THIS ICON" text that was
-          there before. -->
-	        <h1 class="text-white"><strong>Software</strong></h1>
-          
+          <h1 class="text-white"><strong>Scientific Software</strong></h1>
           <hr class="light">
         </div>
-      </div>   
+      </div>
     </div>
-    
-    
-      <a class="portfolio-box"
-         href="https://huggingface.co/spaces/mehradans92/decode-elm"
-         style="max-width: 650px; margin:20px; margin-left:31%;">
-        <!--  Awesome photo of JT and random skiers from Google Photos
-                  (Personal photo taken March 15 2017 at Cannon Mt)
-                  Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
-                  -->
-        <img class="img-responsive"
-             width="100%"
-             height="auto"
-             style="border-radius: 20px;"
-             src="img/arxiv_decode.png"
-             alt="">
-  
-        <div class="portfolio-box-caption">
-          <div class="portfolio-box-caption-content">
-            <div class="project-category text-faded">
-              <strong>Decode-elm</strong>
-            </div>
-            <div class="project-name">
-              Answer scientific questions from pre-print servers using Langchain and OpenAI.  
-            </div>
-  
-          </div>
-        </div>
-      </a>
-   
 
 
-        <div class="row text-center no-gutters">
-          <div class="col-md-6">
-            <a class="portfolio-box"
-               href="https://github.com/TRI-AMDD/bye-cycle"
-               style="max-width: 650px; margin:20px; margin-left:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
-                        (Personal photo taken March 15 2017 at Cannon Mt)
-                        Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
-                        -->
-              <img class="img-responsive"
-                   width="100%"
-                   height="auto"
-                   style="border-radius: 20px;"
-                   src="img/bye_cycle_logo_new.gif"
-                   alt="">
-        
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>Bye-Cycle</strong>
-                  </div>
-                  <div class="project-name">
-                    Automated deep learning framework for early prediction of degradation of batteries with unknown cycling histories. 
-                  </div>
-        
-                </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <a class="portfolio-box" href="https://huggingface.co/spaces/mehradans92/decode-elm"
+          style="max-width: 900px; margin: 20px;">
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/arxiv_decode.png"
+            alt="">
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                <strong>Decode-elm</strong>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a class="portfolio-box"
-               href="https://peptide.bio/"
-               style="max-width: 650px; margin:20px; margin-right:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
-                                  (Personal photo taken March 15 2017 at Cannon Mt)
-                                  Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
-                                  -->
-              <img class="img-responsive"
-                   width="100%"
-                   height="auto"
-                   style="border-radius: 20px;"
-                   src="img/peptide_bio.png"
-                   alt="">
-          
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>PEPTIDE.BIO</strong>
-                  </div>
-                  <div class="project-name">
-                    Edge-computing sequence-based prediction of peptide properties using recurrent neural networks.
-                  </div>
-          
-                </div>
+              <div class="project-name">
+                Answer scientific questions from pre-print servers using Langchain and OpenAI.
               </div>
-            </a>
+            </div>
           </div>
+        </a>
+      </div>
+
+      <div class="row justify-content-center text-center no-gutters"> <!-- Centered Row -->
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/TRI-AMDD/bye-cycle"
+            style="max-width: 900px; margin:20px; margin-left:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
+                   (Personal photo taken March 15 2017 at Cannon Mt)
+                   Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
+                   -->
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+              src="img/bye_cycle_logo_new.gif" alt="">
+
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>Bye-Cycle</strong>
+                </div>
+                <div class="project-name">
+                  Automated deep learning framework for early prediction of degradation of batteries with unknown
+                  cycling histories.
+                </div>
+
+              </div>
+            </div>
+          </a>
         </div>
-    <div class="row no-gutters">
-          <div class="col-md-6">
-            <a class="portfolio-box" href="https://github.com/ur-whitelab/hoomd-tf" style="max-width: 650px; margin:20px; margin-left:30%;">
-                <!--  Awesome photo of JT and random skiers from Google Photos
+
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://peptide.bio/" style="max-width: 650px; margin:20px; margin-right:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
+                             (Personal photo taken March 15 2017 at Cannon Mt)
+                             Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
+                             -->
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+              src="img/peptide_bio.png" alt="">
+
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>PEPTIDE.BIO</strong>
+                </div>
+                <div class="project-name">
+                  Edge-computing sequence-based prediction of peptide properties using recurrent neural networks.
+                </div>
+
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/ur-whitelab/hoomd-tf"
+            style="max-width: 900px; margin:20px; margin-left:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
                 -->
-                <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/ezgif.com-video-to-gif.gif" alt="">
-                
-                <div class="portfolio-box-caption" >
-                  <div class="portfolio-box-caption-content">
-                      <div class="project-category text-faded">
-                        <strong>HOOMD-TF</strong>
-                      </div>
-                      <div class="project-name">
-                                      Plugin with TensorFlow GPU-accelerated operations combined with HOOMD-Blue molecular dynamics simulation engine.
-                      </div>
-                      
-                  </div>
-                </div>
-            </a>
-          </div> 
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+              src="img/ezgif.com-video-to-gif.gif" alt="">
 
-      <div class="col-md-6">
-          <a class="portfolio-box" href="https://github.com/ur-whitelab/maxent" style="max-width: 650px; margin:20px; margin-right:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
-              (Personal photo taken March 15 2017 at Cannon Mt)
-              Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
-              -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/all_models.png" alt="">
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      <strong>MaxEnt</strong>
-                    </div>
-                    <div class="project-name">
-                        Python implementation of Maximum Entropy principle for simulation-based inference.
-                    </div>
-                    
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>HOOMD-TF</strong>
                 </div>
+                <div class="project-name">
+                  Plugin with TensorFlow GPU-accelerated operations combined with HOOMD-Blue molecular dynamics
+                  simulation engine.
+                </div>
+
               </div>
+            </div>
           </a>
-      </div>
-      <div class="col-md-6">
-          <a class="portfolio-box" href="https://github.com/ur-whitelab/py0" style="max-width: 650px; margin:20px; margin-left:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+        </div>
+
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/ur-whitelab/maxent"
+            style="max-width: 900px; margin:20px; margin-right:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
               (Personal photo taken March 15 2017 at Cannon Mt)
               Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/py_0.gif" alt="">
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      <strong>py0</strong>
-                    </div>
-                    <div class="project-name">
-                        Python implementation of compartmental disease modeling.
-                    </div>
-                    
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/all_models.png"
+              alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>MaxEnt</strong>
                 </div>
+                <div class="project-name">
+                  Python implementation of Maximum Entropy principle for simulation-based inference.
+                </div>
+
               </div>
-           </a>
-      </div>
-            <div class="col-md-6">
-          <a class="portfolio-box" href="https://github.com/ur-whitelab/alcfd" style="max-width: 650px; margin:20px; margin-right:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/ur-whitelab/py0"
+            style="max-width: 900px; margin:20px; margin-left:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
               (Personal photo taken March 15 2017 at Cannon Mt)
               Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/concept_alcfd.png" alt="">
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      <strong>alcfd</strong>
-                    </div>
-                    <div class="project-name">
-                        Automated workflow in CFD modeling combined with active-learning and symbolic regression.
-                    </div>
-                    
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/py_0.gif"
+              alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>py0</strong>
                 </div>
+                <div class="project-name">
+                  Python implementation of compartmental disease modeling.
+                </div>
+
               </div>
-           </a>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/ur-whitelab/alcfd"
+            style="max-width: 900px; margin:20px; margin-right:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
+              (Personal photo taken March 15 2017 at Cannon Mt)
+              Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
+              -->
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+              src="img/concept_alcfd.png" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>alcfd</strong>
+                </div>
+                <div class="project-name">
+                  Automated workflow in CFD modeling combined with active-learning and symbolic regression.
+                </div>
+
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </div> 
-    <div class="row no-gutters">
-      <div class="col-md-6">
-            <a class="portfolio-box" href="https://github.com/mehradans92/Real-time-HPC-Monitoring" style="max-width: 650px; margin:20px; margin-left:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <a class="portfolio-box" href="https://github.com/mehradans92/Real-time-HPC-Monitoring"
+            style="max-width: 900px; margin:20px; margin-left:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
                     (Personal photo taken March 15 2017 at Cannon Mt)
                     Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/how_it_works.gif" alt="">
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>Real-time HPC Monitoring</strong>
-                  </div>
-                  <div class="project-name">
-                    Web-based app for real-time monitoring of CPU resources in SLRUM using a Raspberry Pi.
-                  </div>
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+              src="img/how_it_works.gif" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>Real-time HPC Monitoring</strong>
+                </div>
+                <div class="project-name">
+                  Web-based app for real-time monitoring of CPU resources in SLRUM using a Raspberry Pi.
                 </div>
               </div>
-            </a>
-      </div>
-            <div class="col-md-6">
-          <a class="portfolio-box" href="GTP/GTP.html" style="max-width: 650px; margin:20px; margin-right:30%;">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="portfolio-box" href="GTP/GTP.html" style="max-width: 900px; margin:20px; margin-right:30%;">
+            <!--  Awesome photo of JT and random skiers from Google Photos
               (Personal photo taken March 15 2017 at Cannon Mt)
               Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/GTP.png" alt="">
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      <strong>Gelator Transparency Predictor (GTP)</strong>
-                    </div>
-                    <div class="project-name">
-                                    Web-based app for predicting transparency of cationic and anionic peptide-based gelators using kernel ridge regression.
-                    </div>
-                    
+            <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/GTP.png"
+              alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                  <strong>Gelator Transparency Predictor (GTP)</strong>
                 </div>
+                <div class="project-name">
+                  Web-based app for predicting transparency of cationic and anionic peptide-based gelators using
+                  kernel ridge regression.
+                </div>
+
               </div>
+            </div>
           </a>
+        </div>
+
       </div>
 
-      </div> 	
-      
     </div>
-    
-	  <div class="row" style="transform: translateY(40px)">
+
+    <div class="row" style="transform: translateY(40px)">
       <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-            <a class="btn btn-primary btn-xl js-scroll-trigge" href="#projects">
-            Let's see some interesting projects!</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigge" href="#projects">
+          Let's see some interesting projects!</a>
       </div>
     </div>
-	</div>
+    </div>
   </section>
 
- 
+
   <section class="bg-red" id="projects">
     <div class="container-fluid">
-      <div class="row images-vcenter">	
-		<div class="col-lg-12 pb-3 text-center">
-			  <h1 class="text-white"><strong>Projects</strong></h1>
-			  <hr class="light">
-		</div>
-    	</div>
+      <div class="row images-vcenter">
+        <div class="col-lg-12 pb-3 text-center">
+          <h1 class="text-white"><strong>Projects</strong></h1>
+          <hr class="light">
+        </div>
+      </div>
     </div>
 
-    
-     <div class="row no-gutters">
+
+    <div class="row no-gutters">
 
       <div class="col-12 d-flex justify-content-center align-items-center" style="padding-top: 30px;">
         <a class="portfolio-box" href="https://youtu.be/jrn5ek2kpEY?si=j8lCFzkbr8Ry8z9M">
@@ -608,22 +633,23 @@
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
           -->
-          
+
           <video width="100%" height="auto" style="border-radius: 20px;" autoplay loop muted>
             <source src="mov/agent_demo.mp4" type="video/mp4">
           </video>
-          <div class="portfolio-box-caption" >
+          <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
               <div class="project-category text-faded">
                 <strong>Agent-based learning of chemical datasets</strong>
               </div>
               <div class="project-name">
-                Using an AI agent with a large language model at its core, we can create chemical datasets and predict properties of new materials.
+                Using an AI agent with a large language model at its core, we can create chemical datasets and predict
+                properties of new materials.
               </div>
             </div>
           </div>
         </a>
-    </div>
+      </div>
 
 
       <div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
@@ -632,17 +658,18 @@
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
           -->
-          
+
           <video width="100%" height="auto" style="border-radius: 20px; " autoplay loop muted>
             <source src="mov/real_NY_new.mp4" type="video/mp4">
           </video>
-          <div class="portfolio-box-caption" >
+          <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
               <div class="project-category text-faded">
                 <strong>Where did Covid-19 start in the state of New York?</strong>
               </div>
               <div class="project-name">
-                Using data from CSSE at John Hopkins University, we infer the source of Covid-19 outbreak in the State of New York.
+                Using data from CSSE at John Hopkins University, we infer the source of Covid-19 outbreak in the State
+                of New York.
               </div>
             </div>
           </div>
@@ -655,17 +682,17 @@
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
           -->
-          
+
           <video width="100%" height="auto" style="border-radius: 20px;" autoplay loop muted>
             <source src="mov/speed-up.mp4" type="video/mp4">
           </video>
-          <div class="portfolio-box-caption" >
+          <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
               <div class="project-category text-faded">
                 <strong>Decode-Elm</strong>
               </div>
               <div class="project-name">
-                Answer scientific questions from pre-print servers using Langchain and OpenAI.  
+                Answer scientific questions from pre-print servers using Langchain and OpenAI.
               </div>
             </div>
           </div>
@@ -678,11 +705,11 @@
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
           -->
-          
+
           <video width="100%" height="auto" style="border-radius: 20px;" autoplay loop muted>
             <source src="mov/pu.mp4" type="video/mp4">
           </video>
-          <div class="portfolio-box-caption" >
+          <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
               <div class="project-category text-faded">
                 <strong>Learning Peptide Properties with Positive Examples Only</strong>
@@ -695,175 +722,181 @@
         </a>
       </div>
       <div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
-            <a class="portfolio-box" href="https://www.youtube.com/watch?v=bbuzor97xYU">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+        <a class="portfolio-box" href="https://www.youtube.com/watch?v=bbuzor97xYU">
+          <!--  Awesome photo of JT and random skiers from Google Photos
                     (Personal photo taken March 15 2017 at Cannon Mt)
                     Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              
-              <video width="100%" height="auto" style="border-radius: 20px; " autoplay loop muted>
-                <source src="mov/Adaptive_mesh_16_9.mp4" type="video/mp4">
-              </video>
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>Computational Fluid Dynamics Analysis of Microfluidics</strong>
-                  </div>
-                  <div class="project-name">
-                    Numerical modeling of spontaneous capillary-driven flow in open microchannels using adaptive mesh refinement.
-                  </div>
-                </div>
+
+          <video width="100%" height="auto" style="border-radius: 20px; " autoplay loop muted>
+            <source src="mov/Adaptive_mesh_16_9.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                <strong>Computational Fluid Dynamics Analysis of Microfluidics</strong>
               </div>
-            </a>
+              <div class="project-name">
+                Numerical modeling of spontaneous capillary-driven flow in open microchannels using adaptive mesh
+                refinement.
+              </div>
+            </div>
           </div>
-         
+        </a>
+      </div>
+
       <div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
-            <a class="portfolio-box" href="https://github.com/mehradans92/Shallow-water-dynamics">
-              <!--  Awesome photo of JT and random skiers from Google Photos
+        <a class="portfolio-box" href="https://github.com/mehradans92/Shallow-water-dynamics">
+          <!--  Awesome photo of JT and random skiers from Google Photos
                     (Personal photo taken March 15 2017 at Cannon Mt)
                     Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
               -->
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/swe_animation.gif" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>Finite Difference Analysis of Shallow Water Dynamics</strong>
-                  </div>
-                  <div class="project-name">
-                    Numerical modeling of shallow water equations using different temporal and spatial discretizations in Python. 
-                  </div>
-                </div>
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"
+            src="img/swe_animation.gif" alt="">
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                <strong>Finite Difference Analysis of Shallow Water Dynamics</strong>
               </div>
-            </a>
-          </div>	
-           
-        <div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
-            <a class="portfolio-box" href="https://www.youtube.com/watch?v=ZJszs21uPq8">
-              <!--  Awesome photo of JT and random skiers from Google Photos
-                    (Personal photo taken March 15 2017 at Cannon Mt)
-                    Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
-              -->
-              
-              <video width="100%" height="auto" style="border-radius: 20px" autoplay loop muted>
-                <source src="mov/vorticity.mp4" type="video/mp4">
-              </video>
-              <div class="portfolio-box-caption" >
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <strong>Aerodynamic Design Optimization of Solar Car</strong>
-                  </div>
-                  <div class="project-name">
-                    3D wind tunnel simulation of a solar car to study drag force and drag coefficient.
-                  </div>
-                </div>
+              <div class="project-name">
+                Numerical modeling of shallow water equations using different temporal and spatial discretizations in
+                Python.
               </div>
-            </a>
+            </div>
           </div>
-        
-
-        
-
+        </a>
       </div>
+
+      <div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+        <a class="portfolio-box" href="https://www.youtube.com/watch?v=ZJszs21uPq8">
+          <!--  Awesome photo of JT and random skiers from Google Photos
+                    (Personal photo taken March 15 2017 at Cannon Mt)
+                    Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
+              -->
+
+          <video width="100%" height="auto" style="border-radius: 20px" autoplay loop muted>
+            <source src="mov/vorticity.mp4" type="video/mp4">
+          </video>
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                <strong>Aerodynamic Design Optimization of Solar Car</strong>
+              </div>
+              <div class="project-name">
+                3D wind tunnel simulation of a solar car to study drag force and drag coefficient.
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
-	  <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-          <a class="btn btn-light btn-xl js-scroll-trigger" style="transform: translateY(30px);" href="#fun">Here's something fun!</a>
+
+
+
+
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+        <a class="btn btn-light btn-xl js-scroll-trigger" style="transform: translateY(30px);" href="#fun">Here's
+          something fun!</a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="bg-green" id="fun">
+    <div class="container-fluid">
+      <div class="row images-vcenter">
+        <div class="col-lg-12 pb-3 text-center">
+          <h1 class="text-white"><strong>Fun Stuff</strong></h1>
+          <hr class="light">
         </div>
       </div>
     </div>
-	</section>
+    <div class="row no-gutters">
+      <div class="col-xs-3 col-sm-3">
+        <a class="portfolio-boxM">
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/P_1.JPG" alt="">
+          <div class="portfolio-boxM-caption">
+            <div class="portfolio-boxM-caption-content">
 
-<section class="bg-green" id="fun">
-    <div class="container-fluid">
-      <div class="row images-vcenter">	
-		<div class="col-lg-12 pb-3 text-center">
-			  <h1 class="text-white"><strong>Fun Stuff</strong></h1>
-			  <hr class="light">
-		</div>
-    	</div>
+              <div class="project-name">
+                Mt. Damavand's Peak <br> (5,671 m)
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-3 col-sm-3">
+        <a class="portfolio-boxM">
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/P_2.jpg" alt="">
+          <div class="portfolio-boxM-caption">
+            <div class="portfolio-boxM-caption-content">
+
+              <div class="project-name">
+                Lake Ontario
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-3 col-sm-3">
+        <a class="portfolio-boxM">
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/P_3.JPG" alt="">
+          <div class="portfolio-boxM-caption">
+            <div class="portfolio-boxM-caption-content">
+              <div class="project-name">
+                Mt. Seechal
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="col-xs-3 col-sm-3">
+        <a class="portfolio-boxM">
+          <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;" src="img/P_4.jpg" alt="">
+          <div class="portfolio-boxM-caption">
+            <div class="portfolio-boxM-caption-content">
+
+              <div class="project-name">
+                Maranjab Desert
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-     <div class="row no-gutters">
-      <div class="col-xs-3 col-sm-3">
-            <a class="portfolio-boxM">     
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/P_1.JPG" alt="">
-              <div class="portfolio-boxM-caption" >
-                <div class="portfolio-boxM-caption-content">
-                
-                  <div class="project-name">
-                    Mt. Damavand's Peak  <br> (5,671 m)
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-         
-      <div class="col-xs-3 col-sm-3">
-            <a class="portfolio-boxM">
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/P_2.jpg" alt="">
-              <div class="portfolio-boxM-caption">
-                <div class="portfolio-boxM-caption-content">
-                 
-                  <div class="project-name">
-                    Lake Ontario 
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>	
-           
-        <div class="col-xs-3 col-sm-3">
-            <a class="portfolio-boxM">
-             <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/P_3.JPG" alt="">
-              <div class="portfolio-boxM-caption" >
-                <div class="portfolio-boxM-caption-content">
-                  <div class="project-name">
-                    Mt. Seechal
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-	
-	
-	  <div class="col-xs-3 col-sm-3">
-            <a class="portfolio-boxM">
-              <img class="img-responsive" width="100%" height="auto" style="border-radius: 20px;"  src="img/P_4.jpg" alt="">
-              <div class="portfolio-boxM-caption" >
-                <div class="portfolio-boxM-caption-content">
-           
-                  <div class="project-name">
-                    Maranjab Desert
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          </div>	
-	</section>
+  </section>
 
   <!-- More section -->
   <section class="min-padding" id="more">
     <div class="container">
 
-      
-      
+
+
       <!-- YouTube, LinkedIn, and GitHub links -->
       <div class="row">
-      
+
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 offset-lg-1 text-center">
           <a href="https://www.youtube.com/channel/UCIamAGo52tAZIoXeBEORieA/videos">
             <i class="fa fa-youtube fa-4x sr-icons"></i>
           </a>
-          <p><a class="text-grey-link" href="https://www.youtube.com/channel/UCIamAGo52tAZIoXeBEORieA/videos" class="text-blue">YouTube</a></p>
+          <p><a class="text-grey-link" href="https://www.youtube.com/channel/UCIamAGo52tAZIoXeBEORieA/videos"
+              class="text-blue">YouTube</a></p>
         </div>
-        
+
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 lg-1 text-center">
           <a href="https://linkedin.com/in/mehrad-ansari-baa732b9/">
             <i class="fa fa-linkedin-square fa-4x sr-icons"></i>
           </a>
-          <p><a class="text-grey-link" href="https://linkedin.com/in/mehrad-ansari-baa732b9/" class="text-blue">LinkedIn</a></p>
+          <p><a class="text-grey-link" href="https://linkedin.com/in/mehrad-ansari-baa732b9/"
+              class="text-blue">LinkedIn</a></p>
         </div>
-        
+
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 lg-1 text-center">
           <a href="https://github.com/mehradans92">
             <i class="fa fa-github-square fa-4x sr-icons"></i>
@@ -875,7 +908,8 @@
           <a href="https://scholar.google.com/citations?user=0Rmr7TwAAAAJ&hl=en">
             <i class="ai ai-google-scholar-square fa-4x sr-icons"></i>
           </a>
-          <p><a class="text-grey-link" href="https://scholar.google.com/citations?user=0Rmr7TwAAAAJ&hl=en" class="text-blue">Google Scholar</a></p>
+          <p><a class="text-grey-link" href="https://scholar.google.com/citations?user=0Rmr7TwAAAAJ&hl=en"
+              class="text-blue">Google Scholar</a></p>
         </div>
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 lg-1 text-center">
           <a href="https://twitter.com/MehradAnsari">
@@ -894,25 +928,27 @@
         
         6/16/2018: Added new line for the Source on Github... part, with margin bottom
                    set to 1 (awesome new bootstrap 4 mb-1 class)-->
-  
+
 
   <!-- 6/15/2018: Updated jQuery, added Popper.js, and updated Bootstrap JS to 4.1.1 -->
   <!-- Also pulling in the Bootstrap 4 update from Start Bootstrap too
        https://github.com/BlackrockDigital/startbootstrap-creative  -->
-       
+
   <!-- jQuery 3.3.1 -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-          crossorigin="anonymous"></script>
-  
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   <!-- Bootstrap 4.1 JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
   <!-- Plugin & Theme JavaScript (With Bootstrap 4 Update) -->
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/creative.min.js"></script>
-  
+
 </body>
+
 </html>
