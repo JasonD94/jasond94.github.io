@@ -79,11 +79,11 @@
   }, 600);
 
   function type() {
-    let speed = 160;
+    let speed = 150;
 
     if (paused) {
       paused = false;
-      setTimeout(type, 1000);
+      setTimeout(type, 900);
       return;
     }
 
@@ -96,7 +96,7 @@
         paused = true;
       }
     } else {
-      speed = 80;
+      speed = 70;
       currentText = phrases[phraseIndex].substr(0, --letterIndex);
       container.textContent = currentText;
 
@@ -110,7 +110,7 @@
     if (!paused) {
       setTimeout(type, speed);
     } else {
-      setTimeout(type, 1000);
+      setTimeout(type, 900);
     }
   }
 
