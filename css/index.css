@@ -25,11 +25,27 @@
     font-size: 97%;
 }
 
+.cursor {
+    position: relative;
+    top: -0.1em;
+    margin-left: -0.35em;
+    padding: 0;
+    font-size: 1em;
+  }
+
+.visible {
+    opacity: 1; /* Fully visible */
+  }
 
 .thicker-text {
     font-weight: bold;
     font-weight: 900; /* Maximum thickness */
     text-shadow: 2px 2px 4px #000000; /* Shadow for more depth */
+  }
+
+  .thinner-text {
+    font-weight: 700; /* Maximum thickness */
+    text-shadow: 3px 3px 4px #000000; /* Shadow for more depth */
   }
 
   .moving-text-container {

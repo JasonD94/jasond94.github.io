@@ -63,41 +63,61 @@
     ga('create', 'UA-68657454-1', 'auto');
     ga('send', 'pageview');
 
-    document.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('DOMContentLoaded', function() {
+  const phrases = ['I am a scientist.','I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let currentText = '';
   const container = document.querySelector('.moving-text-container');
-  const sentences = [
-    "I am an AI enthusiast.",
-    "I am a Chemical Engineer.",
-    "I am an adventurer."
-  ];
-  
-  let i = 0; // index for sentences
-  let j = 0; // index for characters within a sentence
-  let currentSentence = sentences[i];
+  const cursor = document.querySelector('.cursor');
+  let erasing = false;
+  let paused = false;
 
-  function typeText() {
-    if (j < currentSentence.length) {
-      container.innerHTML += currentSentence.charAt(j);
-      j++;
-      setTimeout(typeText, 200);
+  // Cursor blinking
+  setInterval(function() {
+    cursor.style.visibility = (cursor.style.visibility === 'visible') ? 'hidden' : 'visible';
+  }, 600);
+
+  function type() {
+    let speed = 160;
+
+    if (paused) {
+      paused = false;
+      setTimeout(type, 1000);
+      return;
+    }
+
+    if (!erasing) {
+      currentText = phrases[phraseIndex].substr(0, ++letterIndex);
+      container.textContent = currentText;
+
+      if (letterIndex === phrases[phraseIndex].length) {
+        erasing = true;
+        paused = true;
+      }
     } else {
-      i = (i + 1) % sentences.length; // Loop back to the first sentence when we reach the end
-      currentSentence = sentences[i];
-      j = 0;
-      setTimeout(() => {
-        container.innerHTML = ''; // Clear the container
-        typeText();
-      }, 2000); // Wait 2 seconds before clearing
+      speed = 80;
+      currentText = phrases[phraseIndex].substr(0, --letterIndex);
+      container.textContent = currentText;
+
+      if (currentText === "I am") {
+        erasing = false;
+        letterIndex = 4;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+
+    if (!paused) {
+      setTimeout(type, speed);
+    } else {
+      setTimeout(type, 1000);
     }
   }
 
-  typeText();
+  type(); // Initial call
 
-  addTextEffect("header-title");
-  addTextEffect("header-subtitle");
-  addTextEffect("header-description");
+  // Add your additional text effects here.
 });
-
 
   </script>
 
@@ -173,7 +193,8 @@
         </div>
         <div class="col-lg-8 mx-auto">
           <h1 class="text-uppercase">
-            <strong class="thicker-text moving-text-container"></strong>
+            <strong class="thinner-text moving-text-container"></strong>
+            <span class="cursor">|</span>
           </h1>
           <p class="text-italic mb-5">Acceleration Consortium Research Fellow</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
