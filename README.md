@@ -27,5 +27,5 @@ Based on the
 from [Start Bootstrap](http://startbootstrap.com/).
 The theme is also MIT Licensed.
 
-
+Anyone may freely use this code. Just don't sue me if it breaks stuff.
 
