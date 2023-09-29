@@ -70,70 +70,70 @@
     ga('send', 'pageview');
 
     document.addEventListener('DOMContentLoaded', function () {
-    const phrases = ['I am a scientist.', 'I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
-    let phraseIndex = 0;
-    let letterIndex = 0;
-    let currentText = '';
-    const container = document.querySelector('.moving-text-container');
-    const cursor = document.querySelector('.cursor');
-    let erasing = false;
-    let paused = false;
+      const phrases = ['I am a scientist.', 'I am an AI enthusiast.', 'I am a Chemical Engineer.', 'I am an adventurer.'];
+      let phraseIndex = 0;
+      let letterIndex = 0;
+      let currentText = '';
+      const container = document.querySelector('.moving-text-container');
+      const cursor = document.querySelector('.cursor');
+      let erasing = false;
+      let paused = false;
 
-    // Cursor blinking
-    setInterval(function () {
+      // Cursor blinking
+      setInterval(function () {
         cursor.style.visibility = (cursor.style.visibility === 'visible') ? 'hidden' : 'visible';
-    }, 600);
+      }, 600);
 
-    function type() {
+      function type() {
         let speed = 150;
 
         if (paused) {
-            paused = false;
-            setTimeout(type, 900);
-            return;
+          paused = false;
+          setTimeout(type, 900);
+          return;
         }
 
         if (!erasing) {
-            currentText = phrases[phraseIndex].substr(0, ++letterIndex);
-            if (letterIndex <= 4) {
-                container.innerHTML = currentText;
-            } else if (letterIndex === phrases[phraseIndex].length) {
-                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5, currentText.length - 6) + '</span><span style="color: white;">.</span>';
-            } else {
-                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
-            }
+          currentText = phrases[phraseIndex].substr(0, ++letterIndex);
+          if (letterIndex <= 4) {
+            container.innerHTML = currentText;
+          } else if (letterIndex === phrases[phraseIndex].length) {
+            container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5, currentText.length - 6) + '</span><span style="color: white;">.</span>';
+          } else {
+            container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+          }
 
-            if (letterIndex === phrases[phraseIndex].length) {
-                erasing = true;
-                paused = true;
-            }
+          if (letterIndex === phrases[phraseIndex].length) {
+            erasing = true;
+            paused = true;
+          }
         } else {
-            speed = 70;
-            currentText = phrases[phraseIndex].substr(0, --letterIndex);
-            if (letterIndex <= 4) {
-                container.innerHTML = currentText;
-            } else if (letterIndex === phrases[phraseIndex].length - 1) {
-                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
-            } else {
-                container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
-            }
+          speed = 70;
+          currentText = phrases[phraseIndex].substr(0, --letterIndex);
+          if (letterIndex <= 4) {
+            container.innerHTML = currentText;
+          } else if (letterIndex === phrases[phraseIndex].length - 1) {
+            container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+          } else {
+            container.innerHTML = 'I am <span style="font-weight: 950; color: #f05f40; text-shadow: 2px 2px 3px black;">' + currentText.substr(5) + '</span>';
+          }
 
-            if (currentText === "I am") {
-                erasing = false;
-                letterIndex = 4;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-            }
+          if (currentText === "I am") {
+            erasing = false;
+            letterIndex = 4;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+          }
         }
 
         if (!paused) {
-            setTimeout(type, speed);
+          setTimeout(type, speed);
         } else {
-            setTimeout(type, 900);
+          setTimeout(type, 900);
         }
-    }
+      }
 
-    type(); // Initial call
-});
+      type(); // Initial call
+    });
 
 
 
@@ -628,14 +628,14 @@
     <div class="row no-gutters">
 
       <div class="col-12 d-flex justify-content-center align-items-center" style="padding-top: 30px;">
-        <a class="portfolio-box" href="https://youtu.be/jrn5ek2kpEY?si=j8lCFzkbr8Ry8z9M">
+        <a class="portfolio-box" href="https://youtu.be/QqcODSIZCrU?si=KGbgUN5KCJ5IhDPF">
           <!--  Awesome photo of JT and random skiers from Google Photos
                 (Personal photo taken March 15 2017 at Cannon Mt)
                 Public URL: https://goo.gl/photos/RXYDMpAVjZmXL4MD6
           -->
 
           <video width="100%" height="auto" style="border-radius: 20px;" autoplay loop muted>
-            <source src="mov/agent_demo.mp4" type="video/mp4">
+            <source src="mov/Eunomia.mp4" type="video/mp4">
           </video>
           <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
