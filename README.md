@@ -32,6 +32,18 @@ View it here: [downing.io](https://downing.io/)
 Check out some of my other webpages at 
 [github.com/JasonD94/](https://github.com/JasonD94/)
 
+Test locally using:
+--------------------------------------------------------------------------------
+```
+python -m http.server
+```
+
+Assumes Python is installed locally (download [here](https://www.python.org/downloads/)).
+
+Site will be visible locally at: http://0.0.0.0:8000
+
+Use your local browser dev tools to test (Network -> Disable Cache for quickly viewing changes for example)
+
 ##### NOTE:
 
 I have a custom domain connected to GitHub, so my GitHub Pages repositories 
